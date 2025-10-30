@@ -1,0 +1,2 @@
+# Nginx vhost configuration for Discourse
+client_max_body_size 32m;

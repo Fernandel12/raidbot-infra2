@@ -1,0 +1,32 @@
+services:
+  mysql:
+    restart: unless-stopped
+    image: mariadb:10
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: uns3cur3
+      MYSQL_DATABASE: raidbot
+      MYSQL_USER: raidbot
+      MYSQL_PASSWORD: uns3cur3
+    command:
+      - mysqld
+      - --character-set-server=utf8mb4
+      - --max_allowed_packet=268435456
+
+  redis:
+    image: redis:7
+    restart: unless-stopped
+    ports:
+      - 6379
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+
+volumes:
+  mysql_data:
+    driver: local
+  redis_data:
+    driver: local

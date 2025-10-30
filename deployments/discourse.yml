@@ -1,0 +1,58 @@
+templates:
+  - "templates/postgres.template.yml"
+  - "templates/redis.template.yml"
+  - "templates/web.template.yml"
+  - "templates/web.ratelimited.template.yml"
+
+params:
+  db_shared_buffers: "4096MB"
+  unicorn_workers: 8
+  version: stable
+  client_max_body_size: 32m
+  upload_size: 32m
+
+env:
+  LC_ALL: en_US.UTF-8
+  LANG: en_US.UTF-8
+  LANGUAGE: en_US.UTF-8
+  UNICORN_WORKERS: 8
+
+  # General Discourse settings
+  DISCOURSE_HOSTNAME: 'community.raidbot.app'
+  DISCOURSE_DEVELOPER_EMAILS: 'admin@raidbot.app'
+
+  # SMTP settings - CONFIGURE THESE
+  DISCOURSE_SMTP_ADDRESS: 'smtp.example.com'
+  DISCOURSE_SMTP_PORT: 587
+  DISCOURSE_SMTP_USER_NAME: 'your_smtp_username'
+  DISCOURSE_SMTP_PASSWORD: 'your_smtp_password'
+  DISCOURSE_SMTP_DOMAIN: 'raidbot.app'
+  DISCOURSE_NOTIFICATION_EMAIL: 'noreply@raidbot.app'
+
+  # nginx-proxy settings
+  VIRTUAL_HOST: 'community.raidbot.app'
+  LETSENCRYPT_HOST: 'community.raidbot.app'
+  LETSENCRYPT_EMAIL: 'admin@raidbot.app'
+
+expose:
+  - '80'
+  - '443'
+
+docker_args:
+  - '--network service-proxy'
+
+volumes:
+  - volume:
+      host: ./shared/standalone
+      guest: /shared
+  - volume:
+      host: ./shared/standalone/log/var-log
+      guest: /var/log
+
+hooks:
+  after_code:
+    - exec:
+        cd: $home/plugins
+        cmd:
+          - git clone https://github.com/discourse/docker_manager.git
+          - git clone https://github.com/discourse/discourse-akismet.git

@@ -1,0 +1,663 @@
+{
+  "global": {
+    "download": "Baixar",
+    "purchase": "Comprar",
+    "feature": "Feature",
+    "discordServer": "Discord",
+    "forum": "Fórum",
+    "login": "Fazer Login",
+    "logout": "Deslogar",
+    "loggingOut": "Deslogando...",
+    "manageLicenses": "Minhas Licenças",
+    "error": "Deu ruim",
+    "success": "Sucesso!",
+    "loading": "Carregando",
+    "processing": "Processando...",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "proceed": "Bora",
+    "back": "Voltar",
+    "submit": "Enviar",
+    "save": "Salvar",
+    "copy": "Copiar",
+    "copied": "Copiado pro ctrl+v!",
+    "viewDetails": "Ver Detalhes",
+    "learnMore": "Saiba Mais",
+    "tryAgain": "Tentar de novo",
+    "filter": "Filtrar"
+  },
+  "products": {
+    "raidBot2": "RaidBot",
+    "raidBotClassic": "RaidBot Classic",
+    "raid": "Raid",
+    "bot": "Bot",
+    "classic": "Classic"
+  },
+  "header": {
+    "joinDiscord": "Colar no Discord",
+    "checkForum": "Dar uma olhada no Fórum",
+    "description": "Economize 100+ horas de farm. Farme conteúdo endgame 24/7. Pegue itens raros enquanto dorme. RaidBot 2 automatiza Path of Exile 2 completamente, do combate à progressão do atlas.",
+    "cta": "Começar Teste Grátis",
+    "purchaseLicense": "Comprar Licença",
+    "forumLink": "https://community.raidbot.app",
+    "switchToEB2": "Trocar pro RaidBot 2",
+    "playingPoe2": "Tá jogando PoE 2?"
+  },
+  "footer": {
+    "raidBot": "RaidBot",
+    "resources": "Recursos",
+    "community": "Comunidade",
+    "legal": "Legal",
+    "aboutUs": "Sobre Nós",
+    "gettingStarted": "Primeiros Passos",
+    "guides": "Guias",
+    "faq": "FAQ",
+    "termsOfService": "Termos de Serviço",
+    "privacyPolicy": "Política de Privacidade",
+    "allRightsReserved": "Todos os direitos reservados",
+    "raidShadowLegendsBot": "Bot para Raid: Shadow Legends"
+  },
+  "auth": {
+    "loginRequired": "Precisa logar primeiro, parça.",
+    "processingLogin": "Logando...",
+    "loginError": "Erro no Login",
+    "redirecting": "Voltando pro início...",
+    "logoutSuccess": "Deslogado com sucesso."
+  },
+  "payment": {
+    "verifyingPayment": "Checando seu pagamento...",
+    "paymentSuccess": "Pagamento confirmado! Sua licença tá chegando.",
+    "paymentFailure": "Erro na verificação do pagamento. ID de sessão não encontrado.",
+    "viewLicenses": "Ver Minhas Licenças",
+    "proceedToCheckout": "Ir pro Pagamento",
+    "securePayment": "Pagamento seguro via PayPal. Aceita todos os cartões principais."
+  },
+  "license": {
+    "activateTitle": "Como Ativar o Bot",
+    "activateStep1": "Passo 1: Abrir o Menu de Autenticação",
+    "activateStep1Details": "Depois de abrir o RaidBot, clica em <strong>Authenticate</strong> no menu de cima, depois em <strong>Activate</strong> no dropdown.",
+    "activateStep2": "Passo 2: Colar a Chave",
+    "activateStep2Details": "Quando abrir a janela, cola sua chave de licença. Tá na tabela aí em cima, só copiar.",
+    "activateStep2Additional": "Escolhe se quer ativar só pro perfil atual ou pra todos.",
+    "activateStep3": "Passo 3: GG WP",
+    "activateStep3Details": "Quando ativar, vai aparecer \"Recursos premium desbloqueados!\" e o status vai mudar de \"Desconectado\" pra \"Usuário Premium\".",
+    "troubleshootingTitle": "Deu Ruim?",
+    "troubleInvalidKey": "<strong>Chave Inválida:</strong> Confere se copiou a chave certa, sem espaço no final",
+    "troubleAlreadyActivated": "<strong>Já Tá Ativa:</strong> Cada chave funciona em um PC por vez",
+    "troubleExpired": "<strong>Licença Vencida:</strong> Dá uma olhada no status da licença pra ver se não expirou",
+    "licenseDuration": "Duração da Licença",
+    "licenseType": "Tipo de Licença",
+    "licenseStatus": "Status da Licença",
+    "expiryDate": "Data de Expiração",
+    "startDate": "Data de Início",
+    "licenseKey": "Chave de Licença",
+    "autoRenewal": "Renovação Automática",
+    "status": {
+      "active": "ATIVA",
+      "expired": "EXPIRADA",
+      "revoked": "REVOGADA",
+      "pending": "PROCESSANDO",
+      "cancelled": "CANCELADA"
+    },
+    "duration": {
+      "lifetime": "Vitalícia",
+      "oneDay": "1 Dia",
+      "oneWeek": "1 Semana",
+      "oneMonth": "1 Mês",
+      "threeMonths": "3 Meses",
+      "unknown": "Desconhecido"
+    },
+    "actions": {
+      "renewLicense": "Renovar",
+      "setupAutoRenewal": "Ativar Renovação Automática",
+      "cancelAutoRenewal": "Desativar Renovação Automática",
+      "copyLicense": "Copiar chave",
+      "purchaseAdditional": "Comprar Mais Uma"
+    },
+    "confirmCancel": {
+      "title": "Cancelar Mesmo?",
+      "message": "Certeza que quer desativar a renovação automática?"
+    },
+    "renewal": {
+      "title": "Renovar Licença",
+      "message": "Você está prestes a renovar sua licença.",
+      "autoRenewalOption": "Configurar renovação automática para esta licença",
+      "autoRenewalOn": "Sua licença será renovada automaticamente antes de expirar",
+      "autoRenewalOff": "Você precisará renovar manualmente quando sua licença expirar",
+      "proceedToPayment": "Prosseguir para o Pagamento"
+    }
+  },
+  "errors": {
+    "general": "Algo deu errado",
+    "fetchFailed": "Não consegui pegar os dados",
+    "authRequired": "Precisa logar",
+    "invalidSession": "Sessão expirou, loga de novo",
+    "paymentFailed": "Erro no pagamento",
+    "noCheckoutUrl": "URL de checkout não encontrada",
+    "activationFailed": "Não consegui ativar a licença"
+  },
+  "security": {
+    "title": "Sem Injeção = Baixo Risco",
+    "description": "A equipe trabalhou duro em um método sem injeção para instruir um personagem a completar todas as tarefas possíveis SEM usar injeção ou escrita na memória!",
+    "injectionMethods": {
+      "title": "Entendendo Métodos de Injeção",
+      "description": "A maioria dos bots públicos no mercado hoje usa uma forma ou outra de injeção ou escrita na memória. Injeção, simplesmente declarada, é um programa de software alterando valores na memória do jogo para realizar uma ação (por exemplo, se você quiser clicar em um item, você 'diria' ao jogo que clicou no item chamando funções no Path of Exile)."
+    },
+    "injectionDescription": "A maioria dos bots por aí injeta código ou mexe direto na memória do jogo. Basicamente eles 'hackeiam' o PoE pra fazer o char se mover e pegar itens modificando os valores do jogo.",
+    "nonInjection": {
+      "title": "Nossa Abordagem Sem Injeção",
+      "description": "A equipe trabalhou duro em um método sem injeção para instruir um personagem a completar todas as tarefas possíveis SEM usar injeção ou escrita na memória! Embora o programador de bot comum pensaria que isso é uma enorme perda de tempo e recursos (é MUITO mais trabalho). No entanto, achamos que definitivamente vale a pena!"
+    },
+    "nonInjectionDescription": "A gente desenvolveu um sistema que não precisa injetar nada no jogo! Dá muito mais trampo fazer assim, mas vale a pena pela segurança. O bot funciona 100% externo, sem tocar no cliente do PoE.",
+    "responsibility": {
+      "title": "Sua Responsabilidade",
+      "description": "Reconhecemos que a Grinding Gear Games se opõe ao uso de programas de bot e não os autoriza nos TOS/EULA. É nossa posição, no entanto, que a Grinding Gear Games não tem o direito de controlar programas de software complementares que desenvolvedores de software terceirizados criam ou vendem e que temos todo o direito de oferecer nosso programa para venda. Dito isso, não temos controle sobre o desejo da Grinding Gear Games de livrar seu ambiente de jogos de programas de bot. Ao usar nosso software, é possível que a Grinding Gear Games possa banir sua conta e citar a linguagem de seus TOS e EULA como o motivo do banimento. Você deve estar ciente de que, ao usar nosso software, a Grinding Gear Games pode tomar medidas contra você pelo que considera ser uma violação de seus contratos e que o risco disso acontecer é inteiramente seu, o comprador. Se você está preocupado com a possibilidade de ser banido ou ser acusado de violar os contratos da Grinding Gear Games, você não deve usar nosso software."
+    },
+    "responsibilityDescription": "Real oficial: a GGG não curte bots e pode dar ban se te pegarem. A gente faz o máximo pra deixar o bot seguro, mas usar é por sua conta e risco. Se tu tá preocupado com ban, melhor não usar. Sem choro depois, beleza?"
+  },
+  "meta": {
+    "title": "RaidBot 2: O Bot Definitivo do PoE 2",
+    "description": "RaidBot 2 - bot 100% externo pro PoE2. Combat system insano, pickit inteligente e progressão completa do atlas com waystone crafting. Zero injeção no cliente.",
+    "keywords": "Path of Exile 2, PoE2, RaidBot 2, bot farm, endgame, smart pickit, loot filter, fast combat, bot externo"
+  },
+  "features": {
+    "title": "Features Disponíveis",
+    "description": "Bot vem com farm básico na versão free, e features premium pra endgame pesado",
+    "freeVersion": "FREE",
+    "premiumVersion": "PREMIUM",
+    "freeFeatures": {
+      "combat": "Combat system rápido e otimizado",
+      "itemLooting": "Pickit avançado com regras customizadas",
+      "areaFarming": "Farm básico de áreas",
+      "detection": "Proteção anti-detecção"
+    },
+    "premiumFeatures": {
+      "allFree": "Tudo do FREE incluído",
+      "atlas": "Farm completo do Atlas endgame",
+      "partyBot": "Party system multi-bot pra follow/fight."
+    },
+    "purchasePremium": "Comprar Premium",
+    "items": {
+      "combat": {
+        "title": "Combat System Insano",
+        "description": "Deleta os mobs com kiting avançado que acha spots seguros automaticamente sem parar de dar dano. Sistema de prioridade de skills, flask management eficiente e target priority pra magic, rare e unique."
+      },
+      "partySystem": {
+        "title": "Follow-Bot Incluso",
+        "description": "Bots seguem outros bots ou seguem você no manual play. Perfeito pra multi-bot farming ou pra ter ajuda no combate enquanto joga."
+      },
+      "lootSystem": {
+        "title": "Smart Pickit",
+        "description": "Pega só item bom usando algoritmo que avalia vários stats ao mesmo tempo. Só loot que vale a pena."
+      },
+      "flaskManagement": {
+        "title": "Flask Management Smart",
+        "description": "Usa os frascos no timing certo baseado em HP/ES/Mana com chicken automático."
+      },
+      "rareHunting": {
+        "title": "Rare Hunting System",
+        "description": "Detecta e caça rares de qualquer distância. Farm efficiency no máximo."
+      },
+      "atlasNavigation": {
+        "title": "Atlas Navigation",
+        "description": "Navega o atlas de boa, crafta waystones e evita mods ruins ou layouts chatos."
+      },
+      "waystoneEnhancement": {
+        "title": "Waystone Enhancement Top",
+        "description": "Instila waystones com distilled emotions e usa precursor tablets nas towers pra maximize os rewards do endgame."
+      },
+      "completeAutomation": {
+        "title": "Automação Total",
+        "description": "Faz tudo no jogo: ativa Breach, Ritual, Delirium automático, stash de valores, vende trash, crafta waystones e gerencia progressão do Atlas."
+      },
+      "safeAutomation": {
+        "title": "Método Externo = Mais Safe",
+        "description": "100% externo, não mexe no cliente nem injeta na memória. Bem mais seguro que os outros bots por aí."
+      }
+    }
+  },
+  "details": {
+    "title": "Bot Completo pro PoE 2",
+    "description": "RaidBot 2 junta automação poderosa com tecnologia externa refinada. Performance top tier.",
+    "items": {
+      "nextGeneration": {
+        "title": "Full Automation PoE2",
+        "description": "Bot faz tudo no PoE2: mata mob, pega loot bom, organiza stash, crafta waystone e farma o atlas sozinho. Processo 100% externo deixa sua conta mais safe sem tocar no cliente. Só dar start e deixar farmando."
+      },
+      "combatSystem": {
+        "title": "Combat Lightning Fast",
+        "description": "Configura o combate do seu jeito. Sistema de kiting acha spots seguros e reposiciona pra não morrer. Define quando usar flask por HP/ES/Mana e customiza prioridade e cooldown das skills. Lida com movement skills e ajusta range de ataque e distância segura pra sua build."
+      },
+      "partyCoordination": {
+        "title": "Party System Multi-Bot",
+        "description": "Roda vários bots juntos - um lidera e os outros seguem. Diferente dos outros follow bots, os nossos lutam e ajudam no clear junto com o líder, deixando o farm muito mais eficiente. Líder invita automaticamente e espera quem fica pra trás."
+      },
+      "monsterTargeting": {
+        "title": "Rare Hunter Otimizado",
+        "description": "Bot detecta rares e prioriza eles de qualquer distância enquanto navega o mapa. Clear rápido e mais drops valiosos."
+      },
+      "waystoneConfig": {
+        "title": "Waystone Management Completo",
+        "description": "Escolhe quais mapas rodar por tier, raridade e mods. Bot usa trans, aug, regal, alch, exalt e vaal nas waystones pra melhorar rewards. Sistema de instillation aplica distilled emotions pra bonus rewards. Tower influence usa precursor tablets pra maximizar endgame progression. Blacklist de mods perigosos pra não morrer e farmar com eficiência."
+      },
+      "lootManagement": {
+        "title": "Loot Management Inteligente",
+        "description": "Cuida de tudo sobre itens no automático. Sistema de pickup rules com weighted sum igual no PoE2 trade pra customização fácil. Pega loot bom, abre chest, identifica e organiza stash. Vende trash, salva item bom e disenchant, tudo nas regras que você configurar."
+      },
+      "community": {
+        "title": "Comunidade Ativa & Suporte",
+        "description": "Milhares de players no Discord e fórum. Compartilha configs, pega ajuda pra otimizar setup e fica por dentro das novidades. Galera ativa posta build guides, pickits prontos e strats de farm que você implementa rapidinho. Updates frequentes e suporte rápido mantendo o bot sempre atualizado."
+      }
+    }
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Tudo sobre o RaidBot 2 pro PoE 2",
+    "items": {
+      "requirements": {
+        "question": "Quais os requisitos pra rodar o bot?",
+        "answer": "Precisa do DirectX Runtime e Visual C++ 2017 (x64). Tem que rodar o PoE2 com 30+ FPS e deixar a escala do Windows em 100% pra não dar misclick."
+      },
+      "chatProblem": {
+        "question": "Por que o bot fica abrindo e fechando o chat?",
+        "answer": "Se tá só abrindo e fechando o chat, os offsets de memória precisam de update. Geralmente acontece depois de patch do jogo. Cola no Discord pra pegar os offsets atualizados ou espera o próximo update do bot."
+      },
+      "setup": {
+        "question": "Como faço o setup do bot?",
+        "answer": "Antes de dar start, faz isso aqui...",
+        "setupSteps": [
+          "Escala do Windows em 100% (Configurações > Sistema > Vídeo > Escala)",
+          "Roda o bot como admin",
+          "Jogo em Inglês (só funciona em inglês)",
+          "Em Options > Interface, ativa 'Always Highlight'",
+          "Key Pickup em 'Use Bound Key' ou 'Use Highlight Key'",
+          "Binda 'Toggle Highlighting' em qualquer tecla",
+          "Desativa todos os loot filters do jogo",
+          "Movimento por clique do mouse (não WASD)",
+          "Binda 'Move Only' numa tecla (tipo 'T')",
+          "Tab de currency tem que ser a última do stash"
+        ]
+      },
+      "resolutions": {
+        "question": "Funciona em qual resolução?",
+        "answer": "Feito pra 1920x1080 mas roda em outras. Pode dar ruim em resolução muito baixa (tipo 800x600) ou aspect ratio diferente de 16:9."
+      },
+      "limitations": {
+        "question": "Tem alguma limitação no bot?",
+        "answer": "Por enquanto tem isso aqui...",
+        "limitationsList": [
+          "Tem que configurar keybind das skills manual (não lê do jogo)",
+          "Só movimento por mouse click (sem WASD)",
+          "Atlas navigation pode bugar com zoom in (deixa sempre zoom out total)",
+          "Pode dar problema com stash tabs (volta pra ordem original se bugar)"
+        ]
+      },
+      "controls": {
+        "question": "Quais as hotkeys do bot?",
+        "answer": "Teclas principais:",
+        "controlsList": [
+          {
+            "key": "F12",
+            "action": "Pausar/Despausar"
+          },
+          {
+            "key": "F7",
+            "action": "Gerar dump de inventário (enquanto o bot está pausado)"
+          },
+          {
+            "key": "INICIAR/PARAR",
+            "action": "Recarregar todas as configurações"
+          }
+        ]
+      },
+      "pickit": {
+        "question": "Como configuro o Pickit?",
+        "answer": "Pra pegar os nomes certos dos mods...",
+        "pickitSteps": [
+          "Põe os itens com mods bons no inventário",
+          "Start no bot e pausa",
+          "Aperta F7 pra gerar dump",
+          "Olha no Logs/dump.log os detalhes",
+          "Pega os nomes exatos dos mods",
+          "Confere no modslist.html",
+          "Usa o ID exato no config do pickit"
+        ]
+      },
+      "logDisable": {
+        "question": "Como desativo os logs?",
+        "answer": "Pra desativar logs no Windows, deixa read-only...",
+        "logDisableSteps": [
+          "Acha os logs na pasta do bot",
+          "Botão direito nos arquivos de log",
+          "Vai em 'Propriedades'",
+          "Marca 'Somente leitura'",
+          "Clica em 'Aplicar' e 'OK'"
+        ],
+        "logDisableNote": "Assim o bot não escreve nesses arquivos, bom pra economizar disco ou manter privacidade."
+      },
+      "hardwareLicense": {
+        "question": "Licença é travada no hardware? Posso usar em outro PC?",
+        "answer": "Não! Licença NÃO é travada no PC. Usa em quantos PCs quiser. Só logar com sua conta em qualquer máquina pra ativar. Pode trocar entre desktop, notebook, o que for, sem problema."
+      }
+    }
+  },
+  "purchase": {
+    "meta": {
+      "title": "RaidBot - Comprar Licença",
+      "description": "Pega o Premium e libera tudo do endgame atlas."
+    },
+    "title": "Licença do RaidBot 2",
+    "subtitle": "Upgrade pro Premium e desbloqueia farm completo do atlas endgame, com waystone crafting e progressão avançada.",
+    "comparison": {
+      "title": "Free vs Premium",
+      "features": {
+        "automation": "Automação Top",
+        "combat": "Combat & Monster Clear",
+        "itemManagement": "Item Management",
+        "flaskSystem": "Flask System",
+        "itemFiltering": "Loot Filter Avançado",
+        "advancedKiting": "Kiting System Pro",
+        "specialEncounters": "Breach, Ritual, Delirium",
+        "followBot": "Multi-Bot Party System",
+        "atlasFarming": "Atlas Endgame Farm",
+        "waystoneInstillation": "Waystone Instillation",
+        "towerInfluence": "Tower & Tablet System"
+      }
+    },
+    "licenseInfo": {
+      "title": "Info da Licença",
+      "description": "Cada licença vale pra 1 bot só. Quer rodar vários? Precisa de mais licenças."
+    },
+    "durationSelection": {
+      "title": "Escolhe o Plano",
+      "weekly": {
+        "name": "Semanal",
+        "price": "€9,50",
+        "period": "/semana",
+        "originalPrice": "",
+        "savePercentage": ""
+      },
+      "monthly": {
+        "name": "Mensal",
+        "price": "€19",
+        "period": "/mês",
+        "originalPrice": "",
+        "savePercentage": "",
+        "savingsNote": "Economia de 50% comparado ao semanal"
+      },
+      "yearly": {
+        "name": "Anual",
+        "price": "€129",
+        "period": "/ano",
+        "originalPrice": "",
+        "savePercentage": "",
+        "savingsNote": "Economia de 43% comparado ao mensal"
+      },
+      "lifetime": {
+        "name": "Vitalícia",
+        "price": "€199",
+        "period": "/para sempre",
+        "originalPrice": "€240",
+        "savePercentage": "17% OFF",
+        "description": "Paga uma vez, usa para sempre"
+      }
+    },
+    "paymentOptions": {
+      "title": "Opções de Pagamento",
+      "autoRenew": {
+        "label": "Auto-renovação",
+        "description": "Renova sozinho quando vencer. Cancela quando quiser no painel da conta."
+      }
+    },
+    "checkoutButton": "Ir pro Pagamento",
+    "loginRequired": "Precisa logar pra comprar.",
+    "refundPolicy": {
+      "title": "Política de Reembolso",
+      "description": "Teve problema com pagamento ou não curtiu o produto? Oferecemos reembolso! Atenção: o reembolso será processado menos as taxas do processador de pagamento (taxas do PayPal/Stripe) que não são reembolsáveis. Só mandar DM pro alk no Discord ou fórum que a gente devolve rapidinho."
+    }
+  },
+  "paymentSuccess": {
+    "title": "Pagamento Confirmado",
+    "successTitle": "Valeu pela compra!",
+    "failedTitle": "Pagamento incompleto",
+    "paymentStatus": "Status do Pagamento",
+    "verifyingPayment": "Checando pagamento...",
+    "successMessage": "Pagamento confirmado! Licença chegando.",
+    "errorMessage": "Erro na verificação. ID de sessão não encontrado.",
+    "viewLicenses": "Ver Minhas Licenças",
+    "processingNote": "Obs: PayPal pode demorar 3-5 min pra processar. A licença aparece quando confirmar o pagamento.",
+    "refreshNote": "Dá F5 na página de licenças pra ver a nova depois que processar."
+  },
+  "licenses": {
+    "title": "Minhas Licenças do EB2",
+    "description": "Gerencia suas licenças e vê o status.",
+    "classicNote": "Tá procurando licenças do Classic?",
+    "manageClassic": "Clica aqui",
+    "loading": "Carregando licenças...",
+    "noLicenses": "Ainda não tem licença do RaidBot 2.",
+    "buyLicense": "Comprar Licença",
+    "tableHeaders": {
+      "licenseKey": "Chave",
+      "startDate": "Início",
+      "duration": "Duração",
+      "expiryDate": "Vencimento",
+      "status": "Status",
+      "autoRenewal": "Auto-Renovação",
+      "actions": "Ações"
+    },
+    "autoRenewalStatus": {
+      "enabled": "Ligada",
+      "disabled": "Desligada",
+      "notAvailable": "Indisponível",
+      "lifetime": "Lifetime"
+    },
+    "dropdownOptions": {
+      "copyKey": "Copiar chave",
+      "renewLicense": "Renovar",
+      "setupAutoRenewal": "Ativar Auto-Renovação",
+      "cancelAutoRenewal": "Desativar Auto-Renovação",
+      "processing": "Processando..."
+    },
+    "confirmCancel": {
+      "title": "Desativar Auto-Renovação",
+      "message": "Certeza que quer desativar? Vai ter que renovar manualmente quando vencer."
+    },
+    "renewal": {
+      "selectPaymentMethod": "Escolhe Como Pagar",
+      "paypalDescription": "Paga uma vez no PayPal",
+      "stripeDescription": "Cartão com opção de assinatura",
+      "enableSubscription": "Ativar renovação automática",
+      "subscriptionOn": "Renova sozinho quando vencer",
+      "subscriptionOff": "Só pagamento único, renova manual depois"
+    }
+  },
+  "community": {
+    "title": "Entre na Nossa Comunidade",
+    "description": "Conecte-se com milhares de usuários do RaidBot. Receba ajuda, compartilhe estratégias e fique atualizado com os novos recursos.",
+    "cards": {
+      "discord": {
+        "title": "Discord Ativo",
+        "members": "5.000+ membros",
+        "description": "Suporte e chat em tempo real"
+      },
+      "forum": {
+        "title": "Fórum da Comunidade",
+        "availability": "24/7 disponível",
+        "description": "Guias e configurações"
+      },
+      "updates": {
+        "title": "Atualizações Regulares",
+        "frequency": "Lançamentos semanais",
+        "description": "Novos recursos e correções"
+      },
+      "support": {
+        "title": "Suporte Especializado",
+        "team": "Desenvolvedores ativos",
+        "description": "Suporte direto e feedback"
+      }
+    },
+    "buttons": {
+      "joinDiscord": "Entrar no Servidor Discord",
+      "visitForum": "Visitar Fórum"
+    }
+  },
+  "setupGuide": {
+    "title": "Guia de Configuração",
+    "description": "Configure o RaidBot 2 em minutos com nosso guia completo de configuração",
+    "videoSection": {
+      "title": "Tutorial em Vídeo",
+      "description": "Assista nosso guia passo a passo cobrindo instalação, configuração e sua primeira execução do bot"
+    },
+    "stepsSection": {
+      "steps": {
+        "download": {
+          "title": "Baixe o RaidBot 2",
+          "description": "Pegue a versão mais recente da nossa página de lançamentos"
+        },
+        "configure": {
+          "title": "Configure as Configurações do Jogo",
+          "description": "Defina o idioma para inglês, ative \"Sempre Destacar\", configure as teclas"
+        },
+        "start": {
+          "title": "Comece Grátis ou Premium",
+          "description": "Certifique-se de NÃO marcar \"Recursos Premium\" para versão grátis, ou adicione a chave de licença para acesso completo"
+        },
+        "run": {
+          "title": "Execute o Bot",
+          "description": "Inicie o jogo, inicie o bot e veja ele farmar automaticamente!"
+        }
+      },
+      "downloadButton": "Baixar RaidBot 2"
+    }
+  },
+  "pickits": {
+    "title": "Configurações de Pickit",
+    "description": "Crie, gerencie e compartilhe suas configs de pickit do Path of Exile. Pickits são filtros automáticos que dizem pro RaidBot quais itens pegar, vender ou ignorar durante o farm, ajudando a maximizar eficiência e lucro.",
+    "contest": {
+      "title": "Contest de Pickit - Ganhe Licença Vitalícia!",
+      "description": "Os 3 primeiros criadores de pickit que chegarem a 100 likes na config ganham LICENÇA VITALÍCIA GRÁTIS do RaidBot 2! Compartilha seus melhores pickits e interage com a galera no Discord pra chegar no topo."
+    },
+    "tabs": {
+      "public": "Biblioteca Pública",
+      "my": "Meus Pickits"
+    },
+    "actions": {
+      "createNew": "Criar Novo Pickit",
+      "createFirst": "Criar Primeiro Pickit",
+      "search": "Buscar pickits...",
+      "edit": "Editar",
+      "delete": "Deletar",
+      "view": "Ver",
+      "share": "Compartilhar",
+      "like": "Curtir",
+      "unlike": "Descurtir"
+    },
+    "sort": {
+      "newest": "Mais Recente",
+      "recentlyUpdated": "Atualizado Recentemente",
+      "mostLiked": "Mais Curtido",
+      "mostViewed": "Mais Visto",
+      "name": "Nome"
+    },
+    "league": {
+      "all": "Todas as Ligas",
+      "filter": "Filtrar por liga"
+    },
+    "empty": {
+      "title": "Nenhum pickit encontrado",
+      "publicDescription": "Ainda não tem pickit público. Seja o primeiro a compartilhar!",
+      "myDescription": "Você ainda não criou nenhum pickit.",
+      "loginRequired": "Faça login pra criar e gerenciar seus pickits"
+    },
+    "stats": {
+      "views": "views",
+      "likes": "likes",
+      "by": "por"
+    },
+    "pagination": {
+      "previous": "Anterior",
+      "next": "Próximo",
+      "page": "Página",
+      "of": "de"
+    },
+    "view": {
+      "backTo": "Voltar para",
+      "updated": "Atualizado",
+      "copyLink": "Copiar Link",
+      "configuration": "Configuração do Pickit",
+      "lootFilter": "Filtro de Loot",
+      "download": "Baixar",
+      "howToUse": {
+        "title": "Como Usar Este Pickit",
+        "method1": {
+          "title": "Método 1: Pela Interface do Bot",
+          "steps": {
+            "downloadIpd": "Baixa o arquivo <strong>.ipd</strong> ali em cima",
+            "goToPickit": "No RaidBot, vai na aba <strong>Pickit</strong>",
+            "selectProfile": "Seleciona <strong>Default</strong> ou o perfil que você quer editar",
+            "clickManage": "Clica no botão <strong>Manage</strong>",
+            "clickOpen": "Clica em <strong>Open</strong> pra abrir o editor",
+            "replaceContent": "Substitui o conteúdo com a configuração baixada",
+            "saveChanges": "Salva as mudanças"
+          }
+        },
+        "method2": {
+          "title": "Método 2: Substituição Direta do Arquivo",
+          "steps": {
+            "downloadIpd": "Baixa o arquivo <strong>.ipd</strong> ali em cima",
+            "navigateFolder": "Vai na pasta <strong>Configuration</strong> do RaidBot",
+            "replaceFile": "Substitui o arquivo <strong>.ipd</strong> existente pelo baixado",
+            "restartBot": "Reinicia o bot ou recarrega a configuração"
+          }
+        },
+        "lootFilterTip": "O filtro de loot (.filter) pode ser usado separadamente nas configurações de filtro do Path of Exile"
+      }
+    }
+  },
+  "getStarted": {
+    "meta": {
+      "title": "Comece com o RaidBot 2 - Teste Grátis",
+      "description": "Comece seu teste gratuito do RaidBot 2. Farme áreas do Path of Exile 2 automaticamente sem limite de tempo."
+    },
+    "hero": {
+      "badge": "TESTE GRÁTIS",
+      "title": "Comece Seu Teste Grátis do RaidBot 2",
+      "description": "<strong>Sem registro, sem chave de licença!</strong> Só baixar o bot e começar a usar de graça - certifique-se de <strong>NÃO</strong> marcar \"Recursos Premium\". Farme áreas automaticamente sem limite de tempo. Suas configurações são salvas quando você faz o upgrade depois."
+    },
+    "videoDescription": "Assista nosso guia rápido de configuração para começar em minutos",
+    "help": {
+      "title": "Precisa de Ajuda pra Começar?",
+      "description": "Entre na nossa comunidade Discord pra suporte instantâneo! Nossos membros experientes e equipe de suporte estão prontos pra ajudar você a configurar e otimizar seu bot.",
+      "linkText": "Entre no Discord pra Suporte"
+    },
+    "cta": {
+      "download": "Baixar RaidBot 2",
+      "premium": "Compre Premium pra Farmar Atlas"
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "items": {
+        "duration": {
+          "question": "Por quanto tempo posso usar a versão grátis?",
+          "answer": "Pra sempre! Não tem limite de tempo na versão grátis. Você pode farmar áreas da campanha o quanto quiser."
+        },
+        "included": {
+          "question": "O que exatamente tá incluído na versão grátis?",
+          "answer": "A versão grátis inclui todos os recursos principais: automação de combate, coleta de itens, gerenciamento de frascos e farm em todas as áreas da campanha. Só não inclui mapeamento do Atlas ou modo grupo."
+        },
+        "upgrade": {
+          "question": "O que acontece com minhas configurações quando eu fizer upgrade?",
+          "answer": "Todas suas configurações são preservadas! Quando fizer upgrade, só marque \"Recursos Premium\", coloque sua chave de licença e continue farmando com todas suas configurações salvas intactas."
+        },
+        "license": {
+          "question": "Preciso de uma chave de licença pra versão grátis?",
+          "answer": "Não! A versão grátis não precisa de chave de licença, registro ou login. Só baixar, manter \"Recursos Premium\" desmarcado e começar a farmar imediatamente."
+        }
+      }
+    },
+    "finalCta": {
+      "title": "Pronto pra Começar a Farmar?",
+      "button": "Baixar RaidBot 2"
+    }
+  }
+}

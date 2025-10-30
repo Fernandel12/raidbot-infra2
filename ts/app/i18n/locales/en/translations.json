@@ -1,0 +1,229 @@
+{
+  "global": {
+    "download": "Download",
+    "purchase": "Purchase",
+    "feature": "Feature",
+    "discordServer": "Discord Server",
+    "forum": "Forum",
+    "login": "Log In",
+    "logout": "Logout",
+    "loggingOut": "Logging out...",
+    "manageLicenses": "Manage Licenses",
+    "error": "Error",
+    "success": "Success",
+    "loading": "Loading",
+    "processing": "Processing...",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "proceed": "Proceed",
+    "back": "Back",
+    "submit": "Submit",
+    "save": "Save",
+    "copy": "Copy",
+    "copied": "Copied to clipboard!",
+    "viewDetails": "View Details",
+    "learnMore": "Learn More",
+    "tryAgain": "Try again",
+    "filter": "Filter"
+  },
+  "products": {
+    "raidBot2": "RaidBot",
+    "raidBotClassic": "RaidBot Classic",
+    "raid": "Raid",
+    "bot": "Bot",
+    "classic": "Classic"
+  },
+  "header": {
+    "joinDiscord": "Join the Discord",
+    "checkForum": "Check the Forum",
+    "title": "RAIDBOT",
+    "tagline": "Your RAID: Shadow Legends Assistant",
+    "description": "Many Farming Features"
+  },
+  "footer": {
+    "raidBot": "RaidBot",
+    "resources": "Resources",
+    "community": "Community",
+    "legal": "Legal",
+    "aboutUs": "About Us",
+    "gettingStarted": "Getting Started",
+    "guides": "Guides",
+    "faq": "FAQ",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "allRightsReserved": "All rights reserved",
+    "raidShadowLegendsBot": "Raid: Shadow Legends Bot"
+  },
+  "auth": {
+    "loginRequired": "Authentication required. Please log in first.",
+    "processingLogin": "Processing login...",
+    "loginError": "Login Error",
+    "redirecting": "Redirecting to home page...",
+    "logoutSuccess": "You have been successfully logged out."
+  },
+  "payment": {
+    "verifyingPayment": "Verifying your payment...",
+    "paymentSuccess": "Your payment was successful! Your license will be activated shortly.",
+    "paymentFailure": "Payment verification failed. No session ID was provided.",
+    "viewLicenses": "View My Licenses",
+    "proceedToCheckout": "Proceed to Checkout",
+    "securePayment": "Secure payment processing by PayPal. All major credit cards accepted."
+  },
+  "license": {
+    "activateTitle": "How to Activate Your License",
+    "activateStep1": "Step 1: Open Authenticate Menu",
+    "activateStep1Details": "After launching RaidBot, click on the <strong>Authenticate</strong> menu in the top navigation bar, then select <strong>Activate</strong> from the dropdown menu.",
+    "activateStep2": "Step 2: Enter Your License Key",
+    "activateStep2Details": "When the authentication dialog appears, enter your license key. You can copy your license key from the table above.",
+    "activateStep2Additional": "Choose to activate for the current profile or all profiles.",
+    "activateStep3": "Step 3: Confirmation",
+    "activateStep3Details": "After successful activation, you'll see a confirmation dialog stating that \"Premium features unlocked!\" The authentication status will also change from \"Disconnected\" to \"Premium User\" in the status panel.",
+    "troubleshootingTitle": "Troubleshooting",
+    "troubleInvalidKey": "<strong>Invalid License Key:</strong> Double-check that you've entered the correct license key with no extra spaces",
+    "troubleAlreadyActivated": "<strong>Already Activated:</strong> Each license key can only be used on one machine at a time",
+    "troubleExpired": "<strong>Expired License:</strong> Check your license status on this page to ensure it hasn't expired",
+    "licenseDuration": "License Duration",
+    "licenseType": "License Type",
+    "licenseStatus": "License Status",
+    "expiryDate": "Expiry Date",
+    "startDate": "Start Date",
+    "licenseKey": "License Key",
+    "status": {
+      "active": "ACTIVE",
+      "expired": "EXPIRED",
+      "revoked": "REVOKED",
+      "pending": "PENDING",
+      "cancelled": "CANCELLED"
+    },
+    "duration": {
+      "lifetime": "Lifetime",
+      "oneDay": "1 Day",
+      "oneWeek": "1 Week",
+      "oneMonth": "1 Month",
+      "threeMonths": "3 Months",
+      "unknown": "Unknown"
+    },
+    "actions": {
+      "renewLicense": "Renew License",
+      "copyLicense": "Copy license key",
+      "purchaseAdditional": "Purchase Additional License"
+    }
+  },
+  "errors": {
+    "general": "An unexpected error occurred",
+    "fetchFailed": "Failed to fetch data",
+    "authRequired": "Authentication required",
+    "invalidSession": "Invalid session, please log in again",
+    "paymentFailed": "Payment processing failed",
+    "noCheckoutUrl": "No checkout URL returned from the API",
+    "activationFailed": "License activation failed"
+  },
+  "security": {
+    "title": "No Injection = Low Risk",
+    "description": "The team worked hard on a non injection method of instructing a character to complete every possible task WITHOUT using injection or memory writing!",
+    "injectionMethods": "Understanding Injection Methods",
+    "injectionDescription": "The majority of public bots on the market today use one form or another of injection or memory writing. Injection simply stated is a software program changing values in the games memory to achieve an action (for example; if you want to click on an item, you would 'tell' the game that you clicked on the item by calling functions in Path of Exile).",
+    "nonInjection": "Our Non-Injection Approach",
+    "nonInjectionDescription": "The team worked hard on a non injection method of instructing a character to complete every possible task WITHOUT using injection or memory writing! While the everyday bot programmer would think of this to be a huge waste of time & resources (it is MUCH more work). However we think that it definitively worth it!",
+    "responsibility": "Your Responsibility",
+    "responsibilityDescription": "We recognize that Grinding Gear Games is opposed to the use of bot programs and does not authorize them in the TOS/EULA. It is our position, however, that Grinding Gear Games has no right to control add-on software programs that third-party software developers create or sell and that we have every right to offer our program for sale. With that being said, we have no control over Grinding Gear Games's desire to rid its gaming environment of bot programs. By using our software, it is possible that Grinding Gear Games could ban your account and cite the language of its TOS and EULA as the reason for the ban. You should be aware that by using our software, Grinding Gear Games could take action against you for what it considers to be a breach of its contracts and that the risk of this happening is entirely on you the purchaser. If you are concerned about the possibility of being banned or being accused of violating Grinding Gear Games's contracts, you should not use our software."
+  },
+  "meta": {
+    "title": "RaidBot: Best bot for RAID: Shadow Legends",
+    "description": "RaidBot is your ultimate assistant for RAID: Shadow Legends. Automate farming, arena battles, and more with human-like behavior simulation.",
+    "keywords": "RAID Shadow Legends, RAID bot, farming bot, arena bot, auto farm, BlueStacks bot, android emulator bot"
+  },
+  "features": {
+    "title": "WHAT WE OFFER",
+    "farmWhileAfk": {
+      "title": "FARM WHILE AFK",
+      "description": "Selected Campaign or Dungeons boss • Battle Arena and filter by enemy team power • Buy Blue/Green shard from market • Level heroes in Sparring Pit • Level food • Manage bastion reward • Fight Clan boss"
+    },
+    "community": {
+      "title": "BE PART OF A COMMUNITY",
+      "description": "24/7 Support • Active forum • Chatbox"
+    },
+    "safeAndEasy": {
+      "title": "SAFE AND EASY",
+      "description": "Running inside BlueStacks Android emulator, very hard to detect, never detected since first release. Easy to setup and run. Emulates human behavior to be more secure."
+    }
+  },
+  "pricing": {
+    "title": "STORE",
+    "securedPayment": "Secured payment",
+    "paymentMethods": "Mastercard • PayPal • Visa • Google Pay",
+    "free": {
+      "title": "FREE OFFER",
+      "price": "Free",
+      "description": "FREE <3",
+      "features": [
+        "Basic features for casual players"
+      ],
+      "buttonText": "TRY IT"
+    },
+    "regular": {
+      "title": "REGULAR OFFER",
+      "price": "From 5€ / week",
+      "description": "Support our dev <3",
+      "features": [
+        "All standard features for advanced player"
+      ],
+      "buttonText": "PURCHASE"
+    },
+    "premium": {
+      "title": "PREMIUM OFFER",
+      "price": "From 7€ / week",
+      "description": "Access to beta features",
+      "features": [
+        "Endgame features for elite players"
+      ],
+      "buttonText": "PURCHASE"
+    }
+  },
+  "licenses": {
+    "title": "Your RaidBot Licenses",
+    "description": "Manage your RaidBot licenses and view their status.",
+    "loading": "Loading your licenses...",
+    "noLicenses": "You don't have any RaidBot licenses yet.",
+    "buyLicense": "Purchase a License",
+    "tableHeaders": {
+      "licenseKey": "License Key",
+      "startDate": "Start Date",
+      "duration": "Duration",
+      "expiryDate": "Expiry Date",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "dropdownOptions": {
+      "copyKey": "Copy license key",
+      "renewLicense": "Renew License",
+      "processing": "Processing..."
+    }
+  },
+  "purchase": {
+    "meta": {
+      "title": "RaidBot - Purchase License",
+      "description": "Purchase a license for RaidBot and unlock all features."
+    },
+    "title": "RaidBot License",
+    "subtitle": "Purchase a license to unlock all bot features.",
+    "loginRequired": "You must be logged in to make a purchase.",
+    "checkoutButton": "Proceed to Checkout",
+    "refundPolicy": {
+      "title": "Our Refund Policy",
+      "description": "If you encounter any problems with your payment or if you're not satisfied with the product, we offer a refund policy. Please note that refunds will be processed minus the transaction processor fees (PayPal/Stripe fees) as these are non-refundable. Simply message alk on our Discord server or forum, and we'll process your refund promptly."
+    }
+  },
+  "paymentSuccess": {
+    "title": "Payment Successful",
+    "successTitle": "Thanks for your purchase!",
+    "failedTitle": "Payment incomplete",
+    "paymentStatus": "Payment Status",
+    "verifyingPayment": "Verifying your payment...",
+    "successMessage": "Your payment was successful! Your license will be activated shortly.",
+    "errorMessage": "Payment verification failed. No session ID was provided.",
+    "viewLicenses": "View My Licenses",
+    "processingNote": "Please note: PayPal payments may take up to 3-5 minutes to process completely. Your license will be added to your account once payment processing is complete.",
+    "refreshNote": "You will need to refresh the licenses page to see your newly added license after processing is complete."
+  }
+}

@@ -1,0 +1,56 @@
+services:
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy:latest
+    container_name: nginx-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certificates:/etc/nginx/certs:ro
+      - ./vhost.d:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - ./htpasswd:/etc/nginx/htpasswd:ro
+    networks:
+      - service-proxy
+    labels:
+      - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
+
+  acme-companion:
+    image: nginxproxy/acme-companion:latest
+    container_name: nginx-proxy-acme
+    restart: unless-stopped
+    environment:
+      - DEFAULT_EMAIL=admin@raidbot.app
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - certificates:/etc/nginx/certs:rw
+      - ./vhost.d:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - acme:/etc/acme.sh
+    depends_on:
+      - nginx-proxy
+
+  whoami:
+    image: jwilder/whoami:latest
+    restart: unless-stopped
+    environment:
+      - VIRTUAL_HOST=whoami.raidbot.app
+      - LETSENCRYPT_HOST=whoami.raidbot.app
+    depends_on:
+      - nginx-proxy
+    networks:
+      - service-proxy
+
+networks:
+  service-proxy:
+    external: true
+  internal:
+    internal: true
+
+volumes:
+  certificates:
+  html:
+  acme:
+  db-data:

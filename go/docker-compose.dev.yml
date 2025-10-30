@@ -1,0 +1,8 @@
+services:
+  mysql:
+    ports:
+      - 3306:3306
+
+  redis:
+    ports:
+      - 6379:6379

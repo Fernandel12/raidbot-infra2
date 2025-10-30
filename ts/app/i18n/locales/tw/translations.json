@@ -1,0 +1,663 @@
+{
+  "global": {
+    "download": "下載",
+    "purchase": "購買",
+    "feature": "功能",
+    "discordServer": "Discord伺服器",
+    "forum": "論壇",
+    "login": "登入",
+    "logout": "登出",
+    "loggingOut": "登出中...",
+    "manageLicenses": "管理授權",
+    "error": "錯誤",
+    "success": "成功",
+    "loading": "載入中",
+    "processing": "處理中...",
+    "confirm": "確認",
+    "cancel": "取消",
+    "proceed": "繼續",
+    "back": "返回",
+    "submit": "提交",
+    "save": "儲存",
+    "copy": "複製",
+    "copied": "已複製到剪貼簿！",
+    "viewDetails": "查看詳情",
+    "learnMore": "了解更多",
+    "tryAgain": "重試",
+    "filter": "篩選"
+  },
+  "products": {
+    "raidBot2": "RaidBot",
+    "raidBotClassic": "流亡機器人經典版",
+    "raid": "流亡",
+    "bot": "機器人",
+    "classic": "經典版"
+  },
+  "header": {
+    "joinDiscord": "加入Discord",
+    "checkForum": "查看論壇",
+    "description": "節省 100+ 小時的刷怪時間。全天候 24/7 刷終局遊戲內容。在您睡覺時獲得稀有物品。流亡機器人 2 完全自動化流亡黯道 2，從戰鬥到輿圖進展。",
+    "cta": "開始免費試用",
+    "purchaseLicense": "購買授權",
+    "forumLink": "https://community.raidbot.app",
+    "switchToEB2": "切換到流亡機器人 2",
+    "playingPoe2": "正在遊玩流亡黯道 2？"
+  },
+  "footer": {
+    "raidBot": "流亡機器人",
+    "resources": "資源",
+    "community": "社群",
+    "legal": "法律",
+    "aboutUs": "關於我們",
+    "gettingStarted": "入門指南",
+    "guides": "指南",
+    "faq": "常見問題",
+    "termsOfService": "服務條款",
+    "privacyPolicy": "隱私政策",
+    "allRightsReserved": "版權所有",
+    "raidShadowLegendsBot": "Raid: Shadow Legends 機器人"
+  },
+  "auth": {
+    "loginRequired": "需要身份驗證。請先登入。",
+    "processingLogin": "正在處理登入...",
+    "loginError": "登入錯誤",
+    "redirecting": "正在重新導向到首頁...",
+    "logoutSuccess": "您已成功登出。"
+  },
+  "payment": {
+    "verifyingPayment": "正在驗證您的付款...",
+    "paymentSuccess": "您的付款成功！您的授權即將啟用。",
+    "paymentFailure": "付款驗證失敗。未提供會話ID。",
+    "viewLicenses": "查看我的授權",
+    "proceedToCheckout": "前往結帳",
+    "securePayment": "PayPal安全付款處理。接受所有主要信用卡。"
+  },
+  "license": {
+    "activateTitle": "如何啟用您的授權",
+    "activateStep1": "步驟1：開啟認證選單",
+    "activateStep1Details": "啟動流亡機器人後，點擊頂部導覽列中的<strong>認證</strong>選單，然後從下拉式選單中選擇<strong>啟用</strong>。",
+    "activateStep2": "步驟2：輸入您的授權碼",
+    "activateStep2Details": "當認證對話框出現時，輸入您的授權碼。您可以從上表中複製您的授權碼。",
+    "activateStep2Additional": "選擇為當前設定檔或所有設定檔啟用。",
+    "activateStep3": "步驟3：確認",
+    "activateStep3Details": "成功啟用後，您將看到一個確認對話框，顯示「高級功能已解鎖！」狀態面板中的認證狀態也會從「已中斷連線」更改為「高級用戶」。",
+    "troubleshootingTitle": "疑難排解",
+    "troubleInvalidKey": "<strong>無效授權碼：</strong> 仔細檢查您輸入的授權碼是否正確，沒有多餘的空格",
+    "troubleAlreadyActivated": "<strong>已啟用：</strong> 每個授權碼一次只能在一台機器上使用",
+    "troubleExpired": "<strong>授權過期：</strong> 在此頁面檢查您的授權狀態，確保它沒有過期",
+    "licenseDuration": "授權期限",
+    "licenseType": "授權類型",
+    "licenseStatus": "授權狀態",
+    "expiryDate": "到期日期",
+    "startDate": "開始日期",
+    "licenseKey": "授權碼",
+    "autoRenewal": "自動續訂",
+    "status": {
+      "active": "啟用中",
+      "expired": "已過期",
+      "revoked": "已撤銷",
+      "pending": "待處理",
+      "cancelled": "已取消"
+    },
+    "duration": {
+      "lifetime": "終身",
+      "oneDay": "1天",
+      "oneWeek": "1週",
+      "oneMonth": "1個月",
+      "threeMonths": "3個月",
+      "unknown": "未知"
+    },
+    "actions": {
+      "renewLicense": "續訂授權",
+      "setupAutoRenewal": "設定自動續訂",
+      "cancelAutoRenewal": "取消自動續訂",
+      "copyLicense": "複製授權碼",
+      "purchaseAdditional": "購買額外授權"
+    },
+    "confirmCancel": {
+      "title": "確認取消",
+      "message": "您確定要取消此授權的自動續訂嗎？"
+    },
+    "renewal": {
+      "title": "續訂授權",
+      "message": "您即將續訂您的授權。",
+      "autoRenewalOption": "為此授權設定自動續訂",
+      "autoRenewalOn": "您的授權將在到期前自動續訂",
+      "autoRenewalOff": "您需要在授權到期時手動續訂",
+      "proceedToPayment": "前往付款"
+    }
+  },
+  "errors": {
+    "general": "發生意外錯誤",
+    "fetchFailed": "獲取資料失敗",
+    "authRequired": "需要身份驗證",
+    "invalidSession": "會話無效，請重新登入",
+    "paymentFailed": "付款處理失敗",
+    "noCheckoutUrl": "API未回傳結帳URL",
+    "activationFailed": "授權啟用失敗"
+  },
+  "security": {
+    "title": "無注入 = 低風險",
+    "description": "團隊努力研究無注入方法，指導角色完成所有可能的任務，無需使用注入或記憶體寫入！",
+    "injectionMethods": {
+      "title": "理解注入方法",
+      "description": "當今市場上的大多數公共機器人都使用某種形式的注入或記憶體寫入。簡單來說，注入是軟體程式改變遊戲記憶體中的值以實現動作（例如：如果您想點擊一個物品，您會透過呼叫流亡黯道中的函數來「告訴」遊戲您點擊了該物品）。"
+    },
+    "injectionDescription": "當今市場上的大多數公共機器人都使用某種形式的注入或記憶體寫入。簡單來說，注入是軟體程式改變遊戲記憶體中的值以實現動作（例如：如果您想點擊一個物品，您會透過呼叫流亡黯道中的函數來「告訴」遊戲您點擊了該物品）。",
+    "nonInjection": {
+      "title": "我們的無注入方法",
+      "description": "團隊努力研究無注入方法，指導角色完成所有可能的任務，無需使用注入或記憶體寫入！雖然日常機器人程式師會認為這是巨大的時間和資源浪費（確實需要更多工作）。但是我們認為這絕對值得！"
+    },
+    "nonInjectionDescription": "團隊努力研究無注入方法，指導角色完成所有可能的任務，無需使用注入或記憶體寫入！雖然日常機器人程式師會認為這是巨大的時間和資源浪費（確實需要更多工作）。但是我們認為這絕對值得！",
+    "responsibility": {
+      "title": "您的責任",
+      "description": "我們認識到Grinding Gear Games反對使用機器人程式，並且不在TOS/EULA中授權它們。然而，我們的立場是，Grinding Gear Games無權控制第三方軟體開發者創建或銷售的附加軟體程式，我們有權提供我們的程式銷售。話雖如此，我們無法控制Grinding Gear Games清除其遊戲環境中機器人程式的願望。透過使用我們的軟體，Grinding Gear Games可能會封鎖您的帳戶，並引用其TOS和EULA的語言作為封鎖理由。您應該意識到，透過使用我們的軟體，Grinding Gear Games可能會因為它認為是違反其合約的行為而對您採取行動，這種風險完全由您這個購買者承擔。如果您擔心被封鎖或被指控違反Grinding Gear Games的合約，您不應該使用我們的軟體。"
+    },
+    "responsibilityDescription": "我們認識到Grinding Gear Games反對使用機器人程式，並且不在TOS/EULA中授權它們。然而，我們的立場是，Grinding Gear Games無權控制第三方軟體開發者創建或銷售的附加軟體程式，我們有權提供我們的程式銷售。話雖如此，我們無法控制Grinding Gear Games清除其遊戲環境中機器人程式的願望。透過使用我們的軟體，Grinding Gear Games可能會封鎖您的帳戶，並引用其TOS和EULA的語言作為封鎖理由。您應該意識到，透過使用我們的軟體，Grinding Gear Games可能會因為它認為是違反其合約的行為而對您採取行動，這種風險完全由您這個購買者承擔。如果您擔心被封鎖或被指控違反Grinding Gear Games的合約，您不應該使用我們的軟體。"
+  },
+  "meta": {
+    "title": "流亡機器人 2：著名的流亡黯道 2 機器人",
+    "description": "流亡機器人 2 為流亡黯道 2 提供完全外部的機器人程式，具有閃電般的戰鬥、智能拾取系統和先進的輿圖進展及道標石製作功能。不修改遊戲客戶端。",
+    "keywords": "流亡黯道 2, PoE2, 流亡機器人 2, 刷怪機器人, 終局遊戲, 智能拾取, 物品過濾, 閃電般戰鬥, 外部記憶體機器人"
+  },
+  "features": {
+    "title": "可用功能",
+    "description": "我們的機器人在免費版本中包含基本的刷怪自動化功能，高級版本提供先進的終局遊戲刷怪功能",
+    "freeVersion": "免費版本",
+    "premiumVersion": "高級版本",
+    "freeFeatures": {
+      "combat": "快速優化戰鬥",
+      "itemLooting": "高級基於規則的物品拾取",
+      "areaFarming": "區域刷怪直到地圖階段",
+      "detection": "防檢測功能"
+    },
+    "premiumFeatures": {
+      "allFree": "包含所有免費功能",
+      "atlas": "終局遊戲輿圖地圖刷怪",
+      "partyBot": "多機器人跟隨/戰鬥組隊系統"
+    },
+    "purchasePremium": "購買高級版",
+    "items": {
+      "combat": {
+        "title": "閃電般戰鬥",
+        "description": "透過強大的高級風箏系統高效消滅敵人，該系統在保持傷害輸出的同時自動重新定位到安全地點。包含智能技能優先級系統、高效藥劑管理和針對魔法、稀有、傳奇怪物的智能目標選擇。"
+      },
+      "partySystem": {
+        "title": "包含跟隨機器人",
+        "description": "機器人可以跟隨其他機器人或在您手動遊戲時跟隨您。適用於多機器人刷怪或在您自己遊戲時獲得戰鬥幫助。"
+      },
+      "lootSystem": {
+        "title": "智能物品拾取",
+        "description": "使用權重演算法自動拾取有價值的物品，該演算法同時評估多個屬性，確保您只收集有利可圖的裝備。"
+      },
+      "flaskManagement": {
+        "title": "智能藥劑管理",
+        "description": "基於生命/能量護盾/魔力閾值智能管理藥劑使用，具有緊急撤退功能。"
+      },
+      "rareHunting": {
+        "title": "稀有怪物狩猟",
+        "description": "從任何距離檢測和狩猟稀有怪物，確保最大化刷怪效率。"
+      },
+      "atlasNavigation": {
+        "title": "輿圖導航",
+        "description": "智能導航輿圖，製作道標石，避免具有不需要的詞綴或不需要的地圖佈局的道標石。"
+      },
+      "waystoneEnhancement": {
+        "title": "高級道標石強化",
+        "description": "自動為道標石注入精煉的情感，並管理先驅石板以影響高塔，獲得最大終局遊戲獎勵。"
+      },
+      "completeAutomation": {
+        "title": "完整自動化",
+        "description": "處理所有遊戲玩法：自動激活特殊遭遇（裂隙、儀式、譫妄）、存放貴重物品、出售垃圾、製作道標石，以及高效管理輿圖進展。"
+      },
+      "safeAutomation": {
+        "title": "無修改記憶體提高安全性",
+        "description": "使用外部方法，不修改遊戲客戶端或注入記憶體，與其他機器人相比降低被偵測風險。"
+      }
+    }
+  },
+  "details": {
+    "title": "流亡黯道 2 完整自動化",
+    "description": "流亡機器人 2 結合強大的流亡黯道 2 自動化與我們精進的外部技術，提供最佳性能。",
+    "items": {
+      "nextGeneration": {
+        "title": "完整PoE2自動化",
+        "description": "自動化所有PoE2遊戲內容：殺死怪物、拾取有價值的戰利品、管理您的倉庫、製作道標石，並自動刷輿圖地圖。外部程序透過永不修改遊戲客戶端保持您的帳戶更安全。只需啟動它，當您離開時它就會處理一切。"
+      },
+      "combatSystem": {
+        "title": "閃電般戰鬥",
+        "description": "完全按照您的意願設置戰鬥。強大的風箏系統會自動找到安全位置並在戰鬥中重新定位以保持您的生存。配置基於您的生命/能量護盾/魔力的藥劑使用時機，自訂技能優先級和冷卻時間。系統處理移動技能，可以根據您的構建調整不同的攻擊距離和安全距離。"
+      },
+      "partyCoordination": {
+        "title": "多機器人組隊系統",
+        "description": "多個機器人一起運行，一個作為領導者，其他跟隨。與其他跟隨機器人不同，我們的跟隨者積極戰鬥並幫助與領導者一起清理地圖，使刷怪更加高效。領導者自動邀請跟隨者，並在他們落後時等待。"
+      },
+      "monsterTargeting": {
+        "title": "優化的稀有狩猟系統",
+        "description": "機器人自動檢測稀有怪物並在導航地圖時優先考慮它們，無論距離如何，確保快速地圖清理和更有價值的掉落。"
+      },
+      "waystoneConfig": {
+        "title": "完整道標石管理",
+        "description": "根據等級、稀有度和詞綴精確選擇要運行的地圖。機器人自動使用點金石、增幅石、富豪石、鍊金石、崇高石和瓦爾寶珠升級道標石以獲得更好的獎勵。高級注入系統自動為道標石應用精煉的情感以獲得額外獎勵。高塔影響系統管理先驅石板以最大化終局遊戲進展。您可以將危險詞綴列入黑名單，保持角色安全同時最大化刷怪效率。"
+      },
+      "lootManagement": {
+        "title": "智能戰利品管理",
+        "description": "自動處理與物品相關的一切。拾取規則系統允許像PoE2交易一樣進行權重和計算，實現高效且可維護的自訂。拾取有價值的戰利品、開箱子、鑑定物品，並整理您的倉庫。還處理出售垃圾、回收物品和解除附魔，所有這些都基於您配置的規則。"
+      },
+      "community": {
+        "title": "友好社群與支援",
+        "description": "加入我們Discord伺服器和論壇上成千上萬滿意的用戶。分享您的配置，獲得優化設置的幫助，並了解最新功能。我們活躍的社群提供構建指南、拾取配置和刷怪策略，只需點擊幾下就能實現。定期更新和響應式支援確保您的機器人始終領先於遊戲變化。"
+      }
+    }
+  },
+  "faq": {
+    "title": "常見問題",
+    "subtitle": "關於流亡黯道 2 的流亡機器人 2 您需要知道的一切",
+    "items": {
+      "requirements": {
+        "question": "流亡機器人 2 的系統要求是什麼？",
+        "answer": "流亡機器人 2 需要DirectX終端用戶執行時期和Visual C++ 2017可再發行套件包(x64)。您的系統必須在POE2中保持30+ FPS，您的Windows顯示縮放應設定為100%以防止誤點擊。"
+      },
+      "chatProblem": {
+        "question": "為什麼我的機器人啟動時只是打開和關閉聊天？",
+        "answer": "如果機器人啟動時只是打開和關閉聊天視窗，這表明記憶體偏移需要更新。這通常在遊戲補丁或更新後發生。查看我們的Discord伺服器獲取最新偏移更新或等待下一個機器人版本。"
+      },
+      "setup": {
+        "question": "如何正確設置流亡機器人 2？",
+        "answer": "啟動機器人之前，請按照以下設置步驟...",
+        "setupSteps": [
+          "將Windows顯示縮放設定為100%（設定，系統，顯示，縮放和版面配置）",
+          "以系統管理員身份執行機器人",
+          "將遊戲語言設定為英語（僅支援的語言）",
+          "在選項然後介面中，啟用「始終醒目提示」",
+          "將拾取鍵設定為「使用綁定鍵」或「使用醒目提示鍵」",
+          "在遊戲設定中將「切換醒目提示」綁定到您選擇的任何鍵",
+          "在遊戲中停用所有戰利品過濾器",
+          "在遊戲中使用滑鼠點擊移動模式",
+          "在POE2中將技能綁定到「僅移動」（例如，鍵'T'）",
+          "確保您用於貨幣的倉庫頁面在倉庫頁面清單中是最後一個"
+        ]
+      },
+      "resolutions": {
+        "question": "支援哪些螢幕解析度？",
+        "answer": "流亡機器人 2 專為1920x1080解析度設計，但適用於其他解析度。它可能無法在極低解析度（例如800x600）或非16:9縱橫比下正常工作。"
+      },
+      "limitations": {
+        "question": "流亡機器人 2 有哪些已知限制？",
+        "answer": "當前限制包括...",
+        "limitationsList": [
+          "手動技能鍵綁定配置（不從遊戲設定讀取）",
+          "僅滑鼠點擊移動（不支援QWSD）",
+          "如果攝影機放大，輿圖導航可能失敗（確保完全縮小）",
+          "可能的倉庫頁面問題（如果出現問題，重設為原始順序）"
+        ]
+      },
+      "controls": {
+        "question": "流亡機器人 2 的主要控制是什麼？",
+        "answer": "主要控制包括：",
+        "controlsList": [
+          {
+            "key": "F12",
+            "action": "暫停/取消暫停"
+          },
+          {
+            "key": "F7",
+            "action": "產生庫存轉儲（機器人暫停時）"
+          },
+          {
+            "key": "開始/停止",
+            "action": "重新載入所有設定"
+          }
+        ]
+      },
+      "pickit": {
+        "question": "如何正確配置拾取系統？",
+        "answer": "要使用正確的詞綴名稱...",
+        "pickitSteps": [
+          "將具有所需詞綴的物品放入您的庫存",
+          "啟動並暫停機器人",
+          "按F7產生轉儲",
+          "檢查Logs/dump.log獲取物品詳情",
+          "找到確切的詞綴名稱",
+          "在modslist.html中引用這些",
+          "在您的拾取配置中使用確切的ID格式"
+        ]
+      },
+      "logDisable": {
+        "question": "如何停用日誌檔案？",
+        "answer": "要在Windows中停用日誌檔案，將它們設為唯讀...",
+        "logDisableSteps": [
+          "在機器人目錄中定位日誌檔案",
+          "右鍵點擊日誌檔案",
+          "選擇「內容」",
+          "勾選「唯讀」核取方塊",
+          "點擊「套用」然後「確定」"
+        ],
+        "logDisableNote": "這會阻止機器人寫入這些檔案，這對於減少磁碟活動或維護隱私很有用。"
+      },
+      "hardwareLicense": {
+        "question": "授權是否綁定硬體？我可以在不同的電腦上使用我的授權嗎？",
+        "answer": "不，授權不綁定硬體。您可以在不同的設備和電腦上自由使用您的授權。只需在任何電腦上使用您的帳戶憑證登入即可啟用授權。這種靈活性讓您可以在桌上型電腦、筆記型電腦或任何其他電腦之間無限制地切換。"
+      }
+    }
+  },
+  "purchase": {
+    "meta": {
+      "title": "流亡機器人 - 購買授權",
+      "description": "升級到高級版並解鎖完整的終局遊戲輿圖地圖功能。"
+    },
+    "title": "流亡機器人 2 授權",
+    "subtitle": "升級到高級版並解鎖完整的終局遊戲輿圖地圖功能，包括道標石製作和先進輿圖進展功能。",
+    "comparison": {
+      "title": "免費版 vs 高級版功能",
+      "features": {
+        "automation": "高級自動化",
+        "combat": "戰鬥與怪物消滅",
+        "itemManagement": "物品管理",
+        "flaskSystem": "藥劑系統",
+        "itemFiltering": "高級物品過濾",
+        "advancedKiting": "高級風箏系統",
+        "specialEncounters": "特殊遭遇（裂隙、儀式、譫妄）",
+        "followBot": "多機器人組隊系統（跟隨機器人）",
+        "atlasFarming": "終局遊戲輿圖刷怪",
+        "waystoneInstillation": "道標石灌注系統",
+        "towerInfluence": "塔影響力及石板系統"
+      }
+    },
+    "licenseInfo": {
+      "title": "授權資訊",
+      "description": "每個授權僅適用於單個機器人實例。運行多個實例需要額外授權。"
+    },
+    "durationSelection": {
+      "title": "選擇授權期限",
+      "weekly": {
+        "name": "每週",
+        "price": "€9.50",
+        "period": "/週",
+        "originalPrice": "",
+        "savePercentage": ""
+      },
+      "monthly": {
+        "name": "每月",
+        "price": "€19",
+        "period": "/月",
+        "originalPrice": "",
+        "savePercentage": "",
+        "savingsNote": "相比每週訂閱節省50%"
+      },
+      "yearly": {
+        "name": "每年",
+        "price": "€129",
+        "period": "/年",
+        "originalPrice": "",
+        "savePercentage": "",
+        "savingsNote": "相比每月訂閱節省43%"
+      },
+      "lifetime": {
+        "name": "終身",
+        "price": "€199",
+        "period": "/終身",
+        "originalPrice": "€240",
+        "savePercentage": "17% OFF",
+        "description": "一次付款，終身使用"
+      }
+    },
+    "paymentOptions": {
+      "title": "付款選項",
+      "autoRenew": {
+        "label": "自動續訂訂閱",
+        "description": "在您的授權到期時自動續訂。可隨時從您的帳戶儀表板取消。"
+      }
+    },
+    "checkoutButton": "前往結帳",
+    "loginRequired": "您必須登入才能購買。",
+    "refundPolicy": {
+      "title": "我們的退款政策",
+      "description": "如果您在付款時遇到任何問題或對產品不滿意，我們提供退款政策。請注意，退款將扣除交易處理費（PayPal/Stripe手續費），因為這些費用無法退還。只需在我們的Discord伺服器或論壇上給alk發訊息，我們會及時處理您的退款。"
+    }
+  },
+  "paymentSuccess": {
+    "title": "付款成功",
+    "successTitle": "感謝您的購買！",
+    "failedTitle": "付款未完成",
+    "paymentStatus": "付款狀態",
+    "verifyingPayment": "正在驗證您的付款...",
+    "successMessage": "您的付款成功！您的授權即將啟用。",
+    "errorMessage": "付款驗證失敗。未提供會話ID。",
+    "viewLicenses": "查看我的授權",
+    "processingNote": "請注意：PayPal付款可能需要最多3-5分鐘才能完全處理。付款處理完成後，您的授權將添加到您的帳戶。",
+    "refreshNote": "處理完成後，您需要重新整理授權頁面才能看到新添加的授權。"
+  },
+  "licenses": {
+    "title": "您的流亡機器人 2 授權",
+    "description": "管理您的流亡機器人 2 授權並查看其狀態。",
+    "classicNote": "尋找流亡機器人經典版授權？",
+    "manageClassic": "在這裡管理",
+    "loading": "正在載入您的授權...",
+    "noLicenses": "您還沒有任何流亡機器人 2 授權。",
+    "buyLicense": "購買授權",
+    "tableHeaders": {
+      "licenseKey": "授權碼",
+      "startDate": "開始日期",
+      "duration": "期限",
+      "expiryDate": "到期日期",
+      "status": "狀態",
+      "autoRenewal": "自動續訂",
+      "actions": "操作"
+    },
+    "autoRenewalStatus": {
+      "enabled": "已啟用",
+      "disabled": "已停用",
+      "notAvailable": "不可用",
+      "lifetime": "終身"
+    },
+    "dropdownOptions": {
+      "copyKey": "複製授權碼",
+      "renewLicense": "續訂授權",
+      "setupAutoRenewal": "設定自動續訂",
+      "cancelAutoRenewal": "取消自動續訂",
+      "processing": "處理中..."
+    },
+    "confirmCancel": {
+      "title": "取消自動續訂",
+      "message": "您確定要取消此授權的自動續訂嗎？授權到期後您需要手動續訂。"
+    },
+    "renewal": {
+      "selectPaymentMethod": "選擇付款方式",
+      "paypalDescription": "通過 PayPal 一次性付款",
+      "stripeDescription": "信用卡/扣賬卡，可選擇訂閱",
+      "enableSubscription": "啟用自動續訂訂閱",
+      "subscriptionOn": "您的授權將在每個週期結束時自動續訂",
+      "subscriptionOff": "僅一次性付款，需要手動續訂"
+    }
+  },
+  "community": {
+    "title": "加入我們的社群",
+    "description": "與數千名流亡機器人用戶聯繫。獲得幫助、分享策略，並了解最新功能。",
+    "cards": {
+      "discord": {
+        "title": "活躍的 Discord",
+        "members": "5,000+ 成員",
+        "description": "即時支援與聊天"
+      },
+      "forum": {
+        "title": "社群論壇",
+        "availability": "24/7 開放",
+        "description": "指南與配置"
+      },
+      "updates": {
+        "title": "定期更新",
+        "frequency": "每週發布",
+        "description": "新功能與修復"
+      },
+      "support": {
+        "title": "專家支援",
+        "team": "活躍的開發者",
+        "description": "直接支援與反饋"
+      }
+    },
+    "buttons": {
+      "joinDiscord": "加入 Discord 伺服器",
+      "visitForum": "訪問論壇"
+    }
+  },
+  "setupGuide": {
+    "title": "設置指南",
+    "description": "通過我們的綜合設置指南，幾分鐘內即可讓流亡機器人 2 運行起來",
+    "videoSection": {
+      "title": "視頻教程",
+      "description": "觀看我們的分步視頻指南，涵蓋安裝、配置和首次機器人運行"
+    },
+    "stepsSection": {
+      "steps": {
+        "download": {
+          "title": "下載流亡機器人 2",
+          "description": "從我們的發布頁面獲取最新版本"
+        },
+        "configure": {
+          "title": "配置遊戲設定",
+          "description": "將語言設定為英語，啟用「始終醒目提示」，配置按鍵綁定"
+        },
+        "start": {
+          "title": "開始免費或高級版",
+          "description": "確保您不要勾選「高級功能」以使用免費版本，或添加授權碼以獲得完整訪問權限"
+        },
+        "run": {
+          "title": "運行機器人",
+          "description": "啟動遊戲，開始機器人，看著它自動刷怪！"
+        }
+      },
+      "downloadButton": "下載流亡機器人 2"
+    }
+  },
+  "pickits": {
+    "title": "拾取配置",
+    "description": "創建、管理和分享您的流亡黯道物品拾取配置。拾取配置是自動化的物品過濾器，告訴流亡機器人在刷怪時要撿取、出售或忽略哪些物品，幫助您最大化效率和收益。",
+    "contest": {
+      "title": "拾取競賽 - 贏取終身授權！",
+      "description": "前3位拾取配置創作者達到100個讚將獲得流亡機器人2的免費終身授權！分享您最好的拾取配置並在Discord社群互動以登上榜首。"
+    },
+    "tabs": {
+      "public": "公開資料庫",
+      "my": "我的拾取配置"
+    },
+    "actions": {
+      "createNew": "創建新拾取配置",
+      "createFirst": "創建第一個拾取配置",
+      "search": "搜尋拾取配置...",
+      "edit": "編輯",
+      "delete": "刪除",
+      "view": "檢視",
+      "share": "分享",
+      "like": "讚",
+      "unlike": "取消讚"
+    },
+    "sort": {
+      "newest": "最新",
+      "recentlyUpdated": "最近更新",
+      "mostLiked": "最多讚",
+      "mostViewed": "最多觀看",
+      "name": "名稱"
+    },
+    "league": {
+      "all": "所有聯盟",
+      "filter": "按聯盟篩選"
+    },
+    "empty": {
+      "title": "找不到拾取配置",
+      "publicDescription": "尚無公開拾取配置。成為第一個分享的人！",
+      "myDescription": "您還沒有創建任何拾取配置。",
+      "loginRequired": "登入以創建和管理您的拾取配置"
+    },
+    "stats": {
+      "views": "觀看",
+      "likes": "讚",
+      "by": "作者"
+    },
+    "pagination": {
+      "previous": "上一頁",
+      "next": "下一頁",
+      "page": "頁",
+      "of": "/"
+    },
+    "view": {
+      "backTo": "返回",
+      "updated": "更新於",
+      "copyLink": "複製連結",
+      "configuration": "拾取配置",
+      "lootFilter": "戰利品過濾器",
+      "download": "下載",
+      "howToUse": {
+        "title": "如何使用此拾取配置",
+        "method1": {
+          "title": "方法 1：通過機器人界面",
+          "steps": {
+            "downloadIpd": "下載上方的 <strong>.ipd</strong> 檔案",
+            "goToPickit": "在 RaidBot 中，前往 <strong>Pickit</strong> 標籤",
+            "selectProfile": "選擇 <strong>Default</strong> 或您要編輯的設定檔",
+            "clickManage": "點擊 <strong>Manage</strong> 按鈕",
+            "clickOpen": "點擊 <strong>Open</strong> 打開編輯器",
+            "replaceContent": "用下載的配置替換內容",
+            "saveChanges": "儲存您的變更"
+          }
+        },
+        "method2": {
+          "title": "方法 2：直接檔案替換",
+          "steps": {
+            "downloadIpd": "下載上方的 <strong>.ipd</strong> 檔案",
+            "navigateFolder": "導航至您的 RaidBot <strong>Configuration</strong> 資料夾",
+            "replaceFile": "用下載的檔案替換現有的 <strong>.ipd</strong> 檔案",
+            "restartBot": "重新啟動機器人或重新載入配置"
+          }
+        },
+        "lootFilterTip": "戰利品過濾器（.filter 檔案）可以在流亡黯道的過濾器設定中單獨使用"
+      }
+    }
+  },
+  "getStarted": {
+    "meta": {
+      "title": "開始使用流亡機器人 2 - 免費試用",
+      "description": "開始您的流亡機器人 2 免費試用。無時間限制自動刷流亡黯道 2 區域。"
+    },
+    "hero": {
+      "badge": "免費試用",
+      "title": "開始您的流亡機器人 2 免費試用",
+      "description": "<strong>無需註冊，無需授權碼！</strong>只需下載機器人即可免費開始使用 - 確保您<strong>不要</strong>勾選「高級功能」。無時間限制自動刷區域。升級時您的設定會被保存。"
+    },
+    "videoDescription": "觀看我們的快速設置指南，幾分鐘內即可開始",
+    "help": {
+      "title": "需要入門幫助嗎？",
+      "description": "加入我們的Discord社群獲得即時支援！我們經驗豐富的成員和支援團隊隨時準備幫助您設置和優化您的機器人。",
+      "linkText": "加入Discord獲得支援"
+    },
+    "cta": {
+      "download": "下載流亡機器人 2",
+      "premium": "獲取高級版以刷輿圖"
+    },
+    "faq": {
+      "title": "常見問題",
+      "items": {
+        "duration": {
+          "question": "我可以使用免費版本多久？",
+          "answer": "永遠！免費版本沒有時間限制。您可以隨心所欲地刷戰役區域。"
+        },
+        "included": {
+          "question": "免費版本究竟包含什麼？",
+          "answer": "免費版本包含所有核心功能：戰鬥自動化、物品拾取、藥劑管理，以及在所有戰役區域中刷怪。只是不包括輿圖地圖或組隊模式。"
+        },
+        "upgrade": {
+          "question": "升級時我的設定會怎樣？",
+          "answer": "所有配置都會保留！升級時，只需勾選「高級功能」，輸入您的授權碼，即可繼續使用所有已保存的設定進行刷怪。"
+        },
+        "license": {
+          "question": "免費版本需要授權碼嗎？",
+          "answer": "不需要！免費版本不需要授權碼、註冊或登入。只需下載，保持「高級功能」未勾選，即可立即開始刷怪。"
+        }
+      }
+    },
+    "finalCta": {
+      "title": "準備開始刷怪了嗎？",
+      "button": "下載流亡機器人 2"
+    }
+  }
+}

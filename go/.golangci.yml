@@ -1,0 +1,69 @@
+run:
+  timeout: 1m
+  tests: false
+
+linters-settings:
+  goconst:
+    min-len: 5
+    min-occurrences: 4
+  misspell:
+    locale: US
+    ignore-words:
+      - fullset
+      - FULLSET
+  revive:
+    rules:
+      - name: var-naming
+        arguments:
+          - ["ID"]
+
+linters:
+  disable-all: true
+  enable:
+    - asasalint
+    - bidichk
+    - bodyclose
+    - decorder
+    # - depguard
+    - dogsled
+    - dupl
+    - durationcheck
+    - errcheck
+    - errchkjson
+    - errname
+    - errorlint
+    - copyloopvar
+    # - gochecknoinits
+    - goconst
+    - gocritic
+    - gofmt
+    - goimports
+    - gosimple
+    - govet
+    - ineffassign
+    - misspell
+    - nilerr
+    - nilnil
+    - reassign
+    - nakedret
+    - prealloc
+    - revive
+    - staticcheck
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - govet
+    - wastedassign
+    - whitespace
+
+issues:
+  exclude:
+    - Using the variable on range scope .* in function literal
+  exclude-files:
+    - "testing.go"
+    - ".*/.*\\.pb\\.go$"
+    - ".*/.*\\.pb\\.gw\\.go$"
+    - ".*/.*\\.pb\\.gorm\\.go$"
+    - ".*/_grpc\\.pb\\.go$"
+    - ".*/.*\\.gen\\.go$"

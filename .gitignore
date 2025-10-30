@@ -1,0 +1,56 @@
+# Binaries and build outputs
+out/
+bin/
+*.dll
+*.dylib
+*.exe
+*.exe~
+*.out
+*.so
+*.test
+go/cmd/raidbot/raidbot
+
+# Go
+vendor/
+coverage.txt
+gen.sum.tmp
+
+# Editor files
+*#
+*.swp
+*~
+.#*
+*.idea
+.vscode/
+
+# OS files
+.DS_Store
+
+# Environment and secrets
+.env
+.dev.vars
+*client_secrets.json
+raidbot_token.json
+
+# Logs
+*.log
+
+# Dependencies
+node_modules
+
+# Temporary files
+swagger.yaml.tmp
+tmp-*/
+*venv
+
+# Deployment
+deployments/nginx-proxy/volumes
+deployments/discourse/
+db_backups
+
+# TypeScript/Remix build outputs
+.cache
+/ts/.cache
+/ts/build
+/ts/public/build
+.wrangler
