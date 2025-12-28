@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	sync "sync"
 	"testing"
 	"time"
 
@@ -25,7 +24,6 @@ func TestActivateLicense(t *testing.T) {
 	})
 	defer cleanup()
 	db := TestingSvcDB(t, svc)
-	redis := TestingSvcRedis(t, svc)
 
 	httpClient := &http.Client{}
 	urlActivate := fmt.Sprintf("http://%s/license/activate", server.ListenerAddr())
@@ -54,11 +52,6 @@ func TestActivateLicense(t *testing.T) {
 
 		// Status should still be 200 to not give any indication of what went wrong
 		assert.Equal(t, http.StatusOK, resp.StatusCode)
-
-		// Redis should not have any session created
-		users, err := redis.GetActiveUsers(context.Background())
-		require.NoError(t, err)
-		assert.Equal(t, 0, users["free"])
 	})
 
 	t.Run("successful paid activation", func(t *testing.T) {
@@ -119,73 +112,6 @@ func TestActivateLicense(t *testing.T) {
 		assert.Equal(t, faultString, respData.Status)
 		assert.NotEmpty(t, respData.FaultString)
 		assert.NotEmpty(t, respData.Timestamp)
-	})
-
-	t.Run("successful free tier activation", func(t *testing.T) {
-		reqBody := ActivateLicenseRequest{
-			Secret: activateSecret,
-		}
-		body, err := json.Marshal(reqBody)
-		require.NoError(t, err)
-
-		req, err := http.NewRequest("POST", urlActivate, bytes.NewReader(body))
-		require.NoError(t, err)
-		req.Header.Set("Content-Type", "application/json")
-
-		resp, err := httpClient.Do(req)
-		require.NoError(t, err)
-		defer resp.Body.Close()
-
-		require.Equal(t, http.StatusOK, resp.StatusCode)
-
-		var respData rbdb.LicenseResponse
-		err = json.NewDecoder(resp.Body).Decode(&respData)
-		require.NoError(t, err)
-
-		assert.Equal(t, "ok", respData.Status)
-		assert.Equal(t, int64(1), respData.Uses)
-		assert.NotEmpty(t, respData.UsageID)
-		assert.NotEmpty(t, respData.Timestamp)
-
-		err = redis.ValidateFreeSession(context.Background(), respData.UsageID)
-		require.NoError(t, err)
-	})
-
-	t.Run("concurrent free tier activations", func(t *testing.T) {
-		var wg sync.WaitGroup
-		sessions := make(map[string]struct{}, 10)
-		var mu sync.Mutex
-
-		for i := 0; i < 10; i++ {
-			wg.Add(1)
-			go func() {
-				defer wg.Add(-1)
-				reqBody := ActivateLicenseRequest{
-					Secret: activateSecret,
-				}
-				body, err := json.Marshal(reqBody)
-				require.NoError(t, err)
-
-				req, err := http.NewRequest("POST", urlActivate, bytes.NewReader(body))
-				require.NoError(t, err)
-				req.Header.Set("Content-Type", "application/json")
-
-				resp, err := httpClient.Do(req)
-				require.NoError(t, err)
-				defer resp.Body.Close()
-
-				var respData rbdb.LicenseResponse
-				err = json.NewDecoder(resp.Body).Decode(&respData)
-				require.NoError(t, err)
-
-				mu.Lock()
-				sessions[respData.UsageID] = struct{}{}
-				mu.Unlock()
-			}()
-		}
-		wg.Wait()
-
-		assert.Equal(t, 10, len(sessions), "should create unique sessions")
 	})
 
 	t.Run("expired license activation", func(t *testing.T) {

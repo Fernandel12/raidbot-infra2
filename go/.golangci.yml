@@ -4,20 +4,6 @@ run:
   timeout: 2m
   tests: false
 
-linters-settings:
-  goconst:
-    min-len: 5
-    min-occurrences: 5
-  misspell:
-    locale: US
-    ignore-words:
-      - fullset
-      - FULLSET
-  staticcheck:
-    checks:
-      - "all"
-      - "-ST1005"  # Allow capitalized error strings
-
 formatters:
   enable:
     - gofmt
@@ -53,6 +39,18 @@ linters:
     - unused
     - wastedassign
     - whitespace
+  settings:
+    goconst:
+      min-len: 5
+      min-occurrences: 5
+    gocritic:
+      disabled-checks:
+        - ifElseChain  # if-else is often clearer than switch for boolean conditions
+    misspell:
+      locale: US
+      ignore-words:
+        - fullset
+        - FULLSET
   exclusions:
     paths:
       - ".*\\.pb\\.go$"

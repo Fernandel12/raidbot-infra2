@@ -62,6 +62,9 @@ func checkLicense(db *gorm.DB, redisStore *RedisStore) http.HandlerFunc {
 					response.Offsets = offsets
 				}
 			}
+		} else {
+			response.Status = faultString
+			response.FaultString = "No license key provided"
 		}
 
 		if err := json.NewEncoder(w).Encode(response); err != nil {

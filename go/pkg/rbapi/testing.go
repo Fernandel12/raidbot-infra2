@@ -18,7 +18,7 @@ import (
 
 const (
 	TestToken     = "YWRtaW49ZmFsc2UmZW1haWw9ZXhpbGVkYm90cG9lJTQwZ21haWwuY29tJmV4dGVybmFsX2lkPTcmZ3JvdXBzPXRydXN0X2xldmVsXzAlMkN0cnVzdF9sZXZlbF8xJTJDdGVzdF91c2VycyZtb2RlcmF0b3I9ZmFsc2UmbmFtZT1UZXN0K1VzZXImbm9uY2U9dGVzdC1ub25jZS0xMjMmcmV0dXJuX3Nzb191cmw9aHR0cCUzQSUyRiUyRmxvY2FsaG9zdCUzQTgwODUlMkZjYWxsYmFjayZ1c2VybmFtZT10ZXN0"
-	TestSignature = "90756c4de4f8382d77556873744c4d3d19e63e9a660d8214a1e4df894db62ab1"
+	TestSignature = "1b5d7dee203122461577227156ba95795c508b44df1a8a969ebdc113f6643362"
 )
 
 func TestingService(t *testing.T, opts ServiceOpts) (Service, func()) {

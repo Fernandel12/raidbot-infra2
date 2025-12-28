@@ -22,6 +22,7 @@ var Models = []interface{}{
 	&UserORM{},
 	&PaymentORM{},
 	&SubscriptionORM{},
+	&OffsetORM{},
 }
 
 type DBConfig struct {
