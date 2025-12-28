@@ -13,8 +13,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"raidbot.app/go/internal/testutil"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/internal/testutil"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 func TestActivateLicense(t *testing.T) {
@@ -66,7 +66,7 @@ func TestActivateLicense(t *testing.T) {
 		session, err := svc.UserGetSession(ctx, nil)
 		require.NoError(t, err)
 		payment := rbdb.TestingCreateTestPayment(t, db, session.User, rbdb.LicenseKey_ONE_MONTH)
-		license, err := rbdb.GenerateLicense(db, session.User.Id, payment.Id, rbdb.LicenseKey_ONE_MONTH, true)
+		license, err := rbdb.GenerateLicense(db, session.User.Id, payment.Id, rbdb.LicenseKey_ONE_MONTH, rbdb.LicenseKey_TIER_PREMIUM, true)
 		require.NoError(t, err)
 
 		reqBody := ActivateLicenseRequest{

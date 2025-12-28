@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next"
 import FeatureCard from "./FeatureCard"
-import { theme } from "~/lib/theme"
 
 export default function FeaturesSection() {
   const { t } = useTranslation()
@@ -9,72 +8,76 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg
-          className="w-24 h-24"
-          viewBox="0 0 120 120"
+          className="w-10 h-10"
+          viewBox="0 0 24 24"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <path
-            d="M60 110C87.614 110 110 87.614 110 60C110 32.386 87.614 10 60 10C32.386 10 10 32.386 10 60C10 87.614 32.386 110 60 110Z"
-            fill="white"
-            opacity="0.9"
-          />
-          <rect x="40" y="50" width="40" height="30" rx="2" fill="#352C71" />
-          <rect x="35" y="40" width="50" height="8" rx="1" fill="#352C71" />
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M6 16h.01M10 16h.01M14 16h.01M18 16h.01" />
         </svg>
       ),
       title: t("features.farmWhileAfk.title"),
       description: t("features.farmWhileAfk.description"),
+      bullets: t("features.farmWhileAfk.bullets", { returnObjects: true }) as string[],
     },
     {
       icon: (
         <svg
-          className="w-24 h-24"
-          viewBox="0 0 120 120"
+          className="w-10 h-10"
+          viewBox="0 0 24 24"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <circle cx="40" cy="45" r="15" fill="white" opacity="0.9" />
-          <circle cx="80" cy="45" r="15" fill="white" opacity="0.9" />
-          <circle cx="60" cy="75" r="15" fill="white" opacity="0.9" />
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
         </svg>
       ),
       title: t("features.community.title"),
       description: t("features.community.description"),
+      bullets: t("features.community.bullets", { returnObjects: true }) as string[],
     },
     {
       icon: (
         <svg
-          className="w-24 h-24"
-          viewBox="0 0 120 120"
+          className="w-10 h-10"
+          viewBox="0 0 24 24"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <path
-            d="M35 55L55 75L85 35"
-            stroke="white"
-            strokeWidth="8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            opacity="0.9"
-          />
+          <path d="M9 12l2 2 4-4" />
+          <circle cx="12" cy="12" r="10" />
         </svg>
       ),
       title: t("features.safeAndEasy.title"),
       description: t("features.safeAndEasy.description"),
+      bullets: t("features.safeAndEasy.bullets", { returnObjects: true }) as string[],
     },
   ]
 
   return (
-    <section className="py-16 px-4 bg-white">
+    <section id="features" className="py-20 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-left mb-12 ml-10">
-          <h2 className="text-4xl font-bold" style={{ color: theme.colors.primary.dark }}>
+        {/* Section Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             {t("features.title")}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+        {/* Feature Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, idx) => (
             <FeatureCard key={idx} {...feature} />
           ))}

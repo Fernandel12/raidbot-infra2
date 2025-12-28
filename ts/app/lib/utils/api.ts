@@ -5,9 +5,9 @@
 export const API_CONFIG = {
   // Base URLs
   API_BASE_URL:
-    process.env.NODE_ENV === "development" ? "http://localhost:8080" : "https://api.raidbot.app",
+    process.env.NODE_ENV === "development" ? "http://localhost:8080" : "https://api.rslbot.com",
 
-  DISCOURSE_URL: "https://community.raidbot.app",
+  DISCOURSE_URL: "https://community.rslbot.com",
 
   // Discourse secret key (should be in env vars in production)
   DISCOURSE_SECRET: "hHDjDtwn6ADb3Gv",
@@ -22,7 +22,7 @@ export function getAppBaseUrl(): string {
   }
 
   // Default fallback for server-side rendering
-  return "https://raidbot.app"
+  return "https://rslbot.com"
 }
 
 /**

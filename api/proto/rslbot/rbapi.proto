@@ -1,0 +1,118 @@
+syntax = "proto3";
+package rslbot.api;
+
+import "google/protobuf/timestamp.proto";
+import "google/api/annotations.proto";
+import "proto/rslbot/rbdb.proto";
+import "proto/rslbot/errcode.proto";
+
+option go_package = "rslbot.com/go/pkg/rbapi";
+
+service Service {
+  rpc AdminAddLicenseKey(AdminAddLicenseKey.Input) returns (AdminAddLicenseKey.Output) { option (google.api.http) = {post: "/admin/add-license-key" body: "*"}; };
+  rpc AdminGetActiveUsers(AdminGetActiveUsers.Input) returns (AdminGetActiveUsers.Output) { option (google.api.http) = {get: "/admin/active-users"}; };
+  rpc AdminRevokeLicense(AdminRevokeLicense.Input) returns (AdminRevokeLicense.Output) { option (google.api.http) = {post: "/admin/revoke-license-key" body: "*"}; };
+  rpc AdminSearchDatabase(AdminSearchDatabase.Input) returns (AdminSearchDatabase.Output) { option (google.api.http) = {post: "/admin/search-database" body: "*"}; };
+
+  rpc PaymentCreatePayPalCheckout(PaymentCreatePayPalCheckout.Input) returns (PaymentCreatePayPalCheckout.Output) { option (google.api.http) = { post: "/payment/paypal/create-checkout" body: "*" }; };
+
+  rpc ToolStatus(ToolStatus.Input) returns (ToolStatus.Output) { option (google.api.http) = {get: "/status"}; }
+
+  rpc UserGetLicenses(UserGetLicenses.Input) returns (UserGetLicenses.Output) { option (google.api.http) = {get: "/user/licenses"}; };
+  rpc UserGetSession(UserGetSession.Input) returns (UserGetSession.Output) { option (google.api.http) = {get: "/user/session"}; };
+  rpc UserLogout(UserLogout.Input) returns (UserLogout.Output) { option (google.api.http) = {post: "/user/logout"}; };
+  rpc UserSyncDiscordRole(UserSyncDiscordRole.Input) returns (UserSyncDiscordRole.Output) { option (google.api.http) = {post: "/user/sync-discord-role"}; };
+}
+
+message AdminAddLicenseKey {
+  message Input {
+    int64 user_id = 1;
+    string user_email = 2;
+    rslbot.db.LicenseKey.Duration duration = 3;
+    rslbot.db.LicenseKey.Tier tier = 4;
+  }
+  message Output {
+    rslbot.db.LicenseKey license_key = 1;
+  }
+}
+
+message AdminGetActiveUsers {
+  message Input {}
+  message Output {
+    int32 free_tier = 1;
+    int32 paid_tier = 2;
+    int32 total_users = 3;
+  }
+}
+
+message AdminRevokeLicense {
+  message Input {
+    string key = 1;
+  }
+  message Output {
+    rslbot.db.LicenseKey license_key = 1;
+  }
+}
+
+message AdminSearchDatabase {
+  message Input {
+    string search_term = 1;
+  }
+  message Output {
+    repeated rslbot.db.User users = 1;
+    repeated rslbot.db.LicenseKey license_keys = 2;
+    repeated rslbot.db.Payment payments = 3;
+    repeated rslbot.db.Subscription subscriptions = 4;
+  }
+}
+
+
+message PaymentCreatePayPalCheckout {
+  message Input {
+    rslbot.db.LicenseKey.Duration license_duration = 1;
+    int64 renewal_key_id = 2;
+  }
+  message Output {
+    string order_id = 1;
+    string checkout_url = 2;
+  }
+}
+
+message ToolStatus {
+  message Input {}
+  message Output {
+    bool everything_is_ok = 1;
+  }
+}
+
+message UserGetLicenses {
+  message Input {}
+  message Output {
+    repeated rslbot.db.LicenseKey licenses = 1;
+  }
+}
+
+message UserGetSession {
+  message Input {}
+  message Output {
+    rslbot.db.User user = 1;
+  }
+}
+
+message UserLogout {
+  message Input {}
+  message Output {
+    bool success = 1;
+  }
+}
+
+message UserSyncDiscordRole {
+  message Input {}
+  message Output {
+    bool success = 1;
+    string message = 2;
+    bool has_lifetime_license = 3;
+    bool discord_linked = 4;
+    bool role_assigned = 5;
+  }
+}

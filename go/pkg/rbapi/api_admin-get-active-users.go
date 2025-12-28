@@ -3,7 +3,7 @@ package rbapi
 import (
 	"context"
 
-	"raidbot.app/go/pkg/errcode"
+	"rslbot.com/go/pkg/errcode"
 )
 
 func (svc *service) AdminGetActiveUsers(ctx context.Context, in *AdminGetActiveUsers_Input) (*AdminGetActiveUsers_Output, error) {

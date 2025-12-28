@@ -5,22 +5,55 @@ import (
 	"crypto/rand"
 	"crypto/sha256"
 	"encoding/hex"
+	"encoding/json"
 	"fmt"
 	"time"
 
 	"google.golang.org/protobuf/types/known/timestamppb"
 	"gorm.io/gorm"
 
-	"raidbot.app/go/pkg/errcode"
+	"rslbot.com/go/pkg/errcode"
 )
 
 // LicenseResponse matches the PHP expected format
 type LicenseResponse struct {
-	Status      string `json:"status,omitempty"`
-	UsageID     string `json:"usage_id,omitempty"`
-	Uses        int64  `json:"uses,omitempty"`
-	FaultString string `json:"fault_string,omitempty"`
-	Timestamp   string `json:"timestamp,omitempty"`
+	Status      string          `json:"status,omitempty"`
+	UsageID     string          `json:"usage_id,omitempty"`
+	Uses        int64           `json:"uses,omitempty"`
+	FaultString string          `json:"fault_string,omitempty"`
+	Timestamp   string          `json:"timestamp,omitempty"`
+	LicenseType int32           `json:"license_type,omitempty"`
+	Offsets     json.RawMessage `json:"offsets,omitempty"`
+}
+
+// Client LicenseID constants matching C# enum
+const (
+	LicenseTypeUnknown         int32 = 0
+	LicenseTypeRegularLifetime int32 = 1
+	LicenseTypeRegular         int32 = 3
+	LicenseTypePremium         int32 = 9
+	LicenseTypePremiumLifetime int32 = 10
+	LicenseTypeFree            int32 = 11
+)
+
+// MapToClientLicenseType converts backend Duration+Tier to client LicenseID
+func MapToClientLicenseType(duration LicenseKey_Duration, tier LicenseKey_Tier) int32 {
+	isPremium := tier == LicenseKey_TIER_PREMIUM
+
+	switch duration {
+	case LicenseKey_LIFETIME:
+		if isPremium {
+			return LicenseTypePremiumLifetime
+		}
+		return LicenseTypeRegularLifetime
+	case LicenseKey_ONE_WEEK, LicenseKey_ONE_MONTH, LicenseKey_SIX_MONTHS, LicenseKey_ONE_YEAR:
+		if isPremium {
+			return LicenseTypePremium
+		}
+		return LicenseTypeRegular
+	default:
+		return LicenseTypeUnknown
+	}
 }
 
 // IsLicenseExpired checks if a license is expired based on its duration and effective date
@@ -35,14 +68,12 @@ func IsLicenseExpired(license *LicenseKey) bool {
 	switch license.Duration {
 	case LicenseKey_LIFETIME:
 		return false
-	case LicenseKey_ONE_DAY:
-		expiration = license.EffectiveFrom.AsTime().AddDate(0, 0, 1)
 	case LicenseKey_ONE_WEEK:
 		expiration = license.EffectiveFrom.AsTime().AddDate(0, 0, 7)
 	case LicenseKey_ONE_MONTH:
 		expiration = license.EffectiveFrom.AsTime().AddDate(0, 1, 0)
-	case LicenseKey_THREE_MONTHS:
-		expiration = license.EffectiveFrom.AsTime().AddDate(0, 3, 0)
+	case LicenseKey_SIX_MONTHS:
+		expiration = license.EffectiveFrom.AsTime().AddDate(0, 6, 0)
 	case LicenseKey_ONE_YEAR:
 		expiration = license.EffectiveFrom.AsTime().AddDate(1, 0, 0)
 	default:
@@ -148,8 +179,8 @@ func ActivateLicense(db *gorm.DB, key string) (*LicenseKey, error) {
 	return license, err
 }
 
-// Check validates a license and increments its use count
-func CheckLicense(db *gorm.DB, key string, usageID string) (int64, error) {
+// CheckLicense validates a license and verifies the usage ID
+func CheckLicense(db *gorm.DB, key string, usageID string) (*LicenseKey, error) {
 	var license *LicenseKey
 	err := db.Transaction(func(tx *gorm.DB) error {
 		var err error
@@ -170,14 +201,14 @@ func CheckLicense(db *gorm.DB, key string, usageID string) (int64, error) {
 		return nil
 	})
 	if err != nil {
-		return 0, err
+		return nil, err
 	}
 
-	return license.Uses, err
+	return license, nil
 }
 
-// Create generates a new license key for a user
-func GenerateLicense(db *gorm.DB, userId int64, paymentId int64, duration LicenseKey_Duration, setEffectiveFromNow bool) (*LicenseKey, error) {
+// GenerateLicense generates a new license key for a user
+func GenerateLicense(db *gorm.DB, userId int64, paymentId int64, duration LicenseKey_Duration, tier LicenseKey_Tier, setEffectiveFromNow bool) (*LicenseKey, error) {
 	// Generate random bytes for the key
 	bytes := make([]byte, 16)
 	if _, err := rand.Read(bytes); err != nil {
@@ -230,6 +261,7 @@ func GenerateLicense(db *gorm.DB, userId int64, paymentId int64, duration Licens
 		license := &LicenseKey{
 			Key:         key,
 			Duration:    duration,
+			Tier:        tier,
 			Revoked:     false,
 			UserId:      userId,
 			Uses:        0,

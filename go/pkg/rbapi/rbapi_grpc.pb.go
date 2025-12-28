@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: proto/raidbot/rbapi.proto
+// source: proto/rslbot/rbapi.proto
 
 package rbapi
 
@@ -19,16 +19,16 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Service_AdminAddLicenseKey_FullMethodName          = "/raidbot.api.Service/AdminAddLicenseKey"
-	Service_AdminGetActiveUsers_FullMethodName         = "/raidbot.api.Service/AdminGetActiveUsers"
-	Service_AdminRevokeLicense_FullMethodName          = "/raidbot.api.Service/AdminRevokeLicense"
-	Service_AdminSearchDatabase_FullMethodName         = "/raidbot.api.Service/AdminSearchDatabase"
-	Service_PaymentCreatePayPalCheckout_FullMethodName = "/raidbot.api.Service/PaymentCreatePayPalCheckout"
-	Service_ToolStatus_FullMethodName                  = "/raidbot.api.Service/ToolStatus"
-	Service_UserGetLicenses_FullMethodName             = "/raidbot.api.Service/UserGetLicenses"
-	Service_UserGetSession_FullMethodName              = "/raidbot.api.Service/UserGetSession"
-	Service_UserLogout_FullMethodName                  = "/raidbot.api.Service/UserLogout"
-	Service_UserSyncDiscordRole_FullMethodName         = "/raidbot.api.Service/UserSyncDiscordRole"
+	Service_AdminAddLicenseKey_FullMethodName          = "/rslbot.api.Service/AdminAddLicenseKey"
+	Service_AdminGetActiveUsers_FullMethodName         = "/rslbot.api.Service/AdminGetActiveUsers"
+	Service_AdminRevokeLicense_FullMethodName          = "/rslbot.api.Service/AdminRevokeLicense"
+	Service_AdminSearchDatabase_FullMethodName         = "/rslbot.api.Service/AdminSearchDatabase"
+	Service_PaymentCreatePayPalCheckout_FullMethodName = "/rslbot.api.Service/PaymentCreatePayPalCheckout"
+	Service_ToolStatus_FullMethodName                  = "/rslbot.api.Service/ToolStatus"
+	Service_UserGetLicenses_FullMethodName             = "/rslbot.api.Service/UserGetLicenses"
+	Service_UserGetSession_FullMethodName              = "/rslbot.api.Service/UserGetSession"
+	Service_UserLogout_FullMethodName                  = "/rslbot.api.Service/UserLogout"
+	Service_UserSyncDiscordRole_FullMethodName         = "/rslbot.api.Service/UserSyncDiscordRole"
 )
 
 // ServiceClient is the client API for Service service.
@@ -393,7 +393,7 @@ func _Service_UserSyncDiscordRole_Handler(srv interface{}, ctx context.Context, 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Service_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "raidbot.api.Service",
+	ServiceName: "rslbot.api.Service",
 	HandlerType: (*ServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -438,5 +438,5 @@ var Service_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "proto/raidbot/rbapi.proto",
+	Metadata: "proto/rslbot/rbapi.proto",
 }

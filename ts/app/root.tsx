@@ -22,7 +22,7 @@ import "./tailwind.css"
 
 // Function to get canonical URL
 function getCanonicalUrl(path: string): string {
-  return `https://raidbot.app${path}`
+  return `https://rslbot.com${path}`
 }
 
 export const links: LinksFunction = (): LinkDescriptor[] => {
@@ -106,9 +106,9 @@ function GoogleAnalytics() {
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-MFWLL5VQ62', {
-        'cookie_domain': 'raidbot.app',
+        'cookie_domain': 'rslbot.com',
         'cookie_flags': 'SameSite=None;Secure',
-        'transport_url': 'https://raidbot.app'
+        'transport_url': 'https://rslbot.com'
       });
     `
     document.head.appendChild(initScript)
@@ -167,7 +167,7 @@ export default function App() {
             key={lang}
             rel="alternate"
             hrefLang={lang === "tw" ? "zh-TW" : lang}
-            href={`https://raidbot.app${location.pathname}?lang=${lang}`}
+            href={`https://rslbot.com${location.pathname}?lang=${lang}`}
           />
         ))}
       </head>

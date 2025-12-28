@@ -3,7 +3,7 @@ package rbapi
 import (
 	"context"
 
-	"raidbot.app/go/pkg/errcode"
+	"rslbot.com/go/pkg/errcode"
 )
 
 // UserLogout implements the UserLogout RPC method

@@ -14,15 +14,15 @@ import (
 	"strconv"
 	"strings"
 
-	"raidbot.app/go/pkg/errcode"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/errcode"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 // TODO: add to environment
 const (
 	DiscourseAPIKey      = "4d2ce37a62f4d9492bca00f823f27b6e5a74ee9d7b9914d6b46367bf92348dee"
 	DiscourseAPIUsername = "alkpone"
-	DiscoursePath        = "https://community.raidbot.app"
+	DiscoursePath        = "https://community.rslbot.com"
 )
 
 // VerifySSO verifies that the SSO payload was signed by our Discourse instance

@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"google.golang.org/grpc/metadata"
-	"raidbot.app/go/pkg/errcode"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/errcode"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 type ctxKey string
@@ -21,11 +21,11 @@ const (
 func (svc *service) AuthFuncOverride(ctx context.Context, path string) (context.Context, error) {
 	// Check if this is a public endpoint that doesn't require authentication
 	publicEndpoints := []string{
-		"/raidbot.api.Service/ToolStatus",
-		"/raidbot.api.Service/PublicBuildGet",
-		"/raidbot.api.Service/PublicBuildList",
-		"/raidbot.api.Service/PublicPickitGet",
-		"/raidbot.api.Service/PublicPickitList",
+		"/rslbot.api.Service/ToolStatus",
+		"/rslbot.api.Service/PublicBuildGet",
+		"/rslbot.api.Service/PublicBuildList",
+		"/rslbot.api.Service/PublicPickitGet",
+		"/rslbot.api.Service/PublicPickitList",
 	}
 
 	for _, endpoint := range publicEndpoints {

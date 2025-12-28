@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"gorm.io/gorm"
-	"raidbot.app/go/pkg/errcode"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/errcode"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 func (svc *service) AdminRevokeLicense(ctx context.Context, in *AdminRevokeLicense_Input) (*AdminRevokeLicense_Output, error) {

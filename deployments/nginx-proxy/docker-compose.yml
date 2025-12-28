@@ -22,7 +22,7 @@ services:
     container_name: nginx-proxy-acme
     restart: unless-stopped
     environment:
-      - DEFAULT_EMAIL=admin@raidbot.app
+      - DEFAULT_EMAIL=admin@rslbot.com
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - certificates:/etc/nginx/certs:rw
@@ -36,8 +36,8 @@ services:
     image: jwilder/whoami:latest
     restart: unless-stopped
     environment:
-      - VIRTUAL_HOST=whoami.raidbot.app
-      - LETSENCRYPT_HOST=whoami.raidbot.app
+      - VIRTUAL_HOST=whoami.rslbot.com
+      - LETSENCRYPT_HOST=whoami.rslbot.com
     depends_on:
       - nginx-proxy
     networks:

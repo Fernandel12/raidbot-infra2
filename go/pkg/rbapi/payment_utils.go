@@ -3,7 +3,7 @@ package rbapi
 import (
 	"fmt"
 
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 // Constants for payment providers
@@ -18,14 +18,12 @@ const (
 // Centralized pricing for all payment providers
 func getPriceInCentsForDuration(duration rbdb.LicenseKey_Duration) int64 {
 	switch duration {
-	case rbdb.LicenseKey_ONE_DAY:
-		return PriceNotAvailable
 	case rbdb.LicenseKey_ONE_WEEK:
 		return 950
 	case rbdb.LicenseKey_ONE_MONTH:
 		return 1900
-	case rbdb.LicenseKey_THREE_MONTHS:
-		return PriceNotAvailable
+	case rbdb.LicenseKey_SIX_MONTHS:
+		return 7900
 	case rbdb.LicenseKey_ONE_YEAR:
 		return 12900
 	case rbdb.LicenseKey_LIFETIME:
@@ -44,14 +42,12 @@ func GenerateLicenseDisplayName(duration rbdb.LicenseKey_Duration, isRenewal boo
 	switch duration {
 	case rbdb.LicenseKey_LIFETIME:
 		durationText = "Lifetime"
-	case rbdb.LicenseKey_ONE_DAY:
-		durationText = "1-Day"
 	case rbdb.LicenseKey_ONE_WEEK:
 		durationText = "1-Week"
 	case rbdb.LicenseKey_ONE_MONTH:
 		durationText = "1-Month"
-	case rbdb.LicenseKey_THREE_MONTHS:
-		durationText = "3-Month"
+	case rbdb.LicenseKey_SIX_MONTHS:
+		durationText = "6-Month"
 	case rbdb.LicenseKey_ONE_YEAR:
 		durationText = "1-Year"
 	default:

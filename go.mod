@@ -1,4 +1,4 @@
-module raidbot.app
+module rslbot.com
 
 go 1.23.6
 

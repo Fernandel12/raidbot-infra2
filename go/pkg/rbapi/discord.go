@@ -7,7 +7,7 @@ import (
 	"io"
 	"net/http"
 
-	"raidbot.app/go/pkg/errcode"
+	"rslbot.com/go/pkg/errcode"
 )
 
 // Discord configuration

@@ -48,7 +48,7 @@ export default {
     themes: [
       {
         raidbot2: {
-          // Based on original raidbot-infra colors
+          // Based on original rslbot-infra colors
           primary: "#743AA0",           // Purple from feature cards
           "primary-content": "#FFFFFF",
           secondary: "#9553B3",         // Mid-tone from pricing gradient

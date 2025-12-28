@@ -41,7 +41,7 @@ export default function Footer() {
             <ul className="mt-3 md:mt-4 space-y-2">
               <li>
                 <a
-                  href="https://community.raidbot.app/c/guides/beginners-guide"
+                  href="https://community.rslbot.com/c/guides/beginners-guide"
                   className="text-sm text-neutral-400 hover:text-primary"
                 >
                   {t("footer.gettingStarted")}
@@ -49,7 +49,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://community.raidbot.app/c/guides"
+                  href="https://community.rslbot.com/c/guides"
                   className="text-sm text-neutral-400 hover:text-primary"
                 >
                   {t("footer.guides")}
@@ -90,7 +90,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://raidbot.app/"
+                  href="https://rslbot.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-neutral-400 hover:text-primary"

@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"raidbot.app/go/pkg/errcode"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/errcode"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 // UserSyncDiscordRole syncs the user's Discord role based on their license status

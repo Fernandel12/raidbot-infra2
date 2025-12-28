@@ -1,0 +1,174 @@
+syntax = "proto3";
+package rslbot.db;
+
+import "google/protobuf/timestamp.proto";
+import "proto/protoc-gen-gorm/options/gorm.proto";
+
+option go_package = "rslbot.com/go/pkg/rbdb;rbdb";
+
+message Activity {
+  option (gorm.opts) = {
+    ormable: true
+  };
+  int64 id = 1 [(gorm.field).tag = {primary_key: true}];
+  google.protobuf.Timestamp created_at = 2;
+  google.protobuf.Timestamp updated_at = 3;
+
+  Kind kind = 100;
+
+  User user = 200 [(gorm.field).belongs_to = {}];
+  LicenseKey license_key = 201 [(gorm.field).belongs_to = {}];
+  Payment payment = 202 [(gorm.field).belongs_to = {}];
+  Subscription subscription = 203 [(gorm.field).belongs_to = {}];
+
+  enum Kind {
+    KIND_UNSPECIFIED = 0;
+    KIND_USER_REGISTER = 1;
+    KIND_USER_CONFIRMED_EMAIL = 2;
+    KIND_LICENSE_GENERATION = 3;
+    KIND_LICENSE_RENEWAL = 4;
+    KIND_PAYMENT_RECEIVED = 5;
+    KIND_SUBSCRIPTION_CREATED = 6;
+    KIND_SUBSCRIPTION_CANCELED = 7;
+    KIND_SUBSCRIPTION_RENEWED = 8;
+    KIND_SUBSCRIPTION_PAYMENT_FAILED = 9;
+    KIND_ADMIN_LICENSE_CREATION = 10;
+    KIND_ADMIN_LICENSE_REVOCATION = 11;
+  }
+}
+
+message LicenseKey {
+  option (gorm.opts) = {
+    ormable: true
+  };
+  int64 id = 1 [(gorm.field).tag = {primary_key: true}];
+  google.protobuf.Timestamp created_at = 2;
+  google.protobuf.Timestamp updated_at = 3;
+
+  google.protobuf.Timestamp effective_from = 100;  // When the license period starts
+  string key = 101 [(gorm.field).tag = {unique: true}];
+  bool revoked = 102;  // Admin can revoke keys if needed
+  Duration duration = 103;  // License duration type
+  string active_usage_id = 104;  // The current valid usage ID from activation
+  int64 uses = 105; // Number of activations
+  bool sandbox_mode = 106;  // Flag to indicate if this license was created in sandbox mode
+
+  User user = 200 [(gorm.field).belongs_to = {foreignkey_tag: {not_null: true}}];
+  int64 user_id = 201;
+
+  Tier tier = 107;  // License tier (regular/premium features)
+
+  enum Duration {
+    UNSPECIFIED = 0;
+    LIFETIME = 1;
+    ONE_WEEK = 2;
+    ONE_MONTH = 3;
+    SIX_MONTHS = 4;
+    ONE_YEAR = 5;
+  }
+
+  enum Tier {
+    TIER_UNSPECIFIED = 0;
+    TIER_FREE = 1;
+    TIER_REGULAR = 2;
+    TIER_PREMIUM = 3;
+  }
+}
+
+message Payment {
+  option (gorm.opts) = {
+    ormable: true
+  };
+  int64 id = 1 [(gorm.field).tag = {primary_key: true}];
+  google.protobuf.Timestamp created_at = 2;
+  google.protobuf.Timestamp updated_at = 3;
+
+  Provider provider = 100;
+  string reference_id = 101 [(gorm.field).tag = {unique: true}];
+  int64 amount_in_cents = 102;
+  string currency = 103;
+  LicenseKey.Duration license_duration = 104;
+  bool is_renewal = 105;
+  bool sandbox_mode = 106;
+  string billing_email = 107;
+  string billing_name = 108;
+
+  User user = 200 [(gorm.field).belongs_to = {foreignkey_tag: {not_null: true}}];
+  int64 user_id = 201;
+  LicenseKey license_key = 202 [(gorm.field).belongs_to = {}];
+  Subscription subscription = 203 [(gorm.field).belongs_to = {}];
+
+  enum Status {
+    STATUS_UNSPECIFIED = 0;
+    STATUS_COMPLETED = 1;
+    STATUS_FAILED = 2;
+    STATUS_REFUNDED = 3;
+  }
+
+  enum Provider {
+    PROVIDER_UNSPECIFIED = 0;
+    PROVIDER_MANUAL = 1;    // For manual payments/admin-created licenses
+    PROVIDER_PAYPAL = 2;
+    PROVIDER_STRIPE = 3;
+  }
+}
+
+message Subscription {
+  option (gorm.opts) = {
+    ormable: true
+  };
+  int64 id = 1 [(gorm.field).tag = {primary_key: true}];
+  google.protobuf.Timestamp created_at = 2;
+  google.protobuf.Timestamp updated_at = 3;
+
+  string stripe_subscription_id = 100 [(gorm.field).tag = {unique: true}];
+  string stripe_customer_id = 101;
+  Status status = 102;
+  LicenseKey.Duration duration = 103;  // Duration type for recurring billing
+  google.protobuf.Timestamp current_period_start = 104;
+  bool sandbox_mode = 106;
+
+  User user = 200 [(gorm.field).belongs_to = {foreignkey_tag: {not_null: true}}];
+  int64 user_id = 201;
+  LicenseKey license_key = 202 [(gorm.field).belongs_to = {foreignkey_tag: {not_null: true}}];
+  int64 license_key_id = 203;
+
+  enum Status {
+    STATUS_UNSPECIFIED = 0;
+    STATUS_ACTIVE = 1;
+    STATUS_CANCELED = 2;
+  }
+}
+
+message User {
+  option (gorm.opts) = {
+    ormable: true
+  };
+  int64 id = 1 [(gorm.field).tag = {primary_key: true}];
+  google.protobuf.Timestamp created_at = 2;
+  google.protobuf.Timestamp updated_at = 3;
+
+  int64 discourse_id = 100 [(gorm.field).tag = {unique_index: "idx_discourse_id"}];
+  string email = 101;
+  string username = 102;
+}
+
+message DiscourseUser {
+  int64 external_id = 1;
+  string username = 2;
+  string email = 3;
+  repeated string groups = 4;
+  bool admin = 5;
+}
+
+message Offset {
+  option (gorm.opts) = {
+    ormable: true
+  };
+  int64 id = 1 [(gorm.field).tag = {primary_key: true}];
+  google.protobuf.Timestamp created_at = 2;
+  google.protobuf.Timestamp updated_at = 3;
+
+  string version = 100 [(gorm.field).tag = {unique: true}];  // Client version (e.g., "1.2.3")
+  bytes data = 101;  // Serialized PixelDefinitions data (JSON)
+}

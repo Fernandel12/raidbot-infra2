@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 // TestUser represents a test user with authentication info and license state
@@ -87,7 +87,7 @@ func createTestUserWithLicense(t *testing.T, svc Service, discourseID int64, use
 	createdPayment, err := rbdb.DefaultCreatePayment(context.Background(), payment, db)
 	require.NoError(t, err)
 
-	license, err := rbdb.GenerateLicense(db, createdUser.Id, createdPayment.Id, duration, true)
+	license, err := rbdb.GenerateLicense(db, createdUser.Id, createdPayment.Id, duration, rbdb.LicenseKey_TIER_PREMIUM, true)
 	require.NoError(t, err)
 
 	return &TestUser{
@@ -165,13 +165,13 @@ func CreateTestUserWithExpiredLicense(t *testing.T, svc Service, discourseID int
 		ReferenceId:     fmt.Sprintf("test-payment-expired-%d", discourseID),
 		AmountInCents:   900,
 		Currency:        "eur",
-		LicenseDuration: rbdb.LicenseKey_ONE_DAY,
+		LicenseDuration: rbdb.LicenseKey_ONE_WEEK,
 		UserId:          createdUser.Id,
 	}
 	createdPayment, err := rbdb.DefaultCreatePayment(context.Background(), payment, db)
 	require.NoError(t, err)
 
-	license, err := rbdb.GenerateLicense(db, createdUser.Id, createdPayment.Id, rbdb.LicenseKey_ONE_DAY, false)
+	license, err := rbdb.GenerateLicense(db, createdUser.Id, createdPayment.Id, rbdb.LicenseKey_ONE_WEEK, rbdb.LicenseKey_TIER_PREMIUM, false)
 	require.NoError(t, err)
 
 	// Set EffectiveFrom to 10 days ago to make it expired
@@ -224,7 +224,7 @@ func CreateTestUserWithRevokedLicense(t *testing.T, svc Service, discourseID int
 	createdPayment, err := rbdb.DefaultCreatePayment(context.Background(), payment, db)
 	require.NoError(t, err)
 
-	license, err := rbdb.GenerateLicense(db, createdUser.Id, createdPayment.Id, rbdb.LicenseKey_ONE_MONTH, true)
+	license, err := rbdb.GenerateLicense(db, createdUser.Id, createdPayment.Id, rbdb.LicenseKey_ONE_MONTH, rbdb.LicenseKey_TIER_PREMIUM, true)
 	require.NoError(t, err)
 
 	// Revoke the license
@@ -301,7 +301,7 @@ func EnsureDefaultTestUserHasLicense(t *testing.T, svc Service) {
 		createdPayment, err := rbdb.DefaultCreatePayment(context.Background(), payment, db)
 		require.NoError(t, err)
 
-		_, err = rbdb.GenerateLicense(db, userOrm.Id, createdPayment.Id, rbdb.LicenseKey_LIFETIME, true)
+		_, err = rbdb.GenerateLicense(db, userOrm.Id, createdPayment.Id, rbdb.LicenseKey_LIFETIME, rbdb.LicenseKey_TIER_PREMIUM, true)
 		require.NoError(t, err)
 	}
 }

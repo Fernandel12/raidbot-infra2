@@ -1,5 +1,11 @@
 # Claude Code Helper
 
+## Git Commit Guidelines
+
+- Do NOT use conventional commits (no `feat:`, `fix:`, `chore:` prefixes)
+- Do NOT add "Generated with Claude Code" footer
+- Do NOT add "Co-Authored-By: Claude" footer
+
 ## Project Overview
 
 This is raidbot-infra2 - infrastructure for RaidBot, a bot for RAID: Shadow Legends game.
@@ -43,15 +49,15 @@ make docker.build
 
 ### Database Backups
 ```bash
-make backup-raidbot-api    # Backup main database
+make backup-rslbot-api    # Backup main database
 make backup-all            # Backup all databases
 ```
 
 ## Module/Package Naming
-- Go module: `raidbot.app`
+- Go module: `rslbot.com`
 - API package: `rbapi`
 - DB package: `rbdb`
-- Domains: `raidbot.app`, `api.raidbot.app`, `community.raidbot.app`
+- Domains: `rslbot.com`, `api.rslbot.com`, `community.rslbot.com`
 
 ## Implementation Progress
 
@@ -105,7 +111,7 @@ make buf-generate
 ```bash
 make build
 # or
-go build -o bin/raidbot ./go/cmd/raidbot
+go build -o bin/rslbot ./go/cmd/rslbot
 ```
 
 ### Run Tests
@@ -115,12 +121,39 @@ make test
 go test ./go/...
 ```
 
-### Run the API Server
-```bash
-./bin/raidbot api --db-urn="..." --redis-url="localhost:6379"
-```
-
 ### Use Admin Commands
 ```bash
-./bin/raidbot admin --help
+./bin/rslbot admin --help
 ```
+
+## Local Development
+
+### Start Backend (API + MySQL + Redis)
+```bash
+cd go
+export PATH="$PATH:$(go env GOPATH)/bin"
+make api
+```
+
+This will:
+1. Start MySQL and Redis containers using `docker-compose.yml` + `docker-compose.dev.yml` in `/go`
+2. Install CompileDaemon for hot-reload
+3. Start the API server on `:8080` with auto-rebuild on file changes
+
+**IMPORTANT**: Use the docker-compose files in `/go` directory for development. Do NOT use the production docker-compose in `/deployments/rslbot-api/`.
+
+### Start Frontend
+```bash
+cd ts
+pnpm dev
+```
+
+This starts the Remix dev server on `http://localhost:5173/` (or next available port).
+
+### Verify Database
+```bash
+cd go
+docker-compose -p rslbot -f docker-compose.yml -f docker-compose.dev.yml exec -T mysql mysql -u root -puns3cur3 rslbot -e "SHOW TABLES;"
+```
+
+Expected tables: `activities`, `license_keys`, `payments`, `subscriptions`, `users`

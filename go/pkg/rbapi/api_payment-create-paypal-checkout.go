@@ -7,8 +7,8 @@ import (
 	"strconv"
 
 	"github.com/plutov/paypal/v4"
-	"raidbot.app/go/pkg/errcode"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/errcode"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 // PaymentCreatePayPalCheckout implements the API endpoint for creating a PayPal checkout session
@@ -147,7 +147,7 @@ func (svc *service) PaymentCreatePayPalCheckout(ctx context.Context, in *Payment
 						},
 						Quantity: "1",
 						Category: paypal.ItemCategoryDigitalGood,
-						ImageURL: "https://raidbot.app/images/eb2avatar.png",
+						ImageURL: "https://rslbot.com/images/eb2avatar.png",
 					},
 				},
 			},

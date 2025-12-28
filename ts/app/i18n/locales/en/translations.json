@@ -40,6 +40,19 @@
     "tagline": "Your RAID: Shadow Legends Assistant",
     "description": "Many Farming Features"
   },
+  "hero": {
+    "title": "Automate RSL",
+    "titleHighlight": "Like a Pro",
+    "description": "Maximize your progress in Raid Shadow Legends with intelligent automation. Farm resources, level heroes, and dominate arenas while you focus on strategy.",
+    "startFreeButton": "Start Free Today",
+    "learnMoreButton": "Learn More",
+    "cardTitle": "RAIDBOT",
+    "cardTagline": "Your RAID: Shadow Legends assistant",
+    "cardDescription": "dedicated to greatly improve and optimize your farming of the game.",
+    "badge1": "24/7 SUPPORT",
+    "badge2": "SAFE & EASY",
+    "badge3": "MANY FARMING FEATURES"
+  },
   "footer": {
     "raidBot": "RaidBot",
     "resources": "Resources",
@@ -134,22 +147,45 @@
     "keywords": "RAID Shadow Legends, RAID bot, farming bot, arena bot, auto farm, BlueStacks bot, android emulator bot"
   },
   "features": {
-    "title": "WHAT WE OFFER",
+    "title": "Powerful Features for Every Player",
     "farmWhileAfk": {
-      "title": "FARM WHILE AFK",
-      "description": "Selected Campaign or Dungeons boss • Battle Arena and filter by enemy team power • Buy Blue/Green shard from market • Level heroes in Sparring Pit • Level food • Manage bastion reward • Fight Clan boss"
+      "title": "Earn Resources 24/7",
+      "description": "Let the bot handle the grind while you sleep. Farm efficiently without lifting a finger.",
+      "bullets": [
+        "Auto-farm campaigns and dungeons",
+        "Battle in Arenas with smart filtering",
+        "Auto-purchase shards from market",
+        "Level heroes in Sparring Pit",
+        "Manage bastion rewards automatically",
+        "Fight Clan Bosses with precision"
+      ]
     },
     "community": {
-      "title": "BE PART OF A COMMUNITY",
-      "description": "24/7 Support • Active forum • Chatbox"
+      "title": "Join a Thriving Community",
+      "description": "Get support, share strategies, and connect with thousands of active players.",
+      "bullets": [
+        "24/7 dedicated support team",
+        "Active community forum",
+        "Real-time chat support",
+        "Regular updates and improvements",
+        "Strategy guides and tips"
+      ]
     },
     "safeAndEasy": {
-      "title": "SAFE AND EASY",
-      "description": "Running inside BlueStacks Android emulator, very hard to detect, never detected since first release. Easy to setup and run. Emulates human behavior to be more secure."
+      "title": "Safe and Simple Setup",
+      "description": "Secure automation built for peace of mind. Get started in minutes with our easy setup.",
+      "bullets": [
+        "Runs safely with Plarium Play",
+        "Never detected since first release",
+        "Quick and easy installation",
+        "Human-like behavior simulation",
+        "Regular security updates"
+      ]
     }
   },
   "pricing": {
-    "title": "STORE",
+    "title": "Choose Your Plan",
+    "subtitle": "Start free and upgrade anytime. All plans include regular updates and community access.",
     "securedPayment": "Secured payment",
     "paymentMethods": "Mastercard • PayPal • Visa • Google Pay",
     "free": {

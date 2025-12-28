@@ -8,8 +8,8 @@ services:
       - 3306
     environment:
       MYSQL_ROOT_PASSWORD: uns3cur3
-      MYSQL_DATABASE: raidbot
-      MYSQL_USER: raidbot
+      MYSQL_DATABASE: rslbot
+      MYSQL_USER: rslbot
       MYSQL_PASSWORD: uns3cur3
     command:
       - mysqld

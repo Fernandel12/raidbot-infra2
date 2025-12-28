@@ -18,21 +18,21 @@ env:
   UNICORN_WORKERS: 8
 
   # General Discourse settings
-  DISCOURSE_HOSTNAME: 'community.raidbot.app'
-  DISCOURSE_DEVELOPER_EMAILS: 'admin@raidbot.app'
+  DISCOURSE_HOSTNAME: 'community.rslbot.com'
+  DISCOURSE_DEVELOPER_EMAILS: 'admin@rslbot.com'
 
   # SMTP settings - CONFIGURE THESE
-  DISCOURSE_SMTP_ADDRESS: 'smtp.example.com'
+  DISCOURSE_SMTP_ADDRESS: 'smtp.resend.com'
   DISCOURSE_SMTP_PORT: 587
-  DISCOURSE_SMTP_USER_NAME: 'your_smtp_username'
-  DISCOURSE_SMTP_PASSWORD: 'your_smtp_password'
-  DISCOURSE_SMTP_DOMAIN: 'raidbot.app'
-  DISCOURSE_NOTIFICATION_EMAIL: 'noreply@raidbot.app'
+  DISCOURSE_SMTP_USER_NAME: 'resend'
+  DISCOURSE_SMTP_PASSWORD: 're_R5Gboyby_GKCMJpLRkpDvTVe5XATG1k7D'
+  DISCOURSE_SMTP_DOMAIN: 'resend.rslbot.com'
+  DISCOURSE_NOTIFICATION_EMAIL: 'noreply@resend.rslbot.com'
 
   # nginx-proxy settings
-  VIRTUAL_HOST: 'community.raidbot.app'
-  LETSENCRYPT_HOST: 'community.raidbot.app'
-  LETSENCRYPT_EMAIL: 'admin@raidbot.app'
+  VIRTUAL_HOST: 'community.rslbot.com'
+  LETSENCRYPT_HOST: 'community.rslbot.com'
+  LETSENCRYPT_EMAIL: 'admin@rslbot.com'
 
 expose:
   - '80'

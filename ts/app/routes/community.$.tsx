@@ -7,7 +7,7 @@ export function loader({ request, params }: LoaderFunctionArgs) {
   const wildcardPath = params["*"] || ""
 
   // Redirect to the target domain with the same path
-  return redirect(`https://community.raidbot.app/${wildcardPath}`, {
+  return redirect(`https://community.rslbot.com/${wildcardPath}`, {
     status: 301,
   })
 }

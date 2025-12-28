@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"raidbot.app/go/internal/testutil"
+	"rslbot.com/go/internal/testutil"
 )
 
 func TestServer(t *testing.T) {

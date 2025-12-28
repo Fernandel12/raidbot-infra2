@@ -13,7 +13,7 @@ import (
 	"google.golang.org/grpc/metadata"
 	"gorm.io/gorm"
 
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 const (
@@ -59,7 +59,7 @@ func TestingService(t *testing.T, opts ServiceOpts) (Service, func()) {
 		createdPayment, err := rbdb.DefaultCreatePayment(context.Background(), payment, db)
 		require.NoError(t, err)
 
-		_, err = rbdb.GenerateLicense(db, userOrm.Id, createdPayment.Id, rbdb.LicenseKey_LIFETIME, true)
+		_, err = rbdb.GenerateLicense(db, userOrm.Id, createdPayment.Id, rbdb.LicenseKey_LIFETIME, rbdb.LicenseKey_TIER_PREMIUM, true)
 		require.NoError(t, err)
 	}
 

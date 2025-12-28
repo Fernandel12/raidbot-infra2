@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"gorm.io/gorm"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 const (
@@ -18,6 +18,7 @@ type ActivateLicenseRequest struct {
 	LicenseKey string `json:"license_key"`
 	Secret     string `json:"secret"`
 	IP         string `json:"ip"`
+	Version    string `json:"version"`
 }
 
 // activateLicense handles license activation
@@ -55,21 +56,15 @@ func activateLicense(db *gorm.DB, redisStore *RedisStore) http.HandlerFunc {
 			response.Status = "ok"
 			response.UsageID = license.ActiveUsageId
 			response.Uses = license.Uses
-		} else {
-			// Free tier activation
-			usageID, err := redisStore.CreateRedisFreeSession(r.Context())
-			if err != nil {
-				response.Status = faultString
-				response.FaultString = "Failed to create free session"
-				if err := json.NewEncoder(w).Encode(response); err != nil {
-					http.Error(w, "Failed to encode response", http.StatusInternalServerError)
-				}
-				return
-			}
+			response.LicenseType = rbdb.MapToClientLicenseType(license.Duration, license.Tier)
 
-			response.Status = "ok"
-			response.UsageID = usageID
-			response.Uses = 1 // Always 1 for free tier
+			// Fetch offsets for the version if provided
+			if req.Version != "" {
+				offsets, err := rbdb.GetOffsetByVersion(db, req.Version)
+				if err == nil && offsets != nil {
+					response.Offsets = offsets
+				}
+			}
 		}
 
 		if err := json.NewEncoder(w).Encode(response); err != nil {

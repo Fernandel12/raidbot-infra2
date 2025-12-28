@@ -5,7 +5,7 @@ import (
 	"errors"
 
 	"gorm.io/gorm"
-	"raidbot.app/go/pkg/errcode"
+	"rslbot.com/go/pkg/errcode"
 )
 
 func IsRecordNotFoundError(err error) bool {

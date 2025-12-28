@@ -8,7 +8,7 @@ import (
 	"github.com/bwmarrin/snowflake"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 type Service interface {

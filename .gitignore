@@ -8,7 +8,7 @@ bin/
 *.out
 *.so
 *.test
-go/cmd/raidbot/raidbot
+go/cmd/rslbot/rslbot
 
 # Go
 vendor/
@@ -30,7 +30,7 @@ gen.sum.tmp
 .env
 .dev.vars
 *client_secrets.json
-raidbot_token.json
+rslbot_token.json
 
 # Logs
 *.log

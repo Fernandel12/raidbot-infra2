@@ -25,7 +25,7 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/protobuf/encoding/protojson"
 	"gorm.io/gorm"
-	"raidbot.app/go/pkg/errcode"
+	"rslbot.com/go/pkg/errcode"
 )
 
 const (
@@ -232,6 +232,7 @@ func httpServer(ctx context.Context, db *gorm.DB, redisStore *RedisStore, server
 	r.Mount("/", gwmux)
 	r.HandleFunc("/license/activate", activateLicense(db, redisStore))
 	r.HandleFunc("/license/check", checkLicense(db, redisStore))
+	r.HandleFunc("/offsets/update", updateOffsets(db))
 	r.HandleFunc("/webhooks/paypal", paypalWebhookHandler(db, logger))
 	if opts.WithPprof {
 		r.HandleFunc("/debug/pprof/*", pprof.Index)

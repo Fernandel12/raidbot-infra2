@@ -1,25 +1,47 @@
-import { theme } from "~/lib/theme"
-
 interface FeatureCardProps {
   icon: React.ReactNode
   title: string
   description: string
+  bullets?: string[]
 }
 
-export default function FeatureCard({ icon, title, description }: FeatureCardProps) {
+export default function FeatureCard({ icon, title, description, bullets }: FeatureCardProps) {
   return (
-    <div
-      className="rounded-2xl p-8 hover:shadow-xl transition-shadow min-h-[450px] flex flex-col items-center text-center"
-      style={{
-        background: theme.gradients.feature,
-        boxShadow: theme.shadows.card,
-      }}
-    >
-      <div className="h-32 flex items-center justify-center mb-6">
+    <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+      {/* Icon */}
+      <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
         {icon}
       </div>
-      <h3 className="text-white text-xl font-semibold mb-4">{title}</h3>
-      <p className="text-white text-sm leading-relaxed">{description}</p>
+
+      {/* Title */}
+      <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
+
+      {/* Description */}
+      <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
+
+      {/* Bullet Points */}
+      {bullets && bullets.length > 0 && (
+        <ul className="space-y-3">
+          {bullets.map((bullet, idx) => (
+            <li key={idx} className="flex items-start gap-3">
+              <svg
+                className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span className="text-gray-700 text-sm">{bullet}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }

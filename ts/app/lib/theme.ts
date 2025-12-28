@@ -1,6 +1,6 @@
 /**
  * Centralized theme configuration for RaidBot
- * Based on original raidbot-infra landing page styling
+ * Based on original rslbot-infra landing page styling
  */
 
 export const theme = {
@@ -68,11 +68,11 @@ export const theme = {
 export type Theme = typeof theme
 
 // Discord invite link
-export const DISCORD_INVITE = "https://discord.gg/raidbot" // TODO: Replace with actual RaidBot Discord invite
+export const DISCORD_INVITE = "https://discord.gg/rslbot" // TODO: Replace with actual RaidBot Discord invite
 
 // External links
 export const links = {
   discord: DISCORD_INVITE,
-  forum: "https://community.raidbot.app",
-  releases: "https://community.raidbot.app/c/eb2-releases/8",
+  forum: "https://community.rslbot.com",
+  releases: "https://community.rslbot.com/c/eb2-releases/8",
 } as const

@@ -1,6 +1,6 @@
-# RaidBot Infrastructure v2
+# RSLBot Infrastructure v2
 
-Modern infrastructure for RaidBot
+Modern infrastructure for RSLBot
 
 ## Architecture
 
@@ -24,14 +24,14 @@ Modern infrastructure for RaidBot
 ```
 raidbot-infra2/
 ├── api/
-│   ├── proto/raidbot/          # Protobuf definitions
+│   ├── proto/rslbot/          # Protobuf definitions
 │   │   ├── rbdb.proto          # Database models
 │   │   ├── rbapi.proto         # API service definitions
 │   │   └── errcode.proto       # Error codes
 │   ├── buf.yaml                # Buf configuration
 │   └── buf.gen.yaml            # Buf generation config
 ├── go/
-│   ├── cmd/raidbot/            # CLI entrypoint
+│   ├── cmd/rslbot/            # CLI entrypoint
 │   │   ├── main.go
 │   │   ├── api.go              # API server command
 │   │   ├── admin.go            # Admin commands
@@ -58,7 +58,7 @@ raidbot-infra2/
 │   ├── public/                 # Static assets
 │   └── package.json            # Node dependencies
 ├── deployments/
-│   ├── raidbot-api/            # API service deployment
+│   ├── rslbot-api/            # API service deployment
 │   ├── nginx-proxy/            # Nginx reverse proxy
 │   └── discourse.yml           # Discourse configuration
 ├── go.mod                      # Go module file
@@ -160,7 +160,7 @@ cd ts && pnpm lint
 
 ```bash
 # Backup main database
-make backup-raidbot-api
+make backup-rslbot-api
 
 # Backup all databases
 make backup-all
@@ -191,7 +191,7 @@ make backup-all
 
 4. **Deploy RaidBot API**:
    ```bash
-   cd deployments/raidbot-api
+   cd deployments/rslbot-api
    cp .env.example .env
    # Edit .env with your credentials
    docker compose up -d
@@ -199,11 +199,11 @@ make backup-all
 
 ### Environment Variables
 
-Create a `.env` file in `deployments/raidbot-api/`:
+Create a `.env` file in `deployments/rslbot-api/`:
 
 ```env
 # Database
-URN=raidbot:password@tcp(mysql:3306)/raidbot?charset=utf8&parseTime=True&loc=Local
+URN=rslbot:password@tcp(mysql:3306)/rslbot?charset=utf8&parseTime=True&loc=Local
 MYSQL_PASSWORD=your_mysql_password
 
 # PayPal
@@ -221,43 +221,43 @@ DISCORD_BOT_TOKEN=...
 
 ```bash
 # Get active users
-./raidbot admin active-users --server localhost:8080
+./rslbot admin active-users --server localhost:8080
 
 # Create license for user
-./raidbot admin create-license \
+./rslbot admin create-license \
   --user-email user@example.com \
   --duration ONE_MONTH
 
 # Revoke license
-./raidbot admin revoke-license --key LICENSE_KEY_HERE
+./rslbot admin revoke-license --key LICENSE_KEY_HERE
 
 # Search database
-./raidbot admin search --term "search_term"
+./rslbot admin search --term "search_term"
 ```
 
 ### Testing User Session
 
 ```bash
 # Test HTTP endpoint
-./raidbot cli @me --server http://localhost:8080
+./rslbot cli @me --server http://localhost:8080
 
 # Test gRPC endpoint
-./raidbot cli @me --grpc --server localhost:8080
+./rslbot cli @me --grpc --server localhost:8080
 ```
 
 ## Module and Package Naming
 
-- Go module: `raidbot.app`
+- Go module: `rslbot.com`
 - API package: `rbapi`
 - DB package: `rbdb`
 - Domains:
-  - Main site: `raidbot.app`
-  - API: `api.raidbot.app`
-  - Community: `community.raidbot.app`
+  - Main site: `rslbot.com`
+  - API: `api.rslbot.com`
+  - Community: `community.rslbot.com`
 
 ## Database Schema
 
-The database schema is defined in `api/proto/raidbot/rbdb.proto` and includes:
+The database schema is defined in `api/proto/rslbot/rbdb.proto` and includes:
 
 - **User** - User accounts (synced with Discourse)
 - **LicenseKey** - Software license keys
@@ -294,7 +294,7 @@ RaidBot uses Discourse for authentication via SSO:
 Admins can create licenses manually:
 
 ```bash
-./raidbot admin create-license \
+./rslbot admin create-license \
   --user-email user@example.com \
   --duration LIFETIME
 ```
@@ -304,23 +304,23 @@ Admins can create licenses manually:
 ### View Logs
 
 ```bash
-cd deployments/raidbot-api
+cd deployments/rslbot-api
 docker compose logs -f
 ```
 
 ### Backup Database
 
 ```bash
-cd deployments/raidbot-api
+cd deployments/rslbot-api
 ./db_backup.sh
 ```
 
-Backups are stored in `deployments/raidbot-api/backups/` and automatically compressed. Old backups (30+ days) are automatically deleted.
+Backups are stored in `deployments/rslbot-api/backups/` and automatically compressed. Old backups (30+ days) are automatically deleted.
 
 ### Restart Services
 
 ```bash
-cd deployments/raidbot-api
+cd deployments/rslbot-api
 docker compose restart
 ```
 
@@ -371,6 +371,6 @@ Proprietary - All rights reserved
 ## Support
 
 For issues and questions:
-- Discord: [Join our community](https://discord.gg/raidbot)
-- Forum: https://community.raidbot.app
-- Email: support@raidbot.app
+- Discord: [Join our community](https://discord.gg/rslbot)
+- Forum: https://community.rslbot.com
+- Email: support@rslbot.com

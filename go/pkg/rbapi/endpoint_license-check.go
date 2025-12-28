@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"gorm.io/gorm"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 const checkSecret = "BzkE4gdxc9z956v"
@@ -16,6 +16,7 @@ type CheckLicenseRequest struct {
 	UsageID    string `json:"usage_id,omitempty"`
 	Secret     string `json:"secret"`
 	IP         string `json:"ip"`
+	Version    string `json:"version"`
 }
 
 // checkLicense handles license checking
@@ -37,7 +38,7 @@ func checkLicense(db *gorm.DB, redisStore *RedisStore) http.HandlerFunc {
 
 		if req.LicenseKey != "" {
 			// Paid tier check
-			uses, err := rbdb.CheckLicense(db, req.LicenseKey, req.UsageID)
+			license, err := rbdb.CheckLicense(db, req.LicenseKey, req.UsageID)
 			if err != nil {
 				response.Status = faultString
 				response.FaultString = err.Error()
@@ -51,31 +52,16 @@ func checkLicense(db *gorm.DB, redisStore *RedisStore) http.HandlerFunc {
 			_ = redisStore.TrackPaidSession(r.Context(), req.UsageID)
 
 			response.Status = "ok"
-			response.Uses = uses
-		} else {
-			// Free tier check
-			if req.UsageID == "" {
-				response.Status = faultString
-				response.FaultString = "Missing usage id"
-				if err := json.NewEncoder(w).Encode(response); err != nil {
-					http.Error(w, "Failed to encode response", http.StatusInternalServerError)
-				}
-				return
-			}
+			response.Uses = license.Uses
+			response.LicenseType = rbdb.MapToClientLicenseType(license.Duration, license.Tier)
 
-			// Validate free session
-			err := redisStore.ValidateFreeSession(r.Context(), req.UsageID)
-			if err != nil {
-				response.Status = faultString
-				response.FaultString = "Invalid or expired free tier session"
-				if err := json.NewEncoder(w).Encode(response); err != nil {
-					http.Error(w, "Failed to encode response", http.StatusInternalServerError)
+			// Fetch offsets for the version if provided
+			if req.Version != "" {
+				offsets, err := rbdb.GetOffsetByVersion(db, req.Version)
+				if err == nil && offsets != nil {
+					response.Offsets = offsets
 				}
-				return
 			}
-
-			response.Status = "ok"
-			response.Uses = 1 // Always 1 for free tier
 		}
 
 		if err := json.NewEncoder(w).Encode(response); err != nil {

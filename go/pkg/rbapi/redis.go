@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/redis/go-redis/v9"
-	"raidbot.app/go/pkg/errcode"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/errcode"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 type RedisConfig struct {

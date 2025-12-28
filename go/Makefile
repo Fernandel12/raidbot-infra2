@@ -8,13 +8,13 @@ check-program = $(foreach exec,$(1),$(if $(shell PATH="$(PATH)" which $(exec)),,
 
 ## MYSQL
 MYSQL_CONFIG = -u root -puns3cur3
-MYSQL_URN := root:uns3cur3@tcp(127.0.0.1:3306)/raidbot?charset=utf8mb4&parseTime=true
+MYSQL_URN := root:uns3cur3@tcp(127.0.0.1:3306)/rslbot?charset=utf8mb4&parseTime=true
 
 ## API BIND
 API_BIND ?= :8080
 
-COMPILEDAEMON_OPTIONS ?= -exclude-dir=.git -color=true -build=go\ install -build-dir=./cmd/raidbot
-COMPOSE_OPTS = -p raidbot -f docker-compose.yml -f docker-compose.dev.yml
+COMPILEDAEMON_OPTIONS ?= -exclude-dir=.git -color=true -build=go\ install -build-dir=./cmd/rslbot
+COMPOSE_OPTS = -p rslbot -f docker-compose.yml -f docker-compose.dev.yml
 
 ## CLI OPTS
 API_DEV_OPTS ?= --db-urn=$(MYSQL_URN) --bind=$(API_BIND)
@@ -24,8 +24,8 @@ API_DEV_OPTS ?= --db-urn=$(MYSQL_URN) --bind=$(API_BIND)
 api: mysql.up
 api: redis.up
 	GOFLAGS= go install github.com/githubnemo/CompileDaemon@latest
-	$(GO) install $(GO_INSTALL_OPTS) ./cmd/raidbot
-	CompileDaemon $(COMPILEDAEMON_OPTIONS) -command="raidbot api $(API_DEV_OPTS)"
+	$(GO) install $(GO_INSTALL_OPTS) ./cmd/rslbot
+	CompileDaemon $(COMPILEDAEMON_OPTIONS) -command="rslbot api $(API_DEV_OPTS)"
 
 .PHONY: api.down
 api.down: mysql.down
@@ -45,8 +45,8 @@ mysql.flush: mysql.down
 
 .PHONY: mysql.down
 mysql.down:
-	docker-compose -p raidbot stop mysql || true
-	docker-compose -p raidbot rm -f -v mysql || true
+	docker-compose -p rslbot stop mysql || true
+	docker-compose -p rslbot rm -f -v mysql || true
 
 .PHONY: redis.up
 redis.up:
@@ -54,16 +54,16 @@ redis.up:
 
 .PHONY: redis.down
 redis.down:
-	docker-compose -p raidbot stop redis || true
-	docker-compose -p raidbot rm -f -v redis || true
+	docker-compose -p rslbot stop redis || true
+	docker-compose -p rslbot rm -f -v redis || true
 
 .PHONY: mysql.logs
 mysql.logs:
-	docker-compose -p raidbot logs --tail=1000 -f mysql
+	docker-compose -p rslbot logs --tail=1000 -f mysql
 
 .PHONY: mysql.shell
 mysql.shell:
-	docker-compose -p raidbot exec mysql mysql $(MYSQL_CONFIG) raidbot
+	docker-compose -p rslbot exec mysql mysql $(MYSQL_CONFIG) rslbot
 
 ## GENERAL RULES
 .PHONY: test
@@ -95,7 +95,7 @@ clean:
 	rm -rf gen/
 	rm -f $(GEN_SUM)
 
-PROTOS_SRC := $(wildcard ../api/proto/raidbot/*.proto)
+PROTOS_SRC := $(wildcard ../api/proto/rslbot/*.proto)
 GEN_SRC := $(PROTOS_SRC) ../api/buf.yaml ../api/buf.gen.yaml
 GEN_SUM := gen.sum
 

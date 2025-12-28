@@ -38,7 +38,7 @@ export default function Navbar() {
             <LanguageSelector />
 
             <a
-              href="https://community.raidbot.app/c/eb2-releases/8"
+              href="https://community.rslbot.com/c/eb2-releases/8"
               target="_blank"
               rel="noopener noreferrer"
               className="text-neutral-content/80 hover:text-neutral-content transition-colors text-sm"
@@ -81,7 +81,7 @@ export default function Navbar() {
           <div className="flex items-center justify-around py-2">
             {/* Download */}
             <a
-              href="https://community.raidbot.app/c/eb2-releases/8"
+              href="https://community.rslbot.com/c/eb2-releases/8"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center p-2 text-neutral-content/80 hover:text-primary transition-colors"

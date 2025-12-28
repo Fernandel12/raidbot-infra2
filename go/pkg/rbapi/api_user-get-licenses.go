@@ -4,8 +4,8 @@ package rbapi
 import (
 	"context"
 
-	"raidbot.app/go/pkg/errcode"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/errcode"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 // UserGetLicenses implements the UserGetLicenses RPC method

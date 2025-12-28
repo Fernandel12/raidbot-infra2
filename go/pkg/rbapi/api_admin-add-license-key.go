@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"gorm.io/gorm"
-	"raidbot.app/go/pkg/errcode"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/errcode"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 func (svc *service) AdminAddLicenseKey(ctx context.Context, in *AdminAddLicenseKey_Input) (*AdminAddLicenseKey_Output, error) {
@@ -58,7 +58,7 @@ func (svc *service) AdminAddLicenseKey(ctx context.Context, in *AdminAddLicenseK
 			return rbdb.GormToErrcode(err)
 		}
 
-		out.LicenseKey, err = rbdb.GenerateLicense(svc.db, userORM.Id, payment.Id, in.Duration, false)
+		out.LicenseKey, err = rbdb.GenerateLicense(svc.db, userORM.Id, payment.Id, in.Duration, in.Tier, false)
 		if err != nil {
 			return errcode.ERR_GENERATE_LICENSE.Wrap(err)
 		}

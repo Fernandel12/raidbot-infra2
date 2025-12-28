@@ -13,7 +13,7 @@ import (
 	"gorm.io/gorm/schema"
 	"moul.io/zapgorm2"
 
-	"raidbot.app/go/pkg/errcode"
+	"rslbot.com/go/pkg/errcode"
 )
 
 var Models = []interface{}{

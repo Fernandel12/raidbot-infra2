@@ -4,8 +4,8 @@ import (
 	"context"
 	"strconv"
 
-	"raidbot.app/go/pkg/errcode"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/errcode"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 func (svc *service) AdminSearchDatabase(ctx context.Context, in *AdminSearchDatabase_Input) (*AdminSearchDatabase_Output, error) {

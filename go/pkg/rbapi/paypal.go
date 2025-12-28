@@ -13,8 +13,8 @@ import (
 	"github.com/plutov/paypal/v4"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
-	"raidbot.app/go/pkg/errcode"
-	"raidbot.app/go/pkg/rbdb"
+	"rslbot.com/go/pkg/errcode"
+	"rslbot.com/go/pkg/rbdb"
 )
 
 var (
@@ -33,9 +33,9 @@ const (
 	PayPalClientSecretSandboxTest = "EO9BFlVy-pJacLZLGGkqx36VwulYIaflxZF1K69oBbM4obepbrOYmnVbqieSMx9H8VJbZx2XcGTFCImz"
 	PayPalWebhookIDSandboxTest    = "7ML47262H43557450"
 	PayPalSuccessURLDev           = "http://localhost:5173/payment/success"
-	PayPalSuccessURLProd          = "https://raidbot.app/payment/success"
+	PayPalSuccessURLProd          = "https://rslbot.com/payment/success"
 	PayPalCancelURLDev            = "http://localhost:5173/purchase"
-	PayPalCancelURLProd           = "https://raidbot.app/purchase"
+	PayPalCancelURLProd           = "https://rslbot.com/purchase"
 )
 
 // SetupPayPal initializes the PayPal configuration
@@ -444,8 +444,8 @@ func handlePaymentCaptureCompleted(ctx context.Context, event paypal.AnyEvent, d
 				return rbdb.GormToErrcode(err)
 			}
 
-			// Generate new license
-			licenseKey, err := rbdb.GenerateLicense(tx, user.Id, createdPayment.Id, licenseDuration, true)
+			// Generate new license (all paid licenses are PREMIUM tier)
+			licenseKey, err := rbdb.GenerateLicense(tx, user.Id, createdPayment.Id, licenseDuration, rbdb.LicenseKey_TIER_PREMIUM, true)
 			if err != nil {
 				return errcode.ERR_GENERATE_LICENSE.Wrap(err)
 			}
