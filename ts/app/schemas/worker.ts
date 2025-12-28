@@ -3,23 +3,29 @@ import { z } from "zod"
 /**
  * Schema for BaseItemType from game data JSON
  */
-export const BaseItemTypeSchema = z.object({
-  Name: z.string(),
-}).passthrough() // Allow additional unknown properties
+export const BaseItemTypeSchema = z
+  .object({
+    Name: z.string(),
+  })
+  .passthrough() // Allow additional unknown properties
 
 /**
  * Schema for ItemClass from game data JSON
  */
-export const ItemClassSchema = z.object({
-  Name: z.string(),
-}).passthrough() // Allow additional unknown properties
+export const ItemClassSchema = z
+  .object({
+    Name: z.string(),
+  })
+  .passthrough() // Allow additional unknown properties
 
 /**
  * Schema for Stat from game data JSON
  */
-export const StatSchema = z.object({
-  Id: z.string(),
-}).passthrough() // Allow additional unknown properties
+export const StatSchema = z
+  .object({
+    Id: z.string(),
+  })
+  .passthrough() // Allow additional unknown properties
 
 /**
  * Schema for the combined game data

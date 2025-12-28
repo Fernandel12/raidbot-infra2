@@ -5,6 +5,9 @@
 - Do NOT use conventional commits (no `feat:`, `fix:`, `chore:` prefixes)
 - Do NOT add "Generated with Claude Code" footer
 - Do NOT add "Co-Authored-By: Claude" footer
+- ALWAYS run lint and tests before committing:
+  - Go: `make lint` and `make test`
+  - TypeScript: `cd ts && pnpm lint && pnpm typecheck && pnpm format:check`
 
 ## Project Overview
 

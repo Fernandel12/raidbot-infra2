@@ -23,9 +23,7 @@ function LicenseActivationInstructions() {
           className="bg-base-200/90 rounded-xl p-5 shadow-xl border border-base-300/30"
         >
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-2xl font-semibold text-white">
-              {t("license.activateTitle")}
-            </h3>
+            <h3 className="text-2xl font-semibold text-white">{t("license.activateTitle")}</h3>
             <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-base-300 rounded-full">
               <X className="h-4 w-4" />
             </button>
@@ -34,9 +32,7 @@ function LicenseActivationInstructions() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-base-100 p-4 rounded-lg border border-base-300/40">
               <div className="text-center mb-3">
-                <h4 className="text-lg font-medium text-white">
-                  {t("license.activateStep1")}
-                </h4>
+                <h4 className="text-lg font-medium text-white">{t("license.activateStep1")}</h4>
               </div>
               <img
                 src="/images/activate_license1.png"
@@ -51,9 +47,7 @@ function LicenseActivationInstructions() {
 
             <div className="bg-base-100 p-4 rounded-lg border border-base-300/40">
               <div className="text-center mb-3">
-                <h4 className="text-lg font-medium text-white">
-                  {t("license.activateStep2")}
-                </h4>
+                <h4 className="text-lg font-medium text-white">{t("license.activateStep2")}</h4>
               </div>
               <img
                 src="/images/activate_license2.png"
@@ -66,9 +60,7 @@ function LicenseActivationInstructions() {
 
             <div className="bg-base-100 p-4 rounded-lg border border-base-300/40">
               <div className="text-center mb-3">
-                <h4 className="text-lg font-medium text-white">
-                  {t("license.activateStep3")}
-                </h4>
+                <h4 className="text-lg font-medium text-white">{t("license.activateStep3")}</h4>
               </div>
               <img
                 src="/images/activate_license3.png"

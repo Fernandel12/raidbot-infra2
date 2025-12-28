@@ -146,7 +146,6 @@ function SessionCheck() {
   return null
 }
 
-
 export default function App() {
   const location = useLocation()
   const loaderData = useLoaderData<typeof loader>()

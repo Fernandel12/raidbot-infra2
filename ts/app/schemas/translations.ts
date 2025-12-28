@@ -13,7 +13,7 @@ export const FaqItemSchema = z.object({
       z.object({
         key: z.string(),
         action: z.string(),
-      }),
+      })
     )
     .optional(),
   pickitSteps: z.array(z.string()).optional(),

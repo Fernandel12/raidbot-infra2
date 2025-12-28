@@ -9,7 +9,10 @@ export const meta: MetaFunction = () => {
     { title: "RaidBot - Purchase License" },
     { name: "description", content: "Purchase a license for RaidBot and unlock all features." },
     { property: "og:title", content: "RaidBot - Purchase License" },
-    { property: "og:description", content: "Purchase a license for RaidBot and unlock all features." },
+    {
+      property: "og:description",
+      content: "Purchase a license for RaidBot and unlock all features.",
+    },
     { property: "og:type", content: "website" },
   ]
 }
@@ -57,9 +60,7 @@ export default function PurchasePage() {
   return (
     <section className="py-10 md:py-16 px-4 max-w-7xl mx-auto">
       <div className="flex flex-col gap-6 items-center justify-center mb-10">
-        <h1 className="text-4xl md:text-5xl font-semibold text-white">
-          RaidBot License
-        </h1>
+        <h1 className="text-4xl md:text-5xl font-semibold text-white">RaidBot License</h1>
         <p className="text-center max-w-2xl text-white/80">
           Purchase a license to unlock all bot features.
         </p>
@@ -71,9 +72,7 @@ export default function PurchasePage() {
         <div className="w-full space-y-6">
           {/* Feature List */}
           <div className="bg-base-200 rounded-xl p-6 shadow-md">
-            <h3 className="text-xl font-bold mb-4 text-primary">
-              Premium Features
-            </h3>
+            <h3 className="text-xl font-bold mb-4 text-primary">Premium Features</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="flex items-start gap-2">
@@ -136,12 +135,11 @@ export default function PurchasePage() {
                   d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <h3 className="text-xl font-bold text-primary">
-                {t("license.licenseType")}
-              </h3>
+              <h3 className="text-xl font-bold text-primary">{t("license.licenseType")}</h3>
             </div>
             <p className="mt-2 font-medium text-white">
-              Each license is valid for one machine only. Multiple devices require separate licenses.
+              Each license is valid for one machine only. Multiple devices require separate
+              licenses.
             </p>
           </div>
         </div>
@@ -159,9 +157,7 @@ export default function PurchasePage() {
             <form onSubmit={(e) => void handleCheckout(e)} className="space-y-6">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-bold text-white">
-                    Select License Duration
-                  </h3>
+                  <h3 className="text-xl font-bold text-white">Select License Duration</h3>
                 </div>
 
                 {/* Pricing cards */}
@@ -185,18 +181,12 @@ export default function PurchasePage() {
                         onChange={() => setSelectedDuration("ONE_WEEK")}
                         className="radio radio-primary"
                       />
-                      <span className="font-semibold text-lg">
-                        {t("license.duration.oneWeek")}
-                      </span>
+                      <span className="font-semibold text-lg">{t("license.duration.oneWeek")}</span>
                     </div>
                     <div className="mt-2">
                       <div className="flex items-baseline">
-                        <span className="text-primary text-4xl font-bold">
-                          $5
-                        </span>
-                        <span className="text-base-content/70 ml-1">
-                          /week
-                        </span>
+                        <span className="text-primary text-4xl font-bold">$5</span>
+                        <span className="text-base-content/70 ml-1">/week</span>
                       </div>
                     </div>
                   </label>
@@ -226,12 +216,8 @@ export default function PurchasePage() {
                     </div>
                     <div className="mt-2">
                       <div className="flex items-baseline">
-                        <span className="text-primary text-4xl font-bold">
-                          $15
-                        </span>
-                        <span className="text-base-content/70 ml-1">
-                          /month
-                        </span>
+                        <span className="text-primary text-4xl font-bold">$15</span>
+                        <span className="text-base-content/70 ml-1">/month</span>
                       </div>
                     </div>
                   </label>
@@ -256,18 +242,12 @@ export default function PurchasePage() {
                         onChange={() => setSelectedDuration("ONE_YEAR")}
                         className="radio radio-primary"
                       />
-                      <span className="font-semibold text-lg">
-                        {t("license.duration.oneYear")}
-                      </span>
+                      <span className="font-semibold text-lg">{t("license.duration.oneYear")}</span>
                     </div>
                     <div className="mt-2">
                       <div className="flex items-baseline">
-                        <span className="text-primary text-4xl font-bold">
-                          $120
-                        </span>
-                        <span className="text-base-content/70 ml-1">
-                          /year
-                        </span>
+                        <span className="text-primary text-4xl font-bold">$120</span>
+                        <span className="text-base-content/70 ml-1">/year</span>
                       </div>
                     </div>
                   </label>
@@ -298,12 +278,8 @@ export default function PurchasePage() {
                     </div>
                     <div className="mt-2">
                       <div className="flex items-baseline">
-                        <span className="text-primary text-4xl font-bold">
-                          $300
-                        </span>
-                        <span className="text-base-content/70 ml-1">
-                          one-time
-                        </span>
+                        <span className="text-primary text-4xl font-bold">$300</span>
+                        <span className="text-base-content/70 ml-1">one-time</span>
                       </div>
                     </div>
                   </label>
@@ -370,9 +346,7 @@ export default function PurchasePage() {
                 </button>
 
                 {!isAuthenticated && (
-                  <p className="mt-3 text-center text-red-600">
-                    {t("auth.loginRequired")}
-                  </p>
+                  <p className="mt-3 text-center text-red-600">{t("auth.loginRequired")}</p>
                 )}
               </div>
 

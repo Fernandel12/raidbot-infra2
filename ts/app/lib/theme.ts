@@ -7,11 +7,11 @@ export const theme = {
   colors: {
     // Primary brand colors
     primary: {
-      dark: "#322B6D",        // Main brand color (headings, emphasis)
-      purple: "#352C71",      // Feature card gradient start
-      violet: "#743AA0",      // Feature card gradient end
-      magenta: "#71389E",     // Pricing card gradient start
-      pink: "#B96FC8",        // Pricing card gradient end
+      dark: "#322B6D", // Main brand color (headings, emphasis)
+      purple: "#352C71", // Feature card gradient start
+      violet: "#743AA0", // Feature card gradient end
+      magenta: "#71389E", // Pricing card gradient start
+      pink: "#B96FC8", // Pricing card gradient end
     },
 
     // Background colors
@@ -50,11 +50,11 @@ export const theme = {
   },
 
   borderRadius: {
-    sm: "0.375rem",     // 6px
-    md: "0.5rem",       // 8px
-    lg: "0.75rem",      // 12px
-    xl: "0.9375rem",    // 15px
-    "2xl": "1rem",      // 16px
+    sm: "0.375rem", // 6px
+    md: "0.5rem", // 8px
+    lg: "0.75rem", // 12px
+    xl: "0.9375rem", // 15px
+    "2xl": "1rem", // 16px
     full: "9999px",
   },
 

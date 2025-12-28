@@ -49,19 +49,19 @@ export default {
       {
         raidbot2: {
           // Based on original rslbot-infra colors
-          primary: "#743AA0",           // Purple from feature cards
+          primary: "#743AA0", // Purple from feature cards
           "primary-content": "#FFFFFF",
-          secondary: "#9553B3",         // Mid-tone from pricing gradient
+          secondary: "#9553B3", // Mid-tone from pricing gradient
           "secondary-content": "#FFFFFF",
-          accent: "#B96FC8",            // Pink from pricing cards
+          accent: "#B96FC8", // Pink from pricing cards
           "accent-content": "#FFFFFF",
-          neutral: "#322B6D",           // Dark brand color
+          neutral: "#322B6D", // Dark brand color
           "neutral-content": "#FFFFFF",
-          "base-100": "#FFFFFF",        // White background
-          "base-200": "#F9FAFB",        // Light gray
-          "base-300": "#E5E7EB",        // Border color
-          "base-content": "#1F2937",    // Dark text
-          info: "#352C71",              // Feature card purple
+          "base-100": "#FFFFFF", // White background
+          "base-200": "#F9FAFB", // Light gray
+          "base-300": "#E5E7EB", // Border color
+          "base-content": "#1F2937", // Dark text
+          info: "#352C71", // Feature card purple
           "info-content": "#FFFFFF",
           success: "#10B981",
           "success-content": "#FFFFFF",

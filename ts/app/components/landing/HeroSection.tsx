@@ -15,9 +15,7 @@ export default function HeroSection() {
               <br />
               <span className="text-indigo-600">{t("hero.titleHighlight")}</span>
             </h1>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              {t("hero.description")}
-            </p>
+            <p className="text-lg text-gray-600 leading-relaxed">{t("hero.description")}</p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 to="https://community.rslbot.com/index.php?/store/product/11-free-license/"
@@ -43,12 +41,8 @@ export default function HeroSection() {
                   <h2 className="text-3xl font-bold text-white">{t("hero.cardTitle")}</h2>
                   <span className="text-2xl">😊</span>
                 </div>
-                <p className="text-indigo-200 text-sm font-medium mb-4">
-                  {t("hero.cardTagline")}
-                </p>
-                <p className="text-white text-sm max-w-md mx-auto">
-                  {t("hero.cardDescription")}
-                </p>
+                <p className="text-indigo-200 text-sm font-medium mb-4">{t("hero.cardTagline")}</p>
+                <p className="text-white text-sm max-w-md mx-auto">{t("hero.cardDescription")}</p>
               </div>
 
               {/* Robot Illustration Placeholder */}
@@ -64,13 +58,19 @@ export default function HeroSection() {
                 {/* Feature Badges */}
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 space-y-3">
                   <div className="bg-white/20 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/30">
-                    <p className="text-white text-xs font-bold whitespace-nowrap">{t("hero.badge1")}</p>
+                    <p className="text-white text-xs font-bold whitespace-nowrap">
+                      {t("hero.badge1")}
+                    </p>
                   </div>
                   <div className="bg-white/20 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/30">
-                    <p className="text-white text-xs font-bold whitespace-nowrap">{t("hero.badge2")}</p>
+                    <p className="text-white text-xs font-bold whitespace-nowrap">
+                      {t("hero.badge2")}
+                    </p>
                   </div>
                   <div className="bg-white/20 backdrop-blur-sm px-3 py-2 rounded-lg border border-white/30">
-                    <p className="text-white text-xs font-bold whitespace-nowrap">{t("hero.badge3")}</p>
+                    <p className="text-white text-xs font-bold whitespace-nowrap">
+                      {t("hero.badge3")}
+                    </p>
                   </div>
                 </div>
               </div>

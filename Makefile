@@ -30,6 +30,14 @@ tidy:
 	cd go && make tidy
 .PHONY: tidy
 
+.PHONY: lint
+lint:
+	cd go && golangci-lint run ./...
+
+.PHONY: install-lint
+install-lint:
+	go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.1.6
+
 ##
 ## docker.build
 ##

@@ -192,27 +192,21 @@
       "title": "FREE OFFER",
       "price": "Free",
       "description": "FREE <3",
-      "features": [
-        "Basic features for casual players"
-      ],
+      "features": ["Basic features for casual players"],
       "buttonText": "TRY IT"
     },
     "regular": {
       "title": "REGULAR OFFER",
       "price": "From 5€ / week",
       "description": "Support our dev <3",
-      "features": [
-        "All standard features for advanced player"
-      ],
+      "features": ["All standard features for advanced player"],
       "buttonText": "PURCHASE"
     },
     "premium": {
       "title": "PREMIUM OFFER",
       "price": "From 7€ / week",
       "description": "Access to beta features",
-      "features": [
-        "Endgame features for elite players"
-      ],
+      "features": ["Endgame features for elite players"],
       "buttonText": "PURCHASE"
     }
   },

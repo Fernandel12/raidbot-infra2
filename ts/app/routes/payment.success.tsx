@@ -22,9 +22,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const t = getTranslator()
 
   // Use dynamic title based on payment status
-  const title = data?.isSuccess
-    ? t("paymentSuccess.successTitle")
-    : t("paymentSuccess.failedTitle")
+  const title = data?.isSuccess ? t("paymentSuccess.successTitle") : t("paymentSuccess.failedTitle")
 
   return [
     { title },
@@ -83,9 +81,7 @@ export default function PaymentSuccessPage() {
           {status.loading ? (
             <div className="flex flex-col items-center justify-center p-8">
               <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-              <p className="mt-4 text-white/70">
-                {t("paymentSuccess.verifyingPayment")}
-              </p>
+              <p className="mt-4 text-white/70">{t("paymentSuccess.verifyingPayment")}</p>
             </div>
           ) : (
             <div
@@ -125,15 +121,11 @@ export default function PaymentSuccessPage() {
                 )}
               </div>
 
-              <p className="text-lg mb-2 text-white/80">
-                {status.message}
-              </p>
+              <p className="text-lg mb-2 text-white/80">{status.message}</p>
 
               {status.success && (
                 <>
-                  <p className="text-sm mb-4 text-white/70">
-                    {t("paymentSuccess.processingNote")}
-                  </p>
+                  <p className="text-sm mb-4 text-white/70">{t("paymentSuccess.processingNote")}</p>
 
                   <div className="flex flex-col gap-2 mt-6">
                     <a

@@ -12,9 +12,7 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           <div>
-            <h6 className="text-lg font-bold text-white">
-              {t("footer.raidBot")}
-            </h6>
+            <h6 className="text-lg font-bold text-white">{t("footer.raidBot")}</h6>
             <ul className="mt-3 md:mt-4 space-y-2">
               <li>
                 <a href="/" className="text-sm text-neutral-400 hover:text-primary">
@@ -35,9 +33,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h6 className="text-lg font-bold text-white">
-              {t("footer.resources")}
-            </h6>
+            <h6 className="text-lg font-bold text-white">{t("footer.resources")}</h6>
             <ul className="mt-3 md:mt-4 space-y-2">
               <li>
                 <a
@@ -64,9 +60,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h6 className="text-lg font-bold text-white">
-              {t("footer.community")}
-            </h6>
+            <h6 className="text-lg font-bold text-white">{t("footer.community")}</h6>
             <ul className="mt-3 md:mt-4 space-y-2">
               <li>
                 <a
@@ -102,9 +96,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h6 className="text-lg font-bold text-white">
-              {t("footer.legal")}
-            </h6>
+            <h6 className="text-lg font-bold text-white">{t("footer.legal")}</h6>
             <ul className="mt-3 md:mt-4 space-y-2">
               <li>
                 <a href="#" className="text-sm text-neutral-400 hover:text-primary">
