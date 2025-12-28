@@ -32,7 +32,7 @@ env:
   # nginx-proxy settings
   VIRTUAL_HOST: 'community.rslbot.com'
   LETSENCRYPT_HOST: 'community.rslbot.com'
-  LETSENCRYPT_EMAIL: 'admin@rslbot.com'
+  LETSENCRYPT_EMAIL: 'denis.palazo@gmail.com'
 
 expose:
   - '80'
