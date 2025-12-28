@@ -371,6 +371,6 @@ Proprietary - All rights reserved
 ## Support
 
 For issues and questions:
-- Discord: [Join our community](https://discord.gg/rslbot)
+- Discord: [Join our community](https://discord.gg/jy8eDQjCt6)
 - Forum: https://community.rslbot.com
 - Email: support@rslbot.com

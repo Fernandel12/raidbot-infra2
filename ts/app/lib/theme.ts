@@ -68,7 +68,7 @@ export const theme = {
 export type Theme = typeof theme
 
 // Discord invite link
-export const DISCORD_INVITE = "https://discord.gg/rslbot" // TODO: Replace with actual RaidBot Discord invite
+export const DISCORD_INVITE = "https://discord.gg/jy8eDQjCt6"
 
 // External links
 export const links = {
