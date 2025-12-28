@@ -20,8 +20,8 @@ import (
 
 // TODO: add to environment
 const (
-	DiscourseAPIKey      = "4d2ce37a62f4d9492bca00f823f27b6e5a74ee9d7b9914d6b46367bf92348dee"
-	DiscourseAPIUsername = "alkpone"
+	DiscourseAPIKey      = "8cd0974ce97eede11aa99f9b900cf607dae41f51cf11b0dcee7e4cdade362e26"
+	DiscourseAPIUsername = "Fernandel"
 	DiscoursePath        = "https://community.rslbot.com"
 )
 
