@@ -1,6 +1,6 @@
 services:
   go-backend:
-    image: index.docker.io/delay42/rslbot:latest
+    image: index.docker.io/napodep/rslbot-backend:latest
     restart: always
     environment:
       # specific to prod
@@ -59,6 +59,16 @@ services:
     networks:
       - internal
     command: redis-server --appendonly yes
+
+  watchtower:
+    image: containrrr/watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_LABEL_ENABLE=true
+    command: --interval 60
 
 networks:
   service-proxy:

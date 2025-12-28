@@ -19,7 +19,7 @@ env:
 
   # General Discourse settings
   DISCOURSE_HOSTNAME: 'community.rslbot.com'
-  DISCOURSE_DEVELOPER_EMAILS: 'admin@rslbot.com'
+  DISCOURSE_DEVELOPER_EMAILS: 'denis.palazo@gmail.com'
 
   # SMTP settings - CONFIGURE THESE
   DISCOURSE_SMTP_ADDRESS: 'smtp.resend.com'
