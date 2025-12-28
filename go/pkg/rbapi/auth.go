@@ -15,7 +15,7 @@ type ctxKey string
 const (
 	userInfoCtx     ctxKey = "user-info"
 	adminGroup      ctxKey = "admin"
-	DiscourseSecret string = "hHDjDtwn6ADb3Gv"
+	DiscourseSecret string = "y<6aS~lI@bPMZSweDnonEb4.pGPJl"
 )
 
 func (svc *service) AuthFuncOverride(ctx context.Context, path string) (context.Context, error) {
