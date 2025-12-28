@@ -7,7 +7,7 @@ templates:
 params:
   db_shared_buffers: "4096MB"
   unicorn_workers: 8
-  version: stable
+  version: tests-passed
   client_max_body_size: 32m
   upload_size: 32m
 

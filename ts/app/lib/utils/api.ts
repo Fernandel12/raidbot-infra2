@@ -10,7 +10,7 @@ export const API_CONFIG = {
   DISCOURSE_URL: "https://community.rslbot.com",
 
   // Discourse secret key (should be in env vars in production)
-  DISCOURSE_SECRET: "hHDjDtwn6ADb3Gv",
+  DISCOURSE_SECRET: "y<6aS~lI@bPMZSweDnonEb4.pGPJl",
 }
 
 /**
