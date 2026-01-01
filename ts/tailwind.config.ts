@@ -47,8 +47,8 @@ export default {
   daisyui: {
     themes: [
       {
-        raidbot2: {
-          // Based on original rslbot-infra colors
+        light: {
+          // Light theme based on original rslbot-infra colors
           primary: "#743AA0", // Purple from feature cards
           "primary-content": "#FFFFFF",
           secondary: "#9553B3", // Mid-tone from pricing gradient
@@ -71,8 +71,33 @@ export default {
           "error-content": "#FFFFFF",
         },
       },
+      {
+        dark: {
+          // Dark theme variant
+          primary: "#9553B3", // Lighter purple for dark mode
+          "primary-content": "#FFFFFF",
+          secondary: "#B96FC8", // Pink accent
+          "secondary-content": "#FFFFFF",
+          accent: "#C084FC", // Brighter purple accent
+          "accent-content": "#FFFFFF",
+          neutral: "#1E1B4B", // Darker navy
+          "neutral-content": "#E5E7EB",
+          "base-100": "#0F0E1A", // Very dark background
+          "base-200": "#1A1825", // Slightly lighter
+          "base-300": "#2D2A3E", // Border color for dark
+          "base-content": "#E5E7EB", // Light text
+          info: "#8B5CF6", // Brighter purple for info
+          "info-content": "#FFFFFF",
+          success: "#34D399",
+          "success-content": "#FFFFFF",
+          warning: "#FBBF24",
+          "warning-content": "#1F2937",
+          error: "#F87171",
+          "error-content": "#FFFFFF",
+        },
+      },
     ],
-    darkTheme: "raidbot2",
+    darkTheme: "dark",
     base: true,
     styled: true,
     utils: true,

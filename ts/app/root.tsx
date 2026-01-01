@@ -9,7 +9,7 @@ import {
   useLoaderData,
   useLocation,
 } from "@remix-run/react"
-import { StrictMode, useEffect, useState } from "react"
+import { StrictMode, useEffect, useState, useCallback } from "react"
 import { I18nProvider } from "~/components/I18nProvider"
 import Footer from "~/components/layout/Footer"
 import Navbar from "~/components/layout/Navbar"
@@ -117,6 +117,27 @@ function GoogleAnalytics() {
   return null
 }
 
+// Hook to detect system dark mode preference
+function useSystemTheme() {
+  const [theme, setTheme] = useState<"light" | "dark">("light")
+
+  useEffect(() => {
+    // Check initial preference
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
+    setTheme(mediaQuery.matches ? "dark" : "light")
+
+    // Listen for changes
+    const handler = (e: MediaQueryListEvent) => {
+      setTheme(e.matches ? "dark" : "light")
+    }
+
+    mediaQuery.addEventListener("change", handler)
+    return () => mediaQuery.removeEventListener("change", handler)
+  }, [])
+
+  return theme
+}
+
 // Component to check session validity on app initialization
 function SessionCheck() {
   const [initialized, setInitialized] = useState(false)
@@ -150,9 +171,15 @@ export default function App() {
   const location = useLocation()
   const loaderData = useLoaderData<typeof loader>()
   const locale = loaderData?.locale || "en"
+  const [mounted, setMounted] = useState(false)
+  const theme = useSystemTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
-    <html lang={locale === "tw" ? "zh-TW" : locale} data-theme="raidbot2">
+    <html lang={locale === "tw" ? "zh-TW" : locale} data-theme={mounted ? theme : "light"}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
