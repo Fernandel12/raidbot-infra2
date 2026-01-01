@@ -27,7 +27,7 @@
     "filter": "필터"
   },
   "products": {
-    "raidBot2": "RaidBot",
+    "raidBot2": "RSLBot",
     "raidBotClassic": "엑자일드봇 클래식",
     "raid": "엑자일드",
     "bot": "봇",
@@ -36,7 +36,7 @@
   "header": {
     "joinDiscord": "Discord 참여",
     "checkForum": "포럼 확인",
-    "description": "100시간 이상의 파밍 시간을 절약하세요. 24/7 엔드게임 콘텐츠를 파밍하세요. 잠자는 동안 희귀 아이템을 얻으세요. RaidBot 2는 전투부터 아틀라스 진행까지 Path of Exile 2를 완전히 자동화합니다.",
+    "description": "100시간 이상의 파밍 시간을 절약하세요. 24/7 엔드게임 콘텐츠를 파밍하세요. 잠자는 동안 희귀 아이템을 얻으세요. RSLBot 2는 전투부터 아틀라스 진행까지 Path of Exile 2를 완전히 자동화합니다.",
     "cta": "무료 체험 시작",
     "purchaseLicense": "라이선스 구매",
     "forumLink": "https://community.rslbot.com",
@@ -473,7 +473,7 @@
   },
   "community": {
     "title": "커뮤니티에 참여하세요",
-    "description": "수천 명의 RaidBot 사용자와 연결하세요. 도움을 받고, 전략을 공유하고, 최신 기능을 확인하세요.",
+    "description": "수천 명의 RSLBot 사용자와 연결하세요. 도움을 받고, 전략을 공유하고, 최신 기능을 확인하세요.",
     "cards": {
       "discord": {
         "title": "활발한 Discord",
@@ -503,7 +503,7 @@
   },
   "setupGuide": {
     "title": "설정 가이드",
-    "description": "포괄적인 설정 가이드로 몇 분 안에 RaidBot 2를 시작하고 실행하세요",
+    "description": "포괄적인 설정 가이드로 몇 분 안에 RSLBot 2를 시작하고 실행하세요",
     "videoSection": {
       "title": "비디오 튜토리얼",
       "description": "설치, 구성 및 첫 번째 봇 실행을 다루는 단계별 비디오 가이드를 시청하세요"
@@ -511,7 +511,7 @@
     "stepsSection": {
       "steps": {
         "download": {
-          "title": "RaidBot 2 다운로드",
+          "title": "RSLBot 2 다운로드",
           "description": "릴리스 페이지에서 최신 버전을 받으세요"
         },
         "configure": {
@@ -527,15 +527,15 @@
           "description": "게임을 시작하고, 봇을 시작하고, 자동으로 파밍하는 것을 보세요!"
         }
       },
-      "downloadButton": "RaidBot 2 다운로드"
+      "downloadButton": "RSLBot 2 다운로드"
     }
   },
   "pickits": {
     "title": "픽업 설정",
-    "description": "패스 오브 엑자일 아이템 픽업 설정을 생성, 관리 및 공유하세요. 픽업은 RaidBot에 파밍 중 어떤 아이템을 줍고, 판매하고, 무시할지 알려주는 자동화된 아이템 필터로, 효율성과 수익을 극대화하는 데 도움을 줍니다.",
+    "description": "패스 오브 엑자일 아이템 픽업 설정을 생성, 관리 및 공유하세요. 픽업은 RSLBot에 파밍 중 어떤 아이템을 줍고, 판매하고, 무시할지 알려주는 자동화된 아이템 필터로, 효율성과 수익을 극대화하는 데 도움을 줍니다.",
     "contest": {
       "title": "픽업 콘테스트 - 평생 라이선스를 획득하세요!",
-      "description": "픽업 설정에서 100개의 좋아요를 먼저 달성하는 상위 3명의 제작자에게 RaidBot 2 무료 평생 라이선스를 드립니다! 최고의 픽업을 공유하고 Discord 커뮤니티와 소통하여 정상에 오르세요."
+      "description": "픽업 설정에서 100개의 좋아요를 먼저 달성하는 상위 3명의 제작자에게 RSLBot 2 무료 평생 라이선스를 드립니다! 최고의 픽업을 공유하고 Discord 커뮤니티와 소통하여 정상에 오르세요."
     },
     "tabs": {
       "public": "공개 라이브러리",
@@ -593,7 +593,7 @@
           "title": "방법 1: 봇 인터페이스를 통해",
           "steps": {
             "downloadIpd": "위의 <strong>.ipd</strong> 파일 다운로드",
-            "goToPickit": "RaidBot에서 <strong>Pickit</strong> 탭으로 이동",
+            "goToPickit": "RSLBot에서 <strong>Pickit</strong> 탭으로 이동",
             "selectProfile": "<strong>Default</strong> 또는 편집할 프로필 선택",
             "clickManage": "<strong>Manage</strong> 버튼 클릭",
             "clickOpen": "<strong>Open</strong>을 클릭하여 편집기 열기",
@@ -605,7 +605,7 @@
           "title": "방법 2: 직접 파일 교체",
           "steps": {
             "downloadIpd": "위의 <strong>.ipd</strong> 파일 다운로드",
-            "navigateFolder": "RaidBot <strong>Configuration</strong> 폴더로 이동",
+            "navigateFolder": "RSLBot <strong>Configuration</strong> 폴더로 이동",
             "replaceFile": "기존 <strong>.ipd</strong> 파일을 다운로드한 파일로 교체",
             "restartBot": "봇을 재시작하거나 구성 다시 로드"
           }
@@ -616,12 +616,12 @@
   },
   "getStarted": {
     "meta": {
-      "title": "RaidBot 2 시작하기 - 무료 체험",
-      "description": "RaidBot 2 무료 체험을 시작하세요. 시간 제한 없이 Path of Exile 2 지역을 자동으로 파밍하세요."
+      "title": "RSLBot 2 시작하기 - 무료 체험",
+      "description": "RSLBot 2 무료 체험을 시작하세요. 시간 제한 없이 Path of Exile 2 지역을 자동으로 파밍하세요."
     },
     "hero": {
       "badge": "무료 체험",
-      "title": "RaidBot 2 무료 체험 시작하기",
+      "title": "RSLBot 2 무료 체험 시작하기",
       "description": "<strong>등록 불필요, 라이선스 키 불필요!</strong> 봇을 다운로드하고 무료로 사용을 시작하세요 - \"프리미엄 기능\"을 <strong>체크하지 마세요</strong>. 시간 제한 없이 자동으로 지역 파밍. 나중에 업그레이드할 때 설정이 저장됩니다."
     },
     "videoDescription": "빠른 설정 가이드를 시청하고 몇 분 안에 시작하세요",
@@ -631,7 +631,7 @@
       "linkText": "지원을 위해 Discord 참여"
     },
     "cta": {
-      "download": "RaidBot 2 다운로드",
+      "download": "RSLBot 2 다운로드",
       "premium": "아틀라스 파밍을 위한 프리미엄 구매"
     },
     "faq": {
@@ -657,7 +657,7 @@
     },
     "finalCta": {
       "title": "파밍을 시작할 준비가 되셨나요?",
-      "button": "RaidBot 2 다운로드"
+      "button": "RSLBot 2 다운로드"
     }
   }
 }

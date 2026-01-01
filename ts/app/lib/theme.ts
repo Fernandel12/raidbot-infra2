@@ -1,5 +1,5 @@
 /**
- * Centralized theme configuration for RaidBot
+ * Centralized theme configuration for RSLBot
  * Based on original rslbot-infra landing page styling
  */
 

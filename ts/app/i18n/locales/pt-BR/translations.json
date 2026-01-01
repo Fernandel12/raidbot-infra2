@@ -27,8 +27,8 @@
     "filter": "Filtrar"
   },
   "products": {
-    "raidBot2": "RaidBot",
-    "raidBotClassic": "RaidBot Classic",
+    "raidBot2": "RSLBot",
+    "raidBotClassic": "RSLBot Classic",
     "raid": "Raid",
     "bot": "Bot",
     "classic": "Classic"
@@ -36,15 +36,15 @@
   "header": {
     "joinDiscord": "Colar no Discord",
     "checkForum": "Dar uma olhada no Fórum",
-    "description": "Economize 100+ horas de farm. Farme conteúdo endgame 24/7. Pegue itens raros enquanto dorme. RaidBot 2 automatiza Path of Exile 2 completamente, do combate à progressão do atlas.",
+    "description": "Economize 100+ horas de farm. Farme conteúdo endgame 24/7. Pegue itens raros enquanto dorme. RSLBot 2 automatiza Path of Exile 2 completamente, do combate à progressão do atlas.",
     "cta": "Começar Teste Grátis",
     "purchaseLicense": "Comprar Licença",
     "forumLink": "https://community.rslbot.com",
-    "switchToEB2": "Trocar pro RaidBot 2",
+    "switchToEB2": "Trocar pro RSLBot 2",
     "playingPoe2": "Tá jogando PoE 2?"
   },
   "footer": {
-    "raidBot": "RaidBot",
+    "raidBot": "RSLBot",
     "resources": "Recursos",
     "community": "Comunidade",
     "legal": "Legal",
@@ -75,7 +75,7 @@
   "license": {
     "activateTitle": "Como Ativar o Bot",
     "activateStep1": "Passo 1: Abrir o Menu de Autenticação",
-    "activateStep1Details": "Depois de abrir o RaidBot, clica em <strong>Authenticate</strong> no menu de cima, depois em <strong>Activate</strong> no dropdown.",
+    "activateStep1Details": "Depois de abrir o RSLBot, clica em <strong>Authenticate</strong> no menu de cima, depois em <strong>Activate</strong> no dropdown.",
     "activateStep2": "Passo 2: Colar a Chave",
     "activateStep2Details": "Quando abrir a janela, cola sua chave de licença. Tá na tabela aí em cima, só copiar.",
     "activateStep2Additional": "Escolhe se quer ativar só pro perfil atual ou pra todos.",
@@ -156,9 +156,9 @@
     "responsibilityDescription": "Real oficial: a GGG não curte bots e pode dar ban se te pegarem. A gente faz o máximo pra deixar o bot seguro, mas usar é por sua conta e risco. Se tu tá preocupado com ban, melhor não usar. Sem choro depois, beleza?"
   },
   "meta": {
-    "title": "RaidBot 2: O Bot Definitivo do PoE 2",
-    "description": "RaidBot 2 - bot 100% externo pro PoE2. Combat system insano, pickit inteligente e progressão completa do atlas com waystone crafting. Zero injeção no cliente.",
-    "keywords": "Path of Exile 2, PoE2, RaidBot 2, bot farm, endgame, smart pickit, loot filter, fast combat, bot externo"
+    "title": "RSLBot 2: O Bot Definitivo do PoE 2",
+    "description": "RSLBot 2 - bot 100% externo pro PoE2. Combat system insano, pickit inteligente e progressão completa do atlas com waystone crafting. Zero injeção no cliente.",
+    "keywords": "Path of Exile 2, PoE2, RSLBot 2, bot farm, endgame, smart pickit, loot filter, fast combat, bot externo"
   },
   "features": {
     "title": "Features Disponíveis",
@@ -218,7 +218,7 @@
   },
   "details": {
     "title": "Bot Completo pro PoE 2",
-    "description": "RaidBot 2 junta automação poderosa com tecnologia externa refinada. Performance top tier.",
+    "description": "RSLBot 2 junta automação poderosa com tecnologia externa refinada. Performance top tier.",
     "items": {
       "nextGeneration": {
         "title": "Full Automation PoE2",
@@ -252,7 +252,7 @@
   },
   "faq": {
     "title": "FAQ",
-    "subtitle": "Tudo sobre o RaidBot 2 pro PoE 2",
+    "subtitle": "Tudo sobre o RSLBot 2 pro PoE 2",
     "items": {
       "requirements": {
         "question": "Quais os requisitos pra rodar o bot?",
@@ -343,10 +343,10 @@
   },
   "purchase": {
     "meta": {
-      "title": "RaidBot - Comprar Licença",
+      "title": "RSLBot - Comprar Licença",
       "description": "Pega o Premium e libera tudo do endgame atlas."
     },
-    "title": "Licença do RaidBot 2",
+    "title": "Licença do RSLBot 2",
     "subtitle": "Upgrade pro Premium e desbloqueia farm completo do atlas endgame, com waystone crafting e progressão avançada.",
     "comparison": {
       "title": "Free vs Premium",
@@ -434,7 +434,7 @@
     "classicNote": "Tá procurando licenças do Classic?",
     "manageClassic": "Clica aqui",
     "loading": "Carregando licenças...",
-    "noLicenses": "Ainda não tem licença do RaidBot 2.",
+    "noLicenses": "Ainda não tem licença do RSLBot 2.",
     "buyLicense": "Comprar Licença",
     "tableHeaders": {
       "licenseKey": "Chave",
@@ -473,7 +473,7 @@
   },
   "community": {
     "title": "Entre na Nossa Comunidade",
-    "description": "Conecte-se com milhares de usuários do RaidBot. Receba ajuda, compartilhe estratégias e fique atualizado com os novos recursos.",
+    "description": "Conecte-se com milhares de usuários do RSLBot. Receba ajuda, compartilhe estratégias e fique atualizado com os novos recursos.",
     "cards": {
       "discord": {
         "title": "Discord Ativo",
@@ -503,7 +503,7 @@
   },
   "setupGuide": {
     "title": "Guia de Configuração",
-    "description": "Configure o RaidBot 2 em minutos com nosso guia completo de configuração",
+    "description": "Configure o RSLBot 2 em minutos com nosso guia completo de configuração",
     "videoSection": {
       "title": "Tutorial em Vídeo",
       "description": "Assista nosso guia passo a passo cobrindo instalação, configuração e sua primeira execução do bot"
@@ -511,7 +511,7 @@
     "stepsSection": {
       "steps": {
         "download": {
-          "title": "Baixe o RaidBot 2",
+          "title": "Baixe o RSLBot 2",
           "description": "Pegue a versão mais recente da nossa página de lançamentos"
         },
         "configure": {
@@ -527,15 +527,15 @@
           "description": "Inicie o jogo, inicie o bot e veja ele farmar automaticamente!"
         }
       },
-      "downloadButton": "Baixar RaidBot 2"
+      "downloadButton": "Baixar RSLBot 2"
     }
   },
   "pickits": {
     "title": "Configurações de Pickit",
-    "description": "Crie, gerencie e compartilhe suas configs de pickit do Path of Exile. Pickits são filtros automáticos que dizem pro RaidBot quais itens pegar, vender ou ignorar durante o farm, ajudando a maximizar eficiência e lucro.",
+    "description": "Crie, gerencie e compartilhe suas configs de pickit do Path of Exile. Pickits são filtros automáticos que dizem pro RSLBot quais itens pegar, vender ou ignorar durante o farm, ajudando a maximizar eficiência e lucro.",
     "contest": {
       "title": "Contest de Pickit - Ganhe Licença Vitalícia!",
-      "description": "Os 3 primeiros criadores de pickit que chegarem a 100 likes na config ganham LICENÇA VITALÍCIA GRÁTIS do RaidBot 2! Compartilha seus melhores pickits e interage com a galera no Discord pra chegar no topo."
+      "description": "Os 3 primeiros criadores de pickit que chegarem a 100 likes na config ganham LICENÇA VITALÍCIA GRÁTIS do RSLBot 2! Compartilha seus melhores pickits e interage com a galera no Discord pra chegar no topo."
     },
     "tabs": {
       "public": "Biblioteca Pública",
@@ -593,7 +593,7 @@
           "title": "Método 1: Pela Interface do Bot",
           "steps": {
             "downloadIpd": "Baixa o arquivo <strong>.ipd</strong> ali em cima",
-            "goToPickit": "No RaidBot, vai na aba <strong>Pickit</strong>",
+            "goToPickit": "No RSLBot, vai na aba <strong>Pickit</strong>",
             "selectProfile": "Seleciona <strong>Default</strong> ou o perfil que você quer editar",
             "clickManage": "Clica no botão <strong>Manage</strong>",
             "clickOpen": "Clica em <strong>Open</strong> pra abrir o editor",
@@ -605,7 +605,7 @@
           "title": "Método 2: Substituição Direta do Arquivo",
           "steps": {
             "downloadIpd": "Baixa o arquivo <strong>.ipd</strong> ali em cima",
-            "navigateFolder": "Vai na pasta <strong>Configuration</strong> do RaidBot",
+            "navigateFolder": "Vai na pasta <strong>Configuration</strong> do RSLBot",
             "replaceFile": "Substitui o arquivo <strong>.ipd</strong> existente pelo baixado",
             "restartBot": "Reinicia o bot ou recarrega a configuração"
           }
@@ -616,12 +616,12 @@
   },
   "getStarted": {
     "meta": {
-      "title": "Comece com o RaidBot 2 - Teste Grátis",
-      "description": "Comece seu teste gratuito do RaidBot 2. Farme áreas do Path of Exile 2 automaticamente sem limite de tempo."
+      "title": "Comece com o RSLBot 2 - Teste Grátis",
+      "description": "Comece seu teste gratuito do RSLBot 2. Farme áreas do Path of Exile 2 automaticamente sem limite de tempo."
     },
     "hero": {
       "badge": "TESTE GRÁTIS",
-      "title": "Comece Seu Teste Grátis do RaidBot 2",
+      "title": "Comece Seu Teste Grátis do RSLBot 2",
       "description": "<strong>Sem registro, sem chave de licença!</strong> Só baixar o bot e começar a usar de graça - certifique-se de <strong>NÃO</strong> marcar \"Recursos Premium\". Farme áreas automaticamente sem limite de tempo. Suas configurações são salvas quando você faz o upgrade depois."
     },
     "videoDescription": "Assista nosso guia rápido de configuração para começar em minutos",
@@ -631,7 +631,7 @@
       "linkText": "Entre no Discord pra Suporte"
     },
     "cta": {
-      "download": "Baixar RaidBot 2",
+      "download": "Baixar RSLBot 2",
       "premium": "Compre Premium pra Farmar Atlas"
     },
     "faq": {
@@ -657,7 +657,7 @@
     },
     "finalCta": {
       "title": "Pronto pra Começar a Farmar?",
-      "button": "Baixar RaidBot 2"
+      "button": "Baixar RSLBot 2"
     }
   }
 }

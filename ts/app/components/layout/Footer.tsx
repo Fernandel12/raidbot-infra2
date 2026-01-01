@@ -114,7 +114,7 @@ export default function Footer() {
 
         <div className="mt-8 md:mt-16 pt-6 md:pt-8 border-t border-neutral-800 text-neutral-400 text-center">
           <p className="text-sm">
-            © {currentYear} RaidBot. {t("footer.allRightsReserved")}
+            © {currentYear} RSLBot. {t("footer.allRightsReserved")}
           </p>
         </div>
       </div>

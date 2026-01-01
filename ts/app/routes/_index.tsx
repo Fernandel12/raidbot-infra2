@@ -41,9 +41,9 @@ export async function loader({ request, params, context }: LoaderFunctionArgs) {
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const metaData = data?.meta || {
-    title: "RaidBot - Best bot for RAID: Shadow Legends",
+    title: "RSLBot - Best bot for RAID: Shadow Legends",
     description:
-      "RaidBot is your ultimate assistant for RAID: Shadow Legends. Automate farming, arena battles, and more with human-like behavior simulation.",
+      "RSLBot is your ultimate assistant for RAID: Shadow Legends. Automate farming, arena battles, and more with human-like behavior simulation.",
   }
 
   return [

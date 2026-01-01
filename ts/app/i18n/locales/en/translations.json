@@ -27,8 +27,8 @@
     "filter": "Filter"
   },
   "products": {
-    "raidBot2": "RaidBot",
-    "raidBotClassic": "RaidBot Classic",
+    "raidBot2": "RSLBot",
+    "raidBotClassic": "RSLBot Classic",
     "raid": "Raid",
     "bot": "Bot",
     "classic": "Classic"
@@ -36,7 +36,7 @@
   "header": {
     "joinDiscord": "Join the Discord",
     "checkForum": "Check the Forum",
-    "title": "RAIDBOT",
+    "title": "RSLBOT",
     "tagline": "Your RAID: Shadow Legends Assistant",
     "description": "Many Farming Features"
   },
@@ -46,7 +46,7 @@
     "description": "Maximize your progress in Raid Shadow Legends with intelligent automation. Farm resources, level heroes, and dominate arenas while you focus on strategy.",
     "startFreeButton": "Start Free Today",
     "learnMoreButton": "Learn More",
-    "cardTitle": "RAIDBOT",
+    "cardTitle": "RSLBOT",
     "cardTagline": "Your RAID: Shadow Legends assistant",
     "cardDescription": "dedicated to greatly improve and optimize your farming of the game.",
     "badge1": "24/7 SUPPORT",
@@ -54,7 +54,7 @@
     "badge3": "MANY FARMING FEATURES"
   },
   "footer": {
-    "raidBot": "RaidBot",
+    "raidBot": "RSLBot",
     "resources": "Resources",
     "community": "Community",
     "legal": "Legal",
@@ -85,7 +85,7 @@
   "license": {
     "activateTitle": "How to Activate Your License",
     "activateStep1": "Step 1: Open Authenticate Menu",
-    "activateStep1Details": "After launching RaidBot, click on the <strong>Authenticate</strong> menu in the top navigation bar, then select <strong>Activate</strong> from the dropdown menu.",
+    "activateStep1Details": "After launching RSLBot, click on the <strong>Authenticate</strong> menu in the top navigation bar, then select <strong>Activate</strong> from the dropdown menu.",
     "activateStep2": "Step 2: Enter Your License Key",
     "activateStep2Details": "When the authentication dialog appears, enter your license key. You can copy your license key from the table above.",
     "activateStep2Additional": "Choose to activate for the current profile or all profiles.",
@@ -142,8 +142,8 @@
     "responsibilityDescription": "We recognize that Grinding Gear Games is opposed to the use of bot programs and does not authorize them in the TOS/EULA. It is our position, however, that Grinding Gear Games has no right to control add-on software programs that third-party software developers create or sell and that we have every right to offer our program for sale. With that being said, we have no control over Grinding Gear Games's desire to rid its gaming environment of bot programs. By using our software, it is possible that Grinding Gear Games could ban your account and cite the language of its TOS and EULA as the reason for the ban. You should be aware that by using our software, Grinding Gear Games could take action against you for what it considers to be a breach of its contracts and that the risk of this happening is entirely on you the purchaser. If you are concerned about the possibility of being banned or being accused of violating Grinding Gear Games's contracts, you should not use our software."
   },
   "meta": {
-    "title": "RaidBot: Best bot for RAID: Shadow Legends",
-    "description": "RaidBot is your ultimate assistant for RAID: Shadow Legends. Automate farming, arena battles, and more with human-like behavior simulation.",
+    "title": "RSLBot: Best bot for RAID: Shadow Legends",
+    "description": "RSLBot is your ultimate assistant for RAID: Shadow Legends. Automate farming, arena battles, and more with human-like behavior simulation.",
     "keywords": "RAID Shadow Legends, RAID bot, farming bot, arena bot, auto farm, BlueStacks bot, android emulator bot"
   },
   "features": {
@@ -211,10 +211,10 @@
     }
   },
   "licenses": {
-    "title": "Your RaidBot Licenses",
-    "description": "Manage your RaidBot licenses and view their status.",
+    "title": "Your RSLBot Licenses",
+    "description": "Manage your RSLBot licenses and view their status.",
     "loading": "Loading your licenses...",
-    "noLicenses": "You don't have any RaidBot licenses yet.",
+    "noLicenses": "You don't have any RSLBot licenses yet.",
     "buyLicense": "Purchase a License",
     "tableHeaders": {
       "licenseKey": "License Key",
@@ -232,10 +232,10 @@
   },
   "purchase": {
     "meta": {
-      "title": "RaidBot - Purchase License",
-      "description": "Purchase a license for RaidBot and unlock all features."
+      "title": "RSLBot - Purchase License",
+      "description": "Purchase a license for RSLBot and unlock all features."
     },
-    "title": "RaidBot License",
+    "title": "RSLBot License",
     "subtitle": "Purchase a license to unlock all bot features.",
     "loginRequired": "You must be logged in to make a purchase.",
     "checkoutButton": "Proceed to Checkout",

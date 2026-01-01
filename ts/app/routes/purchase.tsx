@@ -6,12 +6,12 @@ import { useSessionStore } from "~/store/sessionStore"
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "RaidBot - Purchase License" },
-    { name: "description", content: "Purchase a license for RaidBot and unlock all features." },
-    { property: "og:title", content: "RaidBot - Purchase License" },
+    { title: "RSLBot - Purchase License" },
+    { name: "description", content: "Purchase a license for RSLBot and unlock all features." },
+    { property: "og:title", content: "RSLBot - Purchase License" },
     {
       property: "og:description",
-      content: "Purchase a license for RaidBot and unlock all features.",
+      content: "Purchase a license for RSLBot and unlock all features.",
     },
     { property: "og:type", content: "website" },
   ]
@@ -60,7 +60,7 @@ export default function PurchasePage() {
   return (
     <section className="py-10 md:py-16 px-4 max-w-7xl mx-auto">
       <div className="flex flex-col gap-6 items-center justify-center mb-10">
-        <h1 className="text-4xl md:text-5xl font-semibold text-white">RaidBot License</h1>
+        <h1 className="text-4xl md:text-5xl font-semibold text-white">RSLBot License</h1>
         <p className="text-center max-w-2xl text-white/80">
           Purchase a license to unlock all bot features.
         </p>

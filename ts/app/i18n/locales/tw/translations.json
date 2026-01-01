@@ -27,7 +27,7 @@
     "filter": "篩選"
   },
   "products": {
-    "raidBot2": "RaidBot",
+    "raidBot2": "RSLBot",
     "raidBotClassic": "流亡機器人經典版",
     "raid": "流亡",
     "bot": "機器人",
@@ -593,7 +593,7 @@
           "title": "方法 1：通過機器人界面",
           "steps": {
             "downloadIpd": "下載上方的 <strong>.ipd</strong> 檔案",
-            "goToPickit": "在 RaidBot 中，前往 <strong>Pickit</strong> 標籤",
+            "goToPickit": "在 RSLBot 中，前往 <strong>Pickit</strong> 標籤",
             "selectProfile": "選擇 <strong>Default</strong> 或您要編輯的設定檔",
             "clickManage": "點擊 <strong>Manage</strong> 按鈕",
             "clickOpen": "點擊 <strong>Open</strong> 打開編輯器",
@@ -605,7 +605,7 @@
           "title": "方法 2：直接檔案替換",
           "steps": {
             "downloadIpd": "下載上方的 <strong>.ipd</strong> 檔案",
-            "navigateFolder": "導航至您的 RaidBot <strong>Configuration</strong> 資料夾",
+            "navigateFolder": "導航至您的 RSLBot <strong>Configuration</strong> 資料夾",
             "replaceFile": "用下載的檔案替換現有的 <strong>.ipd</strong> 檔案",
             "restartBot": "重新啟動機器人或重新載入配置"
           }
