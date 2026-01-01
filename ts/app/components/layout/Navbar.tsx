@@ -25,6 +25,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between mx-auto px-4 sm:px-8 py-4">
           {/* Logo/Brand */}
           <Link to="/" className="flex items-center gap-2">
+            <img src="/logo.png" alt="RSLBot" className="h-8 w-8" />
             <span className="text-xl font-bold text-primary">{t("products.raidBot2")}</span>
           </Link>
 
