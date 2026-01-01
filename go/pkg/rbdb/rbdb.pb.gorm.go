@@ -683,7 +683,7 @@ type UserWithAfterToPB interface {
 
 type OffsetORM struct {
 	CreatedAt *time.Time
-	Data      []byte `gorm:"type:bytea"`
+	Data      []byte `gorm:"type:LONGBLOB"`
 	Id        int64  `gorm:"primaryKey"`
 	UpdatedAt *time.Time
 	Version   string `gorm:"unique"`
