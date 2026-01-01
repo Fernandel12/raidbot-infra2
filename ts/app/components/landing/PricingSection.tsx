@@ -32,16 +32,16 @@ export default function PricingSection() {
   ]
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-base-100">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">{t("pricing.title")}</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-base-content">{t("pricing.title")}</h2>
         </div>
 
         {/* Subtitle */}
         <div className="text-center mb-16">
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">{t("pricing.subtitle")}</p>
+          <p className="text-base-content/70 text-lg max-w-2xl mx-auto">{t("pricing.subtitle")}</p>
         </div>
 
         {/* Pricing Cards Grid */}
@@ -53,9 +53,9 @@ export default function PricingSection() {
 
         {/* Payment methods */}
         <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">{t("pricing.securedPayment")}</p>
+          <p className="text-base-content/70 mb-4">{t("pricing.securedPayment")}</p>
           <div className="flex justify-center items-center gap-6">
-            <span className="text-sm text-gray-500">{t("pricing.paymentMethods")}</span>
+            <span className="text-sm text-base-content/60">{t("pricing.paymentMethods")}</span>
           </div>
         </div>
       </div>

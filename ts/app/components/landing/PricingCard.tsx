@@ -26,8 +26,8 @@ export default function PricingCard({
       }}
     >
       {/* Price header */}
-      <div className="bg-white py-4 px-6 text-center">
-        <h3 className="text-[#71389E] text-2xl font-bold">{price}</h3>
+      <div className="bg-base-100 py-4 px-6 text-center">
+        <h3 className="text-primary text-2xl font-bold">{price}</h3>
       </div>
 
       {/* Content */}
@@ -45,7 +45,7 @@ export default function PricingCard({
           href={buttonLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-auto bg-white hover:bg-gray-100 text-black font-semibold py-3 px-8 rounded-lg transition-colors"
+          className="mt-auto bg-base-100 hover:bg-base-200 text-base-content font-semibold py-3 px-8 rounded-lg transition-colors"
         >
           {buttonText}
         </a>

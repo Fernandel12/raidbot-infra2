@@ -5,27 +5,27 @@ export default function HeroSection() {
   const { t } = useTranslation()
 
   return (
-    <section className="pt-24 pb-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+    <section className="pt-24 pb-16 px-4 bg-gradient-to-b from-base-200 to-base-100">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-6">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
+            <h1 className="text-5xl md:text-6xl font-bold text-base-content">
               {t("hero.title")}
               <br />
-              <span className="text-indigo-600">{t("hero.titleHighlight")}</span>
+              <span className="text-primary">{t("hero.titleHighlight")}</span>
             </h1>
-            <p className="text-lg text-gray-600 leading-relaxed">{t("hero.description")}</p>
+            <p className="text-lg text-base-content/70 leading-relaxed">{t("hero.description")}</p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 to="https://community.rslbot.com/index.php?/store/product/11-free-license/"
-                className="px-8 py-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors text-center shadow-lg hover:shadow-xl"
+                className="px-8 py-4 bg-primary text-primary-content font-semibold rounded-lg hover:bg-primary/90 transition-colors text-center shadow-lg hover:shadow-xl"
               >
                 {t("hero.startFreeButton")}
               </Link>
               <a
                 href="#features"
-                className="px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors text-center"
+                className="px-8 py-4 bg-base-100 text-primary font-semibold rounded-lg border-2 border-primary hover:bg-base-200 transition-colors text-center"
               >
                 {t("hero.learnMoreButton")}
               </a>
