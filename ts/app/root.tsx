@@ -172,6 +172,8 @@ export default function App() {
         <Meta />
         <Links />
         <link rel="canonical" href={getCanonicalUrl(location.pathname)} />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
 
         {/* Add alternate language links for SEO */}
         {supportedLanguages.map((lang) => (
