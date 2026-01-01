@@ -170,5 +170,5 @@ message Offset {
   google.protobuf.Timestamp updated_at = 3;
 
   string version = 100 [(gorm.field).tag = {unique: true}];  // Client version (e.g., "1.2.3")
-  bytes data = 101;  // Serialized PixelDefinitions data (JSON)
+  bytes data = 101 [(gorm.field).tag = {type: "LONGBLOB"}];  // Serialized PixelDefinitions data (JSON)
 }
