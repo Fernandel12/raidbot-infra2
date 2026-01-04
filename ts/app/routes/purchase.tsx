@@ -70,51 +70,174 @@ export default function PurchasePage() {
       <div className="flex flex-col gap-8 max-w-4xl mx-auto">
         {/* Features comparison */}
         <div className="w-full space-y-6">
-          {/* Feature List */}
+          {/* Features Comparison Table */}
           <div className="bg-base-200 rounded-xl p-6 shadow-md">
-            <h3 className="text-xl font-bold mb-4 text-primary">Premium Features</h3>
+            <h3 className="text-xl font-bold mb-4 text-primary">Features Comparison</h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <div className="flex items-start gap-2">
-                <span className="text-primary text-xl">✓</span>
-                <span>Feature 1 - Placeholder</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-primary text-xl">✓</span>
-                <span>Feature 2 - Placeholder</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-primary text-xl">✓</span>
-                <span>Feature 3 - Placeholder</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-primary text-xl">✓</span>
-                <span>Feature 4 - Placeholder</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-primary text-xl">✓</span>
-                <span>Feature 5 - Placeholder</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-primary text-xl">✓</span>
-                <span>Feature 6 - Placeholder</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-primary text-xl">✓</span>
-                <span>Feature 7 - Placeholder</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-primary text-xl">✓</span>
-                <span>Feature 8 - Placeholder</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-primary text-xl">✓</span>
-                <span>Feature 9 - Placeholder</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-primary text-xl">✓</span>
-                <span>Feature 10 - Placeholder</span>
-              </div>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse text-sm">
+                <thead>
+                  <tr className="border-b border-base-300">
+                    <th className="text-left py-3 px-2">Feature</th>
+                    <th className="text-center py-3 px-2">Free</th>
+                    <th className="text-center py-3 px-2">Regular</th>
+                    <th className="text-center py-3 px-2 text-primary">Premium</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Base features - Available in all tiers */}
+                  <tr className="border-b border-base-300">
+                    <td className="py-2 px-2">Campaign Battles</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300">
+                    <td className="py-2 px-2">Classic Arena</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300">
+                    <td className="py-2 px-2">Tag Team Arena</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300">
+                    <td className="py-2 px-2">Live Arena</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300">
+                    <td className="py-2 px-2">Demon Lord</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300">
+                    <td className="py-2 px-2">Daily & Advanced Quests</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300">
+                    <td className="py-2 px-2">AutoSell Artifacts/Accessories</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300">
+                    <td className="py-2 px-2">Artifacts/Accessories Storage Management</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+
+                  {/* Dungeons - Different between Free and Regular+ */}
+                  <tr className="border-b border-base-300 bg-base-300/20">
+                    <td className="py-2 px-2">4 Main Dungeons</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-base-content/40">-</td>
+                    <td className="text-center py-2 px-2 text-base-content/40">-</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-base-300/20">
+                    <td className="py-2 px-2 font-medium">All Dungeons</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+
+                  {/* Regular features */}
+                  <tr className="border-b border-base-300 bg-base-300/20">
+                    <td className="py-2 px-2 font-medium">Faction Wars</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-base-300/20">
+                    <td className="py-2 px-2 font-medium">Doom Tower</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-base-300/20">
+                    <td className="py-2 px-2 font-medium">Champions Leveling</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-base-300/20">
+                    <td className="py-2 px-2 font-medium">Daily Battles</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                    <td className="text-center py-2 px-2 text-success">✓</td>
+                  </tr>
+
+                  {/* Premium-only features */}
+                  <tr className="border-b border-base-300 bg-primary/10">
+                    <td className="py-2 px-2 font-medium text-primary">Hydra</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success font-bold">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-primary/10">
+                    <td className="py-2 px-2 font-medium text-primary">Chimera</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success font-bold">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-primary/10">
+                    <td className="py-2 px-2 font-medium text-primary">Cursed City</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success font-bold">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-primary/10">
+                    <td className="py-2 px-2 font-medium text-primary">Grim Forest</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success font-bold">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-primary/10">
+                    <td className="py-2 px-2 font-medium text-primary">Champions Training</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success font-bold">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-primary/10">
+                    <td className="py-2 px-2 font-medium text-primary">Summon Rush</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success font-bold">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-primary/10">
+                    <td className="py-2 px-2 font-medium text-primary">
+                      Opponents Choice/Exclusion (Arenas)
+                    </td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success font-bold">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-primary/10">
+                    <td className="py-2 px-2 font-medium text-primary">
+                      Champions Banning/Targeting (Arenas)
+                    </td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success font-bold">✓</td>
+                  </tr>
+                  <tr className="border-b border-base-300 bg-primary/10">
+                    <td className="py-2 px-2 font-medium text-primary">
+                      Battles Priorities Management
+                    </td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-error">✗</td>
+                    <td className="text-center py-2 px-2 text-success font-bold">✓</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 

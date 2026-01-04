@@ -71,7 +71,9 @@ export default function FeaturesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-base-content">{t("features.title")}</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-base-content">
+            {t("features.title")}
+          </h2>
         </div>
 
         {/* Feature Cards Grid */}
